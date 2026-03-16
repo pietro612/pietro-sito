@@ -1,137 +1,96 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<form action="https://formspree.io/f/xwvrrnnew" method="POST" style="margin-top: 20px;">
 
-    <title>Scrivi una domanda</title>
-    <meta name="description" content="Uno spazio semplice e tranquillo dove puoi scrivere liberamente la tua domanda, senza giudizio.">
+  <!-- MESSAGGIO -->
+  <label for="message" style="display:block; margin-bottom:6px; font-weight:600;">
+    La tua domanda
+  </label>
+  <textarea id="message" name="message" required
+    style="width:100%; min-height:140px; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;"></textarea>
 
-    <meta name="theme-color" content="#245f89">
+  <!-- METODO DI CONTATTO -->
+  <label for="contact-method" style="display:block; margin-top:20px; margin-bottom:6px; font-weight:600;">
+    Come preferisci ricevere la risposta?
+  </label>
+  <select id="contact-method" name="contact-method" required onchange="toggleContactFields()"
+    style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
+    <option value="">Seleziona un’opzione</option>
+    <option value="email">Email</option>
+    <option value="phone">Numero di cellulare</option>
+    <option value="none">Non voglio lasciare un contatto</option>
+  </select>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Scrivi una domanda">
-    <meta property="og:description" content="Uno spazio semplice e tranquillo dove puoi scrivere liberamente la tua domanda, senza giudizio.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
-    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
+  <!-- EMAIL -->
+  <div id="email-field" style="display:none; margin-top:15px;">
+    <label for="email" style="display:block; margin-bottom:6px; font-weight:600;">
+      La tua email
+    </label>
+    <input type="email" id="email" name="email"
+      style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
+  </div>
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Scrivi una domanda">
-    <meta name="twitter:description" content="Uno spazio semplice e tranquillo dove puoi scrivere liberamente la tua domanda, senza giudizio.">
-    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
+  <!-- TELEFONO -->
+  <div id="phone-field" style="display:none; margin-top:15px;">
+    <label for="phone" style="display:block; margin-bottom:6px; font-weight:600;">
+      Numero di cellulare
+    </label>
+    <input type="tel" id="phone" name="phone"
+      style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
 
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style-v2.css">
-</head>
+    <label for="phone-preference" style="display:block; margin-top:15px; margin-bottom:6px; font-weight:600;">
+      Preferisci ricevere la risposta via:
+    </label>
+    <select id="phone-preference" name="phone-preference"
+      style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
+      <option value="sms">SMS</option>
+      <option value="whatsapp">WhatsApp</option>
+    </select>
+  </div>
 
-<body>
+  <!-- NOTA -->
+  <p style="font-size:0.9em; color:#555; margin-top:15px; line-height:1.4;">
+    Se non lasci un contatto, non potrò risponderti direttamente.  
+    La tua domanda resterà comunque completamente privata.
+  </p>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-    <h2>Menu</h2>
-    <a href="index.html">Home</a>
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="chi-sono.html">Chi sono</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="scrivi.html" class="active">Scrivi una domanda</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-</div>
+  <!-- REDIRECT CORRETTO -->
+  <input type="hidden" name="_redirect" value="https://domandedeigiovani.it/grazie.html">
 
-<!-- HERO -->
-<div class="hero">
-    <img src="immagini/hero-scrivi.jpg" alt="Una mano aperta con punti interrogativi luminosi, un invito a porre la tua domanda con calma">
+  <!-- INVIO -->
+  <button type="submit"
+    style="margin-top:20px; padding:12px 20px; background-color:#245f89; color:white; border:none; border-radius:4px; font-size:16px; cursor:pointer;">
+    Invia
+  </button>
 
-    <div class="hero-content">
-       <h1>Scrivi una domanda</h1>
-       <p>Uno spazio semplice e sicuro dove puoi iniziare a parlare con calma, senza fretta e senza pressione.</p>
-    </div>
-</div>
+</form>
 
-<!-- CONTENUTO -->
-<section class="pagina-testo">
+<script>
+function toggleContactFields() {
+  const method = document.getElementById("contact-method").value;
+  const emailField = document.getElementById("email-field");
+  const phoneField = document.getElementById("phone-field");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const phonePref = document.getElementById("phone-preference");
 
-    <h2>La tua domanda</h2>
-    <p>
-        Puoi scrivere liberamente ciò che vivi. Ogni parola è accolta con rispetto e presenza.
-    </p>
+  // Reset dei required
+  emailInput.required = false;
+  phoneInput.required = false;
+  phonePref.required = false;
 
-    <!-- FORM -->
-    <form action="https://formspree.io/f/xwvrrnnew" method="POST" style="margin-top: 20px;">
-
-      <label for="message" style="display:block; margin-bottom:6px; font-weight:600;">
-        La tua domanda
-      </label>
-      <textarea id="message" name="message" required
-        style="width:100%; min-height:140px; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;"></textarea>
-
-      <label for="contact-method" style="display:block; margin-top:20px; margin-bottom:6px; font-weight:600;">
-        Come preferisci ricevere la risposta?
-      </label>
-      <select id="contact-method" name="contact-method" required onchange="toggleContactFields()"
-        style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
-        <option value="">Seleziona un’opzione</option>
-        <option value="email">Email</option>
-        <option value="phone">Numero di cellulare</option>
-        <option value="none">Non voglio lasciare un contatto</option>
-      </select>
-
-      <div id="email-field" style="display:none; margin-top:15px;">
-        <label for="email" style="display:block; margin-bottom:6px; font-weight:600;">
-          La tua email
-        </label>
-        <input type="email" id="email" name="email"
-          style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
-      </div>
-
-      <div id="phone-field" style="display:none; margin-top:15px;">
-        <label for="phone" style="display:block; margin-bottom:6px; font-weight:600;">
-          Numero di cellulare
-        </label>
-        <input type="tel" id="phone" name="phone"
-          style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
-
-        <label for="phone-preference" style="display:block; margin-top:15px; margin-bottom:6px; font-weight:600;">
-          Preferisci ricevere la risposta via:
-        </label>
-        <select id="phone-preference" name="phone-preference"
-          style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-size:16px;">
-          <option value="sms">SMS</option>
-          <option value="whatsapp">WhatsApp</option>
-        </select>
-      </div>
-
-      <p style="font-size:0.9em; color:#555; margin-top:15px; line-height:1.4;">
-        Se non lasci un contatto, non potrò risponderti direttamente.  
-        La tua domanda resterà comunque completamente privata.
-      </p>
-
-      <button type="submit"
-        style="margin-top:20px; padding:12px 20px; background-color:#245f89; color:white; border:none; border-radius:4px; font-size:16px; cursor:pointer;">
-        Invia
-      </button>
-
-    </form>
-
-    <script>
-    function toggleContactFields() {
-      const method = document.getElementById("contact-method").value;
-      document.getElementById("email-field").style.display = method === "email" ? "block" : "none";
-      document.getElementById("phone-field").style.display = method === "phone" ? "block" : "none";
-    }
-    </script>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <p>Uno spazio di ascolto, con calma e presenza.</p>
-    <p><a href="contatto.html">Contattami</a></p>
-</footer>
-
-</body>
-</html>
+  if (method === "email") {
+    emailField.style.display = "block";
+    phoneField.style.display = "none";
+    emailInput.required = true;
+  } 
+  else if (method === "phone") {
+    emailField.style.display = "none";
+    phoneField.style.display = "block";
+    phoneInput.required = true;
+    phonePref.required = true;
+  } 
+  else {
+    emailField.style.display = "none";
+    phoneField.style.display = "none";
+  }
+}
+</script>
