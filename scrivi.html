@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Scrivi una domanda</title>
-    <meta name="description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
+    <meta name="description" content="Scrivi una domanda in modo privato. Nessun giudizio, solo ascolto.">
 
     <meta name="theme-color" content="#245f89">
+
     <link rel="canonical" href="https://domandedeigiovani.it/scrivi.html">
 
     <meta property="og:title" content="Scrivi una domanda">
-    <meta property="og:description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
+    <meta property="og:description" content="Scrivi una domanda in modo privato. Nessun giudizio, solo ascolto.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
     <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Scrivi una domanda">
-    <meta name="twitter:description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
+    <meta name="twitter:description" content="Scrivi una domanda in modo privato. Nessun giudizio, solo ascolto.">
     <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -40,9 +41,23 @@
             flex-direction: column;
             gap: 16px;
         }
-        .sidebar h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
-        .sidebar a { color: #245f89; text-decoration: none; padding: 4px 0; }
-        .sidebar a:hover { text-decoration: underline; }
+
+        .sidebar h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #245f89;
+        }
+
+        .sidebar a {
+            color: #245f89;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
 
         /* MOBILE TOP BAR */
         .mobile-bar {
@@ -53,18 +68,26 @@
             padding: 0 16px;
             align-items: center;
         }
-        .mobile-menu-icon { font-size: 26px; color: #245f89; cursor: pointer; }
+
+        .mobile-menu-icon {
+            font-size: 26px;
+            color: #245f89;
+            cursor: pointer;
+        }
 
         /* MOBILE PANEL */
         .mobile-panel-overlay {
             display: none;
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(0,0,0,0.25);
             justify-content: center;
             align-items: center;
         }
+
         .mobile-panel {
             background: #ffffff;
             width: 300px;
@@ -75,46 +98,60 @@
             flex-direction: column;
             gap: 12px;
         }
-        .mobile-panel h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
-        .mobile-panel a { color: #245f89; text-decoration: none; }
-        .mobile-panel a:hover { text-decoration: underline; }
 
-        /* LAYOUT SHIFT */
-        body { margin-left: 220px; }
+        .mobile-panel h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #245f89;
+        }
+
+        .mobile-panel a {
+            color: #245f89;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .mobile-panel a:hover {
+            text-decoration: underline;
+        }
+
+        /* LAYOUT SHIFT FOR SIDEBAR */
+        body {
+            margin-left: 220px;
+        }
 
         /* MOBILE RULES */
         @media (max-width: 768px) {
-            .sidebar { display: none; }
-            body { margin-left: 0; }
-            .mobile-bar { display: flex; }
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 260px;
-            line-height: 1.5;
-            resize: none;
-            padding: 12px;
-            font-size: 1rem;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
+            .sidebar {
+                display: none;
+            }
+            body {
+                margin-left: 0;
+            }
+            .mobile-bar {
+                display: flex;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- SIDEBAR DESKTOP -->
     <nav class="sidebar">
         <h3>Navigazione</h3>
         <a href="index.html">Home</a>
+        <a href="benvenuto.html">Benvenuto</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
         <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="comefunziona.html">Come funziona</a>
-        <a href="chisono.html">Chi sono</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
     </nav>
 
-    <!-- MOBILE BAR -->
+    <!-- MOBILE TOP BAR -->
     <div class="mobile-bar">
         <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
     </div>
@@ -124,15 +161,24 @@
         <div class="mobile-panel" onclick="event.stopPropagation()">
             <h3>Navigazione</h3>
             <a href="index.html">Home</a>
+            <a href="benvenuto.html">Benvenuto</a>
+            <a href="perche-esiste.html">Perché esiste</a>
+            <a href="come-funziona.html">Come funziona</a>
+            <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
             <a href="scrivi.html">Scrivi una domanda</a>
-            <a href="comefunziona.html">Come funziona</a>
-            <a href="chisono.html">Chi sono</a>
+            <a href="contatto.html">Contatto</a>
+            <a href="chi-sono.html">Chi sono</a>
+            <a href="faq.html">FAQ</a>
         </div>
     </div>
 
     <script>
-        function openMobileMenu() { document.getElementById('mobilePanel').style.display = 'flex'; }
-        function closeMobileMenu() { document.getElementById('mobilePanel').style.display = 'none'; }
+        function openMobileMenu() {
+            document.getElementById('mobilePanel').style.display = 'flex';
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobilePanel').style.display = 'none';
+        }
     </script>
 
     <!-- HERO -->
@@ -141,31 +187,34 @@
         <div class="hero-overlay"></div>
         <div class="hero-text">
             <h1>Scrivi una domanda</h1>
-            <p>In modo semplice, privato e senza giudizio.</p>
+            <p>In modo privato, senza giudizio.</p>
         </div>
     </section>
 
     <!-- CONTENUTO -->
     <main class="contenuto">
 
-        <h2>Il tuo spazio di parola</h2>
-        <p>Puoi scrivere liberamente ciò che desideri. Leggo personalmente ogni messaggio e rispondo nel modo che preferisci.</p>
+        <h2>Scrivi la tua domanda</h2>
 
-        <form action="https://formspree.io/f/mqakjvkd" method="POST">
-
-            <label for="nome">Il tuo nome (facoltativo)</label>
-            <input type="text" id="nome" name="nome">
-
-            <label for="email">La tua email (se vuoi risposta via email)</label>
-            <input type="email" id="email" name="email">
-
-            <label for="telefono">Il tuo cellulare (se preferisci SMS o WhatsApp)</label>
-            <input type="tel" id="telefono" name="telefono">
+        <form action="https://formspree.io/f/your-endpoint" method="POST">
 
             <label for="messaggio">La tua domanda</label>
             <textarea id="messaggio" name="messaggio" required></textarea>
 
+            <label for="contatto">Come vuoi essere ricontattato?</label>
+            <select id="contatto" name="contatto" required>
+                <option value="email">Email</option>
+                <option value="cellulare">Cellulare (SMS o WhatsApp)</option>
+            </select>
+
+            <label for="email">Email (se hai scelto email)</label>
+            <input type="email" id="email" name="email">
+
+            <label for="telefono">Cellulare (se hai scelto cellulare)</label>
+            <input type="tel" id="telefono" name="telefono">
+
             <button type="submit" class="cta">Invia</button>
+
         </form>
 
     </main>
@@ -173,7 +222,7 @@
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Domande dei Giovani</p>
-        <a href="index.html">Home</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
     </footer>
 
 </body>
