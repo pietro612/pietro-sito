@@ -2,10 +2,10 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>Scrivi una domanda</title>
-    <meta name="description" content="Scrivi la tua domanda in modo privato. Nessun giudizio, solo ascolto.">
+    <meta name="description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
 
     <meta name="theme-color" content="#245f89">
 
@@ -14,7 +14,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Scrivi una domanda">
-    <meta property="og:description" content="Scrivi la tua domanda in modo privato. Nessun giudizio, solo ascolto.">
+    <meta property="og:description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
     <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
@@ -22,11 +22,25 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Scrivi una domanda">
-    <meta name="twitter:description" content="Scrivi la tua domanda in modo privato. Nessun giudizio, solo ascolto.">
+    <meta name="twitter:description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
     <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style-v2.css">
+
+    <style>
+        textarea {
+            width: 100%;
+            min-height: 260px;
+            line-height: 1.5;
+            resize: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,38 +51,33 @@
         <div class="hero-overlay"></div>
         <div class="hero-text">
             <h1>Scrivi una domanda</h1>
-            <p>Puoi farlo in modo privato. Nessun giudizio, solo ascolto.</p>
+            <p>In modo semplice, privato e senza giudizio.</p>
         </div>
     </section>
 
-    <!-- FORM -->
+    <!-- CONTENUTO -->
     <main class="contenuto">
-        <form action="https://formspree.io/f/mqakjvqp" method="POST" class="form">
 
-            <label for="message">La tua domanda</label>
-            <textarea id="message" name="message" required></textarea>
+        <h2>Il tuo spazio di parola</h2>
+        <p>Puoi scrivere liberamente ciò che desideri. Leggo personalmente ogni messaggio e rispondo nel modo che preferisci.</p>
 
-            <label for="contact-method">Come vuoi essere ricontattato?</label>
-            <select id="contact-method" name="contact-method" required>
-                <option value="">Scegli un’opzione</option>
-                <option value="email">Email</option>
-                <option value="phone">Cellulare (SMS o WhatsApp)</option>
-            </select>
+        <form action="https://formspree.io/f/mqakjvkd" method="POST">
 
-            <div id="email-field" style="display:none;">
-                <label for="email">La tua email</label>
-                <input type="email" id="email" name="email">
-            </div>
+            <label for="nome">Il tuo nome (facoltativo)</label>
+            <input type="text" id="nome" name="nome">
 
-            <div id="phone-field" style="display:none;">
-                <label for="phone">Il tuo numero</label>
-                <input type="tel" id="phone" name="phone">
-            </div>
+            <label for="email">La tua email (se vuoi risposta via email)</label>
+            <input type="email" id="email" name="email">
 
-            <input type="hidden" name="_redirect" value="https://domandedeigiovani.it/grazie.html">
+            <label for="telefono">Il tuo cellulare (se preferisci SMS o WhatsApp)</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="messaggio">La tua domanda</label>
+            <textarea id="messaggio" name="messaggio" required></textarea>
 
             <button type="submit" class="cta">Invia</button>
         </form>
+
     </main>
 
     <!-- FOOTER -->
@@ -77,16 +86,14 @@
         <a href="index.html">Home</a>
     </footer>
 
-    <!-- SCRIPT PER MOSTRARE I CAMPI GIUSTI -->
+    <!-- AUTO-RESIZE DELLA TEXTAREA -->
     <script>
-        const select = document.getElementById('contact-method');
-        const emailField = document.getElementById('email-field');
-        const phoneField = document.getElementById('phone-field');
-
-        select.addEventListener('change', function() {
-            emailField.style.display = this.value === 'email' ? 'block' : 'none';
-            phoneField.style.display = this.value === 'phone' ? 'block' : 'none';
-        });
+    document.addEventListener('input', function (e) {
+        if (e.target.tagName.toLowerCase() === 'textarea') {
+            e.target.style.height = 'auto';
+            e.target.style.height = (e.target.scrollHeight) + 'px';
+        }
+    });
     </script>
 
 </body>
