@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +26,6 @@
     <link rel="stylesheet" href="style-v2.css">
 
     <style>
-        /* SIDEBAR DESKTOP */
         .sidebar {
             position: fixed;
             top: 0;
@@ -39,23 +40,9 @@
             flex-direction: column;
             gap: 16px;
         }
-
-        .sidebar h3 {
-            margin: 0 0 8px 0;
-            font-size: 1.1rem;
-            color: #245f89;
-        }
-
-        .sidebar a {
-            color: #245f89;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 4px 0;
-        }
-
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
+        .sidebar h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
+        .sidebar a { color: #245f89; text-decoration: none; font-size: 1rem; padding: 4px 0; }
+        .sidebar a:hover { text-decoration: underline; }
 
         .mobile-bar {
             display: none;
@@ -65,12 +52,7 @@
             padding: 0 16px;
             align-items: center;
         }
-
-        .mobile-menu-icon {
-            font-size: 26px;
-            color: #245f89;
-            cursor: pointer;
-        }
+        .mobile-menu-icon { font-size: 26px; color: #245f89; cursor: pointer; }
 
         .mobile-panel-overlay {
             display: none;
@@ -83,7 +65,6 @@
             justify-content: center;
             align-items: center;
         }
-
         .mobile-panel {
             background: #ffffff;
             width: 300px;
@@ -94,26 +75,11 @@
             flex-direction: column;
             gap: 12px;
         }
+        .mobile-panel h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
+        .mobile-panel a { color: #245f89; text-decoration: none; font-size: 1rem; }
+        .mobile-panel a:hover { text-decoration: underline; }
 
-        .mobile-panel h3 {
-            margin: 0 0 8px 0;
-            font-size: 1.1rem;
-            color: #245f89;
-        }
-
-        .mobile-panel a {
-            color: #245f89;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        .mobile-panel a:hover {
-            text-decoration: underline;
-        }
-
-        body {
-            margin-left: 220px;
-        }
+        body { margin-left: 220px; }
 
         @media (max-width: 768px) {
             .sidebar { display: none; }
@@ -122,3 +88,64 @@
         }
     </style>
 </head>
+
+<body>
+
+    <nav class="sidebar">
+        <h3>Navigazione</h3>
+        <a href="index.html">Home</a>
+        <a href="benvenuto.html">Benvenuto</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="mobile-bar">
+        <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
+    </div>
+
+    <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
+        <div class="mobile-panel" onclick="event.stopPropagation()">
+            <h3>Navigazione</h3>
+            <a href="index.html">Home</a>
+            <a href="benvenuto.html">Benvenuto</a>
+            <a href="perche-esiste.html">Perché esiste</a>
+            <a href="come-funziona.html">Come funziona</a>
+            <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+            <a href="scrivi.html">Scrivi una domanda</a>
+            <a href="contatto.html">Contatto</a>
+            <a href="chi-sono.html">Chi sono</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </div>
+
+    <script>
+        function openMobileMenu() { document.getElementById('mobilePanel').style.display = 'flex'; }
+        function closeMobileMenu() { document.getElementById('mobilePanel').style.display = 'none'; }
+    </script>
+
+    <section class="hero">
+        <img src="immagini/hero-home.jpg" alt="Come tratto i messaggi" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>Come tratto i messaggi</h1>
+            <p>Ascolto, privacy e nessun giudizio.</p>
+        </div>
+    </section>
+
+    <main class="contenuto">
+        <h2>Come tratto i messaggi</h2>
+        <p>Ogni messaggio viene letto personalmente e trattato con rispetto e riservatezza. Non condivido le tue parole con nessuno.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Domande dei Giovani</p>
+        <a href="scrivi.html">Scrivi una domanda</a>
+    </footer>
+
+</body>
+</html>
