@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Grazie</title>
-    <meta name="description" content="Grazie per il tuo messaggio. Lo leggerò con attenzione e rispetto.">
+    <meta name="description" content="Grazie per aver inviato la tua domanda. Riceverai una risposta personale.">
 
     <meta name="theme-color" content="#245f89">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://domandedeigiovani.it/grazie.html">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Grazie">
-    <meta property="og:description" content="Grazie per il tuo messaggio. Lo leggerò con attenzione e rispetto.">
+    <meta property="og:description" content="Grazie per aver inviato la tua domanda. Riceverai una risposta personale.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/grazie.html">
-    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
+    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-grazie.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Grazie">
-    <meta name="twitter:description" content="Grazie per il tuo messaggio. Lo leggerò con attenzione e rispetto.">
-    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
+    <meta name="twitter:description" content="Grazie per aver inviato la tua domanda. Riceverai una risposta personale.">
+    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-grazie.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style-v2.css">
@@ -28,77 +31,33 @@
 
 <body>
 
-    <!-- SIDEBAR -->
-   <div class="sidebar">
-    <h2>Menu</h2>
-    <a href="index.html">Home</a>
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="chi-sono.html">Chi sono</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="scrivi.html">Scrivi una domanda</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-
-    <div class="sidebar-audio">
-        <button id="play-audio" class="audio-icon">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 9v6"></path>
-                <path d="M9 7v10"></path>
-                <path d="M13 5v14"></path>
-                <path d="M17 7v10"></path>
-            </svg>
-        </button>
-        <audio id="audio-player" src="audio/musica.mp3"></audio>
-    </div>
-</div>
-
     <!-- HERO -->
-    <div class="hero">
-        <img src="immagini/hero-grazie.jpg" alt="Grazie">
-        <div class="hero-content">
+    <section class="hero">
+        <img src="immagini/hero-grazie.jpg" alt="Grazie" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
             <h1>Grazie</h1>
-            <p>Il tuo messaggio è arrivato.</p>
+            <p>La tua domanda è stata inviata. Riceverai una risposta personale.</p>
         </div>
-    </div>
-
-    <!-- CONTENUTO -->
-    <section class="pagina-testo">
-
-        <h2>Ti risponderò con calma</h2>
-        <p>
-            Ho ricevuto ciò che hai scritto.  
-            Mi prenderò il tempo necessario per leggere con attenzione le tue parole e risponderti con rispetto, senza fretta.
-        </p>
-
-        <p>
-            Nel frattempo, puoi tornare alla pagina iniziale o esplorare gli altri contenuti.
-        </p>
-
-        <p>
-            <a href="index.html" style="color:#245f89; text-decoration:none; font-weight:600;">
-                Torna alla Home
-            </a>
-        </p>
-
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>Uno spazio di ascolto, con calma e presenza.</p>
-        <p><a href="contatto.html">Contattami</a></p>
-    </footer>
+    <!-- CONTENUTO -->
+    <main class="contenuto">
+        <h2>Grazie per la tua fiducia</h2>
+        <p>Ho ricevuto la tua domanda. Ti risponderò nel modo che hai scelto: email o cellulare.</p>
 
-    <!-- SCRIPT AUDIO -->
-    <script>
-    document.getElementById("play-audio").addEventListener("click", function() {
-        const audio = document.getElementById("audio-player");
-        audio.play();
-    });
-    </script>
+        <p>Nel frattempo puoi tornare alla home o leggere come funziona il sito.</p>
+
+        <a href="index.html" class="cta">Torna alla Home</a>
+        <br><br>
+        <a href="comefunziona.html" class="link">Come funziona</a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Domande dei Giovani</p>
+        <a href="index.html">Home</a>
+    </footer>
 
 </body>
 </html>
-
-
