@@ -15,18 +15,17 @@
     <meta property="og:description" content="Scrivi una domanda, scegli come essere ricontattato e ricevi una risposta personale.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/come-funziona.html">
-    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-comefunziona.jpg">
+    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-funziona.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Come funziona">
     <meta name="twitter:description" content="Scrivi una domanda, scegli come essere ricontattato e ricevi una risposta personale.">
-    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-comefunziona.jpg">
+    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-funziona.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style-v2.css">
 
     <style>
-        /* SIDEBAR DESKTOP */
         .sidebar {
             position: fixed;
             top: 0;
@@ -59,7 +58,6 @@
             text-decoration: underline;
         }
 
-        /* MOBILE TOP BAR */
         .mobile-bar {
             display: none;
             height: 48px;
@@ -75,7 +73,6 @@
             cursor: pointer;
         }
 
-        /* MOBILE PANEL */
         .mobile-panel-overlay {
             display: none;
             position: fixed;
@@ -115,29 +112,20 @@
             text-decoration: underline;
         }
 
-        /* LAYOUT SHIFT FOR SIDEBAR */
         body {
             margin-left: 220px;
         }
 
-        /* MOBILE RULES */
         @media (max-width: 768px) {
-            .sidebar {
-                display: none;
-            }
-            body {
-                margin-left: 0;
-            }
-            .mobile-bar {
-                display: flex;
-            }
+            .sidebar { display: none; }
+            body { margin-left: 0; }
+            .mobile-bar { display: flex; }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- SIDEBAR DESKTOP -->
     <nav class="sidebar">
         <h3>Navigazione</h3>
         <a href="index.html">Home</a>
@@ -151,12 +139,10 @@
         <a href="faq.html">FAQ</a>
     </nav>
 
-    <!-- MOBILE TOP BAR -->
     <div class="mobile-bar">
         <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
     </div>
 
-    <!-- MOBILE PANEL -->
     <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
         <div class="mobile-panel" onclick="event.stopPropagation()">
             <h3>Navigazione</h3>
@@ -173,17 +159,12 @@
     </div>
 
     <script>
-        function openMobileMenu() {
-            document.getElementById('mobilePanel').style.display = 'flex';
-        }
-        function closeMobileMenu() {
-            document.getElementById('mobilePanel').style.display = 'none';
-        }
+        function openMobileMenu() { document.getElementById('mobilePanel').style.display = 'flex'; }
+        function closeMobileMenu() { document.getElementById('mobilePanel').style.display = 'none'; }
     </script>
 
-    <!-- HERO -->
     <section class="hero">
-        <img src="immagini/hero-comefunziona.jpg" alt="Come funziona" class="hero-image">
+        <img src="immagini/hero-funziona.jpg" alt="Come funziona" class="hero-image">
         <div class="hero-overlay"></div>
         <div class="hero-text">
             <h1>Come funziona</h1>
@@ -191,7 +172,6 @@
         </div>
     </section>
 
-    <!-- CONTENUTO -->
     <main class="contenuto">
 
         <h2>Un processo semplice</h2>
@@ -202,7 +182,6 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Domande dei Giovani</p>
         <a href="scrivi.html">Scrivi una domanda</a>
