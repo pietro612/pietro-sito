@@ -4,49 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Come funziona</title>
-    <meta name="description" content="Come funziona Domande dei Giovani: scrivi una domanda, scegli come essere ricontattato e ricevi una risposta personale.">
+    <title>Scrivi una domanda</title>
+    <meta name="description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
 
     <meta name="theme-color" content="#245f89">
+    <link rel="canonical" href="https://domandedeigiovani.it/scrivi.html">
 
-    <link rel="canonical" href="https://domandedeigiovani.it/comefunziona.html">
-
-    <meta property="og:title" content="Come funziona">
-    <meta property="og:description" content="Scrivi una domanda, scegli come essere ricontattato e ricevi una risposta personale.">
+    <meta property="og:title" content="Scrivi una domanda">
+    <meta property="og:description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://domandedeigiovani.it/comefunziona.html">
-    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-comefunziona.jpg">
+    <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
+    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Come funziona">
-    <meta name="twitter:description" content="Scrivi una domanda, scegli come essere ricontattato e ricevi una risposta personale.">
-    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-comefunziona.jpg">
+    <meta name="twitter:title" content="Scrivi una domanda">
+    <meta name="twitter:description" content="Scrivi una domanda in modo semplice e privato. Rispondo personalmente, via email o cellulare.">
+    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style-v2.css">
+
+    <style>
+        /* SIDEBAR DESKTOP */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100vh;
+            background: #ffffff;
+            border-right: 1px solid #e5e5e5;
+            padding: 24px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .sidebar h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
+        .sidebar a { color: #245f89; text-decoration: none; padding: 4px 0; }
+        .sidebar a:hover { text-decoration: underline; }
+
+        /* MOBILE TOP BAR */
+        .mobile-bar {
+            display: none;
+            height: 48px;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0 16px;
+            align-items: center;
+        }
+        .mobile-menu-icon { font-size: 26px; color: #245f89; cursor: pointer; }
+
+        /* MOBILE PANEL */
+        .mobile-panel-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.25);
+            justify-content: center;
+            align-items: center;
+        }
+        .mobile-panel {
+            background: #ffffff;
+            width: 300px;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .mobile-panel h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
+        .mobile-panel a { color: #245f89; text-decoration: none; }
+        .mobile-panel a:hover { text-decoration: underline; }
+
+        /* LAYOUT SHIFT */
+        body { margin-left: 220px; }
+
+        /* MOBILE RULES */
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            body { margin-left: 0; }
+            .mobile-bar { display: flex; }
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 260px;
+            line-height: 1.5;
+            resize: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <h3>Navigazione</h3>
+        <a href="index.html">Home</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="comefunziona.html">Come funziona</a>
+        <a href="chisono.html">Chi sono</a>
+    </nav>
+
+    <!-- MOBILE BAR -->
+    <div class="mobile-bar">
+        <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
+    </div>
+
+    <!-- MOBILE PANEL -->
+    <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
+        <div class="mobile-panel" onclick="event.stopPropagation()">
+            <h3>Navigazione</h3>
+            <a href="index.html">Home</a>
+            <a href="scrivi.html">Scrivi una domanda</a>
+            <a href="comefunziona.html">Come funziona</a>
+            <a href="chisono.html">Chi sono</a>
+        </div>
+    </div>
+
+    <script>
+        function openMobileMenu() { document.getElementById('mobilePanel').style.display = 'flex'; }
+        function closeMobileMenu() { document.getElementById('mobilePanel').style.display = 'none'; }
+    </script>
+
+    <!-- HERO -->
     <section class="hero">
-        <img src="immagini/hero-comefunziona.jpg" alt="Come funziona" class="hero-image">
+        <img src="immagini/hero-scrivi.jpg" alt="Scrivi una domanda" class="hero-image">
         <div class="hero-overlay"></div>
         <div class="hero-text">
-            <h1>Come funziona</h1>
-            <p>Scrivi la tua domanda, scegli come essere ricontattato e riceverai una risposta personale.</p>
+            <h1>Scrivi una domanda</h1>
+            <p>In modo semplice, privato e senza giudizio.</p>
         </div>
     </section>
 
+    <!-- CONTENUTO -->
     <main class="contenuto">
 
-        <h2>Un processo semplice</h2>
-        <p>Scrivi la tua domanda nella pagina dedicata. Puoi scegliere se ricevere una risposta via email oppure tramite cellulare (SMS o WhatsApp).</p>
+        <h2>Il tuo spazio di parola</h2>
+        <p>Puoi scrivere liberamente ciò che desideri. Leggo personalmente ogni messaggio e rispondo nel modo che preferisci.</p>
 
-        <h2>Risposta personale</h2>
-        <p>Ogni messaggio viene letto personalmente e riceverai una risposta privata, senza giudizio.</p>
+        <form action="https://formspree.io/f/mqakjvkd" method="POST">
+
+            <label for="nome">Il tuo nome (facoltativo)</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="email">La tua email (se vuoi risposta via email)</label>
+            <input type="email" id="email" name="email">
+
+            <label for="telefono">Il tuo cellulare (se preferisci SMS o WhatsApp)</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="messaggio">La tua domanda</label>
+            <textarea id="messaggio" name="messaggio" required></textarea>
+
+            <button type="submit" class="cta">Invia</button>
+        </form>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Domande dei Giovani</p>
         <a href="index.html">Home</a>
