@@ -8,7 +8,6 @@
     <meta name="description" content="Mi chiamo Pietro e rispondo personalmente alle domande dei giovani, con ascolto e senza giudizio.">
 
     <meta name="theme-color" content="#245f89">
-
     <link rel="canonical" href="https://domandedeigiovani.it/chisono.html">
 
     <meta property="og:title" content="Chi sono">
@@ -24,10 +23,107 @@
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style-v2.css">
+
+    <style>
+        /* SIDEBAR DESKTOP */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100vh;
+            background: #ffffff;
+            border-right: 1px solid #e5e5e5;
+            padding: 24px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .sidebar h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
+        .sidebar a { color: #245f89; text-decoration: none; padding: 4px 0; }
+        .sidebar a:hover { text-decoration: underline; }
+
+        /* MOBILE TOP BAR */
+        .mobile-bar {
+            display: none;
+            height: 48px;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0 16px;
+            align-items: center;
+        }
+        .mobile-menu-icon { font-size: 26px; color: #245f89; cursor: pointer; }
+
+        /* MOBILE PANEL */
+        .mobile-panel-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.25);
+            justify-content: center;
+            align-items: center;
+        }
+        .mobile-panel {
+            background: #ffffff;
+            width: 300px;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .mobile-panel h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
+        .mobile-panel a { color: #245f89; text-decoration: none; }
+        .mobile-panel a:hover { text-decoration: underline; }
+
+        /* LAYOUT SHIFT */
+        body { margin-left: 220px; }
+
+        /* MOBILE RULES */
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            body { margin-left: 0; }
+            .mobile-bar { display: flex; }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <h3>Navigazione</h3>
+        <a href="index.html">Home</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="comefunziona.html">Come funziona</a>
+        <a href="chisono.html">Chi sono</a>
+    </nav>
+
+    <!-- MOBILE BAR -->
+    <div class="mobile-bar">
+        <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
+    </div>
+
+    <!-- MOBILE PANEL -->
+    <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
+        <div class="mobile-panel" onclick="event.stopPropagation()">
+            <h3>Navigazione</h3>
+            <a href="index.html">Home</a>
+            <a href="scrivi.html">Scrivi una domanda</a>
+            <a href="comefunziona.html">Come funziona</a>
+            <a href="chisono.html">Chi sono</a>
+        </div>
+    </div>
+
+    <script>
+        function openMobileMenu() { document.getElementById('mobilePanel').style.display = 'flex'; }
+        function closeMobileMenu() { document.getElementById('mobilePanel').style.display = 'none'; }
+    </script>
+
+    <!-- HERO -->
     <section class="hero">
         <img src="immagini/hero-chisono.jpg" alt="Chi sono" class="hero-image">
         <div class="hero-overlay"></div>
@@ -37,6 +133,7 @@
         </div>
     </section>
 
+    <!-- CONTENUTO -->
     <main class="contenuto">
 
         <h2>Ascolto e accoglienza</h2>
@@ -47,6 +144,7 @@
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Domande dei Giovani</p>
         <a href="index.html">Home</a>
