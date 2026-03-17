@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,19 +14,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/come-tratto-i-messaggi.html">
     <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
-<meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Come tratto i messaggi">
     <meta name="twitter:description" content="Ascolto, privacy e nessun giudizio.">
-   <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
-<meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Come tratto i messaggi">
-<meta name="twitter:description" content="Ascolto, privacy e nessun giudizio.">
-<meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-cometrattoimessaggi.jpg">
-
+    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style-v2.css">
@@ -67,7 +57,6 @@
             text-decoration: underline;
         }
 
-        /* MOBILE TOP BAR */
         .mobile-bar {
             display: none;
             height: 48px;
@@ -83,7 +72,6 @@
             cursor: pointer;
         }
 
-        /* MOBILE PANEL */
         .mobile-panel-overlay {
             display: none;
             position: fixed;
@@ -123,95 +111,14 @@
             text-decoration: underline;
         }
 
-        /* LAYOUT SHIFT FOR SIDEBAR */
         body {
             margin-left: 220px;
         }
 
-        /* MOBILE RULES */
         @media (max-width: 768px) {
-            .sidebar {
-                display: none;
-            }
-            body {
-                margin-left: 0;
-            }
-            .mobile-bar {
-                display: flex;
-            }
+            .sidebar { display: none; }
+            body { margin-left: 0; }
+            .mobile-bar { display: flex; }
         }
     </style>
 </head>
-
-<body>
-
-    <!-- SIDEBAR DESKTOP -->
-    <nav class="sidebar">
-        <h3>Navigazione</h3>
-        <a href="index.html">Home</a>
-        <a href="benvenuto.html">Benvenuto</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
-    </nav>
-
-    <!-- MOBILE TOP BAR -->
-    <div class="mobile-bar">
-        <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
-    </div>
-
-    <!-- MOBILE PANEL -->
-    <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
-        <div class="mobile-panel" onclick="event.stopPropagation()">
-            <h3>Navigazione</h3>
-            <a href="index.html">Home</a>
-            <a href="benvenuto.html">Benvenuto</a>
-            <a href="perche-esiste.html">Perché esiste</a>
-            <a href="come-funziona.html">Come funziona</a>
-            <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-            <a href="scrivi.html">Scrivi una domanda</a>
-            <a href="contatto.html">Contatto</a>
-            <a href="chi-sono.html">Chi sono</a>
-            <a href="faq.html">FAQ</a>
-        </div>
-    </div>
-
-    <script>
-        function openMobileMenu() {
-            document.getElementById('mobilePanel').style.display = 'flex';
-        }
-        function closeMobileMenu() {
-            document.getElementById('mobilePanel').style.display = 'none';
-        }
-    </script>
-
-    <!-- HERO -->
-    <section class="hero">
-    <img src="immagini/hero-home.jpg" alt="Come tratto i messaggi" class="hero-image">   
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-            <h1>Come tratto i messaggi</h1>
-            <p>Ascolto, privacy e nessun giudizio.</p>
-        </div>
-    </section>
-
-    <!-- CONTENUTO -->
-    <main class="contenuto">
-
-        <h2>Come tratto i messaggi</h2>
-        <p>Ogni messaggio viene letto personalmente e trattato con rispetto e riservatezza. Non condivido le tue parole con nessuno.</p>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Domande dei Giovani</p>
-        <a href="scrivi.html">Scrivi una domanda</a>
-    </footer>
-
-</body>
-</html>
