@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Scrivi una domanda</title>
-    <meta name="description" content="Scrivi una domanda in modo privato. Nessun giudizio, solo ascolto.">
+    <meta name="description" content="Scrivi una domanda in modo privato e ricevi una risposta personale.">
 
     <meta name="theme-color" content="#245f89">
-
     <link rel="canonical" href="https://domandedeigiovani.it/scrivi.html">
 
     <meta property="og:title" content="Scrivi una domanda">
-    <meta property="og:description" content="Scrivi una domanda in modo privato. Nessun giudizio, solo ascolto.">
+    <meta property="og:description" content="Scrivi una domanda in modo privato e ricevi una risposta personale.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
     <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Scrivi una domanda">
-    <meta name="twitter:description" content="Scrivi una domanda in modo privato. Nessun giudizio, solo ascolto.">
+    <meta name="twitter:description" content="Scrivi una domanda in modo privato e ricevi una risposta personale.">
     <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -112,6 +111,7 @@
         <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
     </div>
 
+    <!-- MENU MOBILE COMPLETO -->
     <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
         <div class="mobile-panel" onclick="event.stopPropagation()">
             <h3>Navigazione</h3>
@@ -137,35 +137,27 @@
         <div class="hero-overlay"></div>
         <div class="hero-text">
             <h1>Scrivi una domanda</h1>
-            <p>In modo privato, senza giudizio.</p>
+            <p>In modo privato e senza giudizio.</p>
         </div>
     </section>
 
     <main class="contenuto">
+        <h2>Scrivi una domanda</h2>
 
-        <h2>Scrivi la tua domanda</h2>
-
-        <form action="https://formspree.io/f/xwvrnnew" method="POST">
+        <form action="https://formspree.io/f/movqzjqd" method="POST" class="form-contatto">
 
             <label for="messaggio">La tua domanda</label>
             <textarea id="messaggio" name="messaggio" required></textarea>
 
-            <label for="contatto">Come vuoi essere ricontattato?</label>
-            <select id="contatto" name="contatto" required>
-                <option value="email">Email</option>
-                <option value="cellulare">Cellulare (SMS o WhatsApp)</option>
-            </select>
-
-            <label for="email">Email (se hai scelto email)</label>
+            <label for="email">Email (opzionale)</label>
             <input type="email" id="email" name="email">
 
-            <label for="telefono">Cellulare (se hai scelto cellulare)</label>
+            <label for="telefono">Cellulare (opzionale)</label>
             <input type="tel" id="telefono" name="telefono">
 
-            <button type="submit" class="cta">Invia</button>
+            <button type="submit">Invia</button>
 
         </form>
-
     </main>
 
     <footer>
