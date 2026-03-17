@@ -4,107 +4,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Domande frequenti</title>
-    <meta name="description" content="Le risposte alle domande più comuni, spiegate con calma e semplicità.">
+    <title>FAQ</title>
+    <meta name="description" content="Domande frequenti su Domande dei Giovani.">
 
     <meta name="theme-color" content="#245f89">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Domande frequenti">
-    <meta property="og:description" content="Le risposte alle domande più comuni, spiegate con calma e semplicità.">
+    <link rel="canonical" href="https://domandedeigiovani.it/faq.html">
+
+    <meta property="og:title" content="FAQ">
+    <meta property="og:description" content="Domande frequenti su Domande dei Giovani.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/faq.html">
     <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-faq.jpg">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Domande frequenti">
-    <meta name="twitter:description" content="Le risposte alle domande più comuni, spiegate con calma e semplicità.">
+    <meta name="twitter:title" content="FAQ">
+    <meta name="twitter:description" content="Domande frequenti su Domande dei Giovani.">
     <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-faq.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style-v2.css">
+
+    <style>
+        /* SIDEBAR DESKTOP */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100vh;
+            background: #ffffff;
+            border-right: 1px solid #e5e5e5;
+            padding: 24px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sidebar h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #245f89;
+        }
+
+        .sidebar a {
+            color: #245f89;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE TOP BAR */
+        .mobile-bar {
+            display: none;
+            height: 48px;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0 16px;
+            align-items: center;
+        }
+
+        .mobile-menu-icon {
+            font-size: 26px;
+            color: #245f89;
+            cursor: pointer;
+        }
+
+        /* MOBILE PANEL */
+        .mobile-panel-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.25);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobile-panel {
+            background: #ffffff;
+            width: 300px;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-panel h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #245f89;
+        }
+
+        .mobile-panel a {
+            color: #245f89;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .mobile-panel a:hover {
+            text-decoration: underline;
+        }
+
+        /* LAYOUT SHIFT FOR SIDEBAR */
+        body {
+            margin-left: 220px;
+        }
+
+        /* MOBILE RULES */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            body {
+                margin-left: 0;
+            }
+            .mobile-bar {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h2>Menu</h2>
+    <!-- SIDEBAR DESKTOP -->
+    <nav class="sidebar">
+        <h3>Navigazione</h3>
         <a href="index.html">Home</a>
         <a href="benvenuto.html">Benvenuto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="come-funziona.html">Come funziona</a>
         <a href="perche-esiste.html">Perché esiste</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contatto.html">Contatto</a>
+        <a href="come-funziona.html">Come funziona</a>
         <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
 
-        <div class="sidebar-audio">
-            <button id="play-audio" class="audio-icon">
-                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 9v6"></path>
-                    <path d="M9 7v10"></path>
-                    <path d="M13 5v14"></path>
-                    <path d="M17 7v10"></path>
-                </svg>
-            </button>
-            <audio id="audio-player" src="audio/musica.mp3"></audio>
+    <!-- MOBILE TOP BAR -->
+    <div class="mobile-bar">
+        <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
+    </div>
+
+    <!-- MOBILE PANEL -->
+    <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
+        <div class="mobile-panel" onclick="event.stopPropagation()">
+            <h3>Navigazione</h3>
+            <a href="index.html">Home</a>
+            <a href="benvenuto.html">Benvenuto</a>
+            <a href="perche-esiste.html">Perché esiste</a>
+            <a href="come-funziona.html">Come funziona</a>
+            <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+            <a href="scrivi.html">Scrivi una domanda</a>
+            <a href="contatto.html">Contatto</a>
+            <a href="chi-sono.html">Chi sono</a>
+            <a href="faq.html">FAQ</a>
         </div>
     </div>
+
+    <script>
+        function openMobileMenu() {
+            document.getElementById('mobilePanel').style.display = 'flex';
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobilePanel').style.display = 'none';
+        }
+    </script>
 
     <!-- HERO -->
-    <div class="hero">
-        <img src="immagini/hero-faq.jpg" alt="Un luogo semplice dove trovare risposte chiare alle domande più comuni">
-        <div class="hero-content">
-            <h1>Domande frequenti</h1>
-            <p>Alcune risposte semplici e chiare per orientarti con calma.</p>
+    <section class="hero">
+        <img src="immagini/hero-faq.jpg" alt="FAQ" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>FAQ</h1>
+            <p>Domande frequenti.</p>
         </div>
-    </div>
+    </section>
 
     <!-- CONTENUTO -->
-    <section class="pagina-testo">
+    <main class="contenuto">
 
         <h2>Domande frequenti</h2>
 
-        <h3>È davvero anonimo?</h3>
-        <p>
-            Sì. Il tuo messaggio non viene pubblicato e non è visibile ad altri.
-        </p>
+        <h3>Le domande sono anonime?</h3>
+        <p>Sì, puoi scrivere senza indicare il tuo nome.</p>
 
-        <h3>Quanto devo scrivere?</h3>
-        <p>
-            Anche poche righe bastano. Non serve trovare le parole perfette.
-        </p>
+        <h3>Come riceverò la risposta?</h3>
+        <p>Puoi scegliere se riceverla via email oppure tramite cellulare (SMS o WhatsApp).</p>
 
-        <h3>Quando riceverò una risposta?</h3>
-        <p>
-            Rispondo con calma, nel tempo necessario per offrirti un ascolto vero.
-        </p>
+        <h3>Chi leggerà il mio messaggio?</h3>
+        <p>Leggo personalmente ogni messaggio e rispondo in modo privato.</p>
 
-        <h3>Serve avere già le idee chiare?</h3>
-        <p>
-            No. Puoi iniziare da dove sei, anche se non sai bene cosa dire.
-            Se vuoi, puoi partire da <a href="scrivi.html">una domanda</a>.
-        </p>
-
-    </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <p>Uno spazio di ascolto, con calma e presenza.</p>
-        <p><a href="contatto.html">Contattami</a></p>
+    <footer>
+        <p>&copy; 2026 Domande dei Giovani</p>
+        <a href="scrivi.html">Scrivi una domanda</a>
     </footer>
-
-    <!-- SCRIPT AUDIO -->
-    <script>
-    document.getElementById("play-audio").addEventListener("click", function() {
-        const audio = document.getElementById("audio-player");
-        audio.play();
-    });
-    </script>
 
 </body>
 </html>
-
