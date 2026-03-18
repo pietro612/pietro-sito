@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Scrivi una domanda</title>
-    <meta name="description" content="Scrivi una domanda in modo privato e ricevi una risposta personale.">
+    <meta name="description" content="Scrivi una domanda in modo privato e senza giudizio.">
 
     <meta name="theme-color" content="#245f89">
     <link rel="canonical" href="https://domandedeigiovani.it/scrivi.html">
 
     <meta property="og:title" content="Scrivi una domanda">
-    <meta property="og:description" content="Scrivi una domanda in modo privato e ricevi una risposta personale.">
+    <meta property="og:description" content="Scrivi una domanda in modo privato e senza giudizio.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
     <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Scrivi una domanda">
-    <meta name="twitter:description" content="Scrivi una domanda in modo privato e ricevi una risposta personale.">
+    <meta name="twitter:description" content="Scrivi una domanda in modo privato e senza giudizio.">
     <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-scrivi.jpg">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -84,6 +84,11 @@
 
         body { margin-left: 220px; }
 
+        /* TEXTAREA PIÙ SPAZIOSO (mobile + desktop) */
+        textarea {
+            min-height: 220px;
+        }
+
         @media (max-width: 768px) {
             .sidebar { display: none; }
             body { margin-left: 0; }
@@ -111,19 +116,19 @@
         <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
     </div>
 
-    <!-- MENU MOBILE COMPLETO -->
+    <!-- MENU MOBILE CORRETTO -->
     <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
         <div class="mobile-panel" onclick="event.stopPropagation()">
             <h3>Navigazione</h3>
-            <a href="index.html">Home</a>
-            <a href="benvenuto.html">Benvenuto</a>
-            <a href="perche-esiste.html">Perché esiste</a>
-            <a href="come-funziona.html">Come funziona</a>
-            <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-            <a href="scrivi.html">Scrivi una domanda</a>
-            <a href="contatto.html">Contatto</a>
-            <a href="chi-sono.html">Chi sono</a>
-            <a href="faq.html">FAQ</a>
+            <a href="index.html" onclick="closeMobileMenu()">Home</a>
+            <a href="benvenuto.html" onclick="closeMobileMenu()">Benvenuto</a>
+            <a href="perche-esiste.html" onclick="closeMobileMenu()">Perché esiste</a>
+            <a href="come-funziona.html" onclick="closeMobileMenu()">Come funziona</a>
+            <a href="come-tratto-i-messaggi.html" onclick="closeMobileMenu()">Come tratto i messaggi</a>
+            <a href="scrivi.html" onclick="closeMobileMenu()">Scrivi una domanda</a>
+            <a href="contatto.html" onclick="closeMobileMenu()">Contatto</a>
+            <a href="chi-sono.html" onclick="closeMobileMenu()">Chi sono</a>
+            <a href="faq.html" onclick="closeMobileMenu()">FAQ</a>
         </div>
     </div>
 
@@ -144,7 +149,7 @@
     <main class="contenuto">
         <h2>Scrivi una domanda</h2>
 
-        <form action="https://formspree.io/f/movqzjqd" method="POST" class="form-contatto">
+        <form action="https://formspree.io/f/mjkbqgkw" method="POST">
 
             <label for="messaggio">La tua domanda</label>
             <textarea id="messaggio" name="messaggio" required></textarea>
@@ -152,11 +157,10 @@
             <label for="email">Email (opzionale)</label>
             <input type="email" id="email" name="email">
 
-            <label for="telefono">Cellulare (opzionale)</label>
-            <input type="tel" id="telefono" name="telefono">
+            <label for="cellulare">Cellulare (opzionale)</label>
+            <input type="text" id="cellulare" name="cellulare">
 
             <button type="submit">Invia</button>
-
         </form>
     </main>
 
