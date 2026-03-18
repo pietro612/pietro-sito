@@ -65,6 +65,11 @@
             background: rgba(0,0,0,0.25);
             justify-content: center;
             align-items: center;
+            cursor: pointer;
+        }
+
+        .mobile-panel-overlay.active {
+            display: flex;
         }
 
         .mobile-panel {
@@ -111,7 +116,6 @@
         <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
     </div>
 
-    <!-- MENU MOBILE CORRETTO -->
     <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
         <div class="mobile-panel" onclick="event.stopPropagation()">
             <h3>Navigazione</h3>
@@ -128,8 +132,12 @@
     </div>
 
     <script>
-        function openMobileMenu() { document.getElementById('mobilePanel').style.display = 'flex'; }
-        function closeMobileMenu() { document.getElementById('mobilePanel').style.display = 'none'; }
+        function openMobileMenu() {
+            document.getElementById('mobilePanel').classList.add('active');
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobilePanel').classList.remove('active');
+        }
     </script>
 
     <section class="hero">
