@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domande dei Giovani</title>
-
-    <!-- Redirect immediato alla nuova Home -->
-    <meta http-equiv="refresh" content="0; url=home.html">
-
-    <script>
-        window.location.href = "home.html";
-    </script>
+  <meta charset="UTF-8">
+  <title>Domande dei Giovani</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #000; color: #fff; }
+    .hero {
+      height: 300px;
+      background-image: url('immagine-erba.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    nav {
+      background: #000;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav a:hover { text-decoration: underline; }
+    main { padding: 24px; max-width: 700px; margin: auto; }
+  </style>
 </head>
 <body>
-    <p>Reindirizzamento in corso…</p>
+
+  <div class="hero"></div>
+
+  <nav>
+    <a href="perche-esiste.html">Perché esiste</a>
+    <a href="come-funziona.html">Come funziona</a>
+    <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+    <a href="scrivi-una-domanda.html">Scrivi una domanda</a>
+    <a href="contatto.html">Contatto</a>
+    <a href="chi-sono.html">Chi sono</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+
+  <main>
+    <h1>Benvenuto</h1>
+    <p>Uno spazio semplice e tranquillo dove puoi fare una domanda.</p>
+  </main>
+
 </body>
 </html>
