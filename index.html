@@ -2,162 +2,17 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domande dei Giovani</title>
-    <meta name="description" content="Uno spazio semplice e tranquillo dove puoi fare una domanda in modo privato e senza giudizio.">
 
-    <meta name="theme-color" content="#245f89">
-    <link rel="canonical" href="https://domandedeigiovani.it/home.html">
-
-    <meta property="og:title" content="Domande dei Giovani">
-    <meta property="og:description" content="Uno spazio semplice e tranquillo dove puoi fare una domanda in modo privato e senza giudizio.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://domandedeigiovani.it/home.html">
-    <meta property="og:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Domande dei Giovani">
-    <meta name="twitter:description" content="Uno spazio semplice e tranquillo dove puoi fare una domanda in modo privato e senza giudizio.">
-    <meta name="twitter:image" content="https://domandedeigiovani.it/immagini/hero-home.jpg">
-
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style-v2.css">
-
-    <style>
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 220px;
-            height: 100vh;
-            background: #ffffff;
-            border-right: 1px solid #e5e5e5;
-            padding: 24px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .sidebar h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
-        .sidebar a { color: #245f89; text-decoration: none; font-size: 1rem; padding: 4px 0; }
-        .sidebar a:hover { text-decoration: underline; }
-
-        .mobile-bar {
-            display: none;
-            height: 48px;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e5e5;
-            padding: 0 16px;
-            align-items: center;
-        }
-
-        .mobile-menu-icon { font-size: 26px; color: #245f89; cursor: pointer; }
-
-        .mobile-panel-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.25);
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .mobile-panel-overlay.active {
-            display: flex;
-        }
-
-        .mobile-panel {
-            background: #ffffff;
-            width: 300px;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .mobile-panel h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #245f89; }
-        .mobile-panel a { color: #245f89; text-decoration: none; font-size: 1rem; }
-        .mobile-panel a:hover { text-decoration: underline; }
-
-        body { margin-left: 220px; }
-
-        @media (max-width: 768px) {
-            .sidebar { display: none; }
-            body { margin-left: 0; }
-            .mobile-bar { display: flex; }
-        }
-    </style>
-</head>
-
-<body>
-
-    <nav class="sidebar">
-        <h3>Navigazione</h3>
-        <a href="home.html">Home</a>
-        <a href="benvenuto.html">Benvenuto</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
-    </nav>
-
-    <div class="mobile-bar">
-        <span class="mobile-menu-icon" onclick="openMobileMenu()">☰</span>
-    </div>
-
-    <div class="mobile-panel-overlay" id="mobilePanel" onclick="closeMobileMenu()">
-        <div class="mobile-panel" onclick="event.stopPropagation()">
-            <h3>Navigazione</h3>
-            <a href="home.html" onclick="closeMobileMenu()">Home</a>
-            <a href="benvenuto.html" onclick="closeMobileMenu()">Benvenuto</a>
-            <a href="perche-esiste.html" onclick="closeMobileMenu()">Perché esiste</a>
-            <a href="come-funziona.html" onclick="closeMobileMenu()">Come funziona</a>
-            <a href="come-tratto-i-messaggi.html" onclick="closeMobileMenu()">Come tratto i messaggi</a>
-            <a href="scrivi.html" onclick="closeMobileMenu()">Scrivi una domanda</a>
-            <a href="contatto.html" onclick="closeMobileMenu()">Contatto</a>
-            <a href="chi-sono.html" onclick="closeMobileMenu()">Chi sono</a>
-            <a href="faq.html" onclick="closeMobileMenu()">FAQ</a>
-        </div>
-    </div>
+    <!-- Redirect immediato alla nuova Home -->
+    <meta http-equiv="refresh" content="0; url=home.html">
 
     <script>
-        function openMobileMenu() {
-            document.getElementById('mobilePanel').classList.add('active');
-        }
-        function closeMobileMenu() {
-            document.getElementById('mobilePanel').classList.remove('active');
-        }
+        window.location.href = "home.html";
     </script>
-
-    <section class="hero">
-        <img src="immagini/hero-home.jpg" alt="Domande dei Giovani" class="hero-image">
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-            <h1>Domande dei Giovani</h1>
-            <p>Uno spazio semplice e tranquillo dove puoi fare una domanda.</p>
-        </div>
-    </section>
-
-    <main class="contenuto">
-        <h2>Benvenuto</h2>
-        <p>Uno spazio sereno dove puoi fare una domanda in modo privato e senza giudizio.</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Domande dei Giovani</p>
-        <a href="scrivi.html">Scrivi una domanda</a>
-    </footer>
-
+</head>
+<body>
+    <p>Reindirizzamento in corso…</p>
 </body>
 </html>
