@@ -85,13 +85,13 @@ footer {
     .hamburger {
         display: block;
     }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
-    }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* questa è fondamentale */
+}
 
     .nav-links.open {
         display: flex;
