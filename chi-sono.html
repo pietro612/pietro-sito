@@ -6,12 +6,76 @@
     <title>Chi sono – Domande dei Giovani</title>
 
     <link rel="stylesheet" href="style-v2.css?v=3">
+
+    <style>
+        /* Icona hamburger (visibile solo su mobile) */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Menu mobile nascosto */
+        nav ul {
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Attiva il menu mobile */
+        nav ul.open {
+            max-height: 500px;
+        }
+
+        /* Versione mobile */
+        @media (max-width: 768px) {
+            nav {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            nav ul {
+                max-height: 0;
+                flex-direction: column;
+                background: white;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                border-top: 1px solid #ddd;
+            }
+
+            nav ul li {
+                padding: 12px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header class="hero" style="background-image: url('hero-chisono.jpg');">
+    <header class="hero" style="background-image: url('hero-chi-sono.jpg');">
+
         <nav>
+
+            <!-- ICONA HAMBURGER -->
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- MENU ORIGINALE -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="perche-esiste.html">Perché esiste</a></li>
@@ -22,35 +86,67 @@
                 <li><a href="chi-sono.html" class="active">Chi sono</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
+
         </nav>
 
         <div class="hero-text">
             <h1>Chi sono</h1>
         </div>
+
     </header>
 
     <main class="content">
-        <h2>Una breve presentazione</h2>
+
+        <h2>Una persona che ascolta</h2>
 
         <p>
-            Mi chiamo Pietro e ho creato questo spazio per offrire un luogo tranquillo dove poter fare domande senza sentirsi giudicati.
-            Credo profondamente nel valore dell’ascolto, della delicatezza e della sincerità.
+            Mi chiamo Pietro e ho creato questo spazio per offrire ai giovani un luogo tranquillo
+            dove poter fare domande, condividere pensieri o cercare un orientamento senza sentirsi
+            giudicati. Non rappresento un’istituzione, non faccio diagnosi e non offro percorsi
+            terapeutici. Sono semplicemente una persona che ascolta.
+        </p>
+
+        <h2>Perché ho aperto questo spazio</h2>
+
+        <p>
+            Negli anni ho incontrato molti giovani che avevano bisogno di parlare, ma non sempre
+            trovavano un luogo sicuro dove farlo. A volte basta qualcuno che legga con attenzione,
+            che risponda con calma, che non abbia fretta di interpretare o classificare.
         </p>
 
         <p>
-            Ogni messaggio che ricevo è per me un gesto di fiducia.  
-            Lo leggo con attenzione e rispetto, cercando di rispondere nel modo più umano e autentico possibile.
+            Questo sito nasce da quel desiderio: offrire un punto di contatto semplice, umano,
+            rispettoso.
+        </p>
+
+        <h2>Come rispondo ai messaggi</h2>
+
+        <p>
+            Leggo ogni messaggio personalmente e rispondo con cura. Non uso modelli automatici,
+            non preparo risposte standard e non raccolgo dati personali. Ogni risposta è un piccolo
+            dialogo, unico e riservato.
         </p>
 
         <p>
-            Non sono qui per dare verità assolute, ma per offrire uno sguardo, un pensiero, un punto di appoggio.
-            A volte basta poco per sentirsi meno soli.
+            Se vuoi scrivermi, puoi farlo da qui:
         </p>
+
+        <p>
+            <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
+        </p>
+
     </main>
 
     <footer>
         <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
     </footer>
+
+    <!-- SCRIPT MENU HAMBURGER -->
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
