@@ -6,12 +6,76 @@
     <title>FAQ – Domande dei Giovani</title>
 
     <link rel="stylesheet" href="style-v2.css?v=3">
+
+    <style>
+        /* Icona hamburger (visibile solo su mobile) */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Menu mobile nascosto */
+        nav ul {
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Attiva il menu mobile */
+        nav ul.open {
+            max-height: 500px;
+        }
+
+        /* Versione mobile */
+        @media (max-width: 768px) {
+            nav {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            nav ul {
+                max-height: 0;
+                flex-direction: column;
+                background: white;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                border-top: 1px solid #ddd;
+            }
+
+            nav ul li {
+                padding: 12px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <header class="hero" style="background-image: url('hero-faq.jpg');">
+
         <nav>
+
+            <!-- ICONA HAMBURGER -->
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- MENU ORIGINALE -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="perche-esiste.html">Perché esiste</a></li>
@@ -22,37 +86,60 @@
                 <li><a href="chi-sono.html">Chi sono</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
             </ul>
+
         </nav>
 
         <div class="hero-text">
             <h1>Domande frequenti</h1>
         </div>
+
     </header>
 
     <main class="content">
 
         <h2>Le domande più comuni</h2>
 
-        <h3>Devo lasciare il mio nome o altri dati personali?</h3>
-        <p>No. Puoi scrivere liberamente senza registrarti e senza lasciare informazioni personali.</p>
+        <h3>Devo registrarmi?</h3>
+        <p>No, non serve nessuna registrazione. Puoi scrivere liberamente senza creare un account.</p>
 
-        <h3>Chi leggerà il mio messaggio?</h3>
-        <p>Leggo personalmente ogni messaggio con attenzione e rispetto.</p>
+        <h3>Devo lasciare i miei dati?</h3>
+        <p>No. L’email è opzionale e serve solo se vuoi ricevere una risposta.</p>
 
-        <h3>Riceverò una risposta?</h3>
-        <p>Sì, se lasci un indirizzo email. Se non lo lasci, leggerò comunque il tuo messaggio, ma non potrò rispondere.</p>
+        <h3>Chi legge i messaggi?</h3>
+        <p>Li leggo personalmente. Non ci sono altre persone coinvolte e non vengono condivisi con nessuno.</p>
 
-        <h3>Il mio messaggio rimane privato?</h3>
-        <p>Sì. Non condivido i messaggi con nessuno e non li uso per altri scopi.</p>
+        <h3>Riceverò sempre una risposta?</h3>
+        <p>Sì, rispondo a ogni messaggio. A volte può volerci un po’ di tempo, ma ogni parola viene letta con attenzione.</p>
 
-        <h3>Posso scrivere più di una domanda?</h3>
-        <p>Certo. Puoi scrivere ogni volta che ne senti il bisogno.</p>
+        <h3>Le mie domande vengono salvate?</h3>
+        <p>No. Non creo archivi, non conservo i messaggi e non costruisco profili.</p>
+
+        <h3>Posso scrivere anche se non so bene cosa dire?</h3>
+        <p>Sì. Puoi iniziare da dove vuoi, anche da una frase semplice o da un pensiero confuso.</p>
+
+        <h3>Posso scrivere più volte?</h3>
+        <p>Certo. Puoi tornare quando vuoi, senza limiti.</p>
+
+        <p>
+            Se vuoi fare una domanda, puoi iniziare da qui:
+        </p>
+
+        <p>
+            <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
+        </p>
 
     </main>
 
     <footer>
         <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
     </footer>
+
+    <!-- SCRIPT MENU HAMBURGER -->
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
