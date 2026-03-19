@@ -4,127 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatto – Domande dei Giovani</title>
-
-   <link rel="stylesheet" href="style-v2.css?v=4">
-
-    <style>
-        /* Icona hamburger (visibile solo su mobile) */
-        .hamburger {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        /* Menu mobile nascosto */
-        nav ul {
-            transition: max-height 0.3s ease;
-            overflow: hidden;
-        }
-
-        /* Attiva il menu mobile */
-        nav ul.open {
-            max-height: 500px;
-        }
-
-        /* Versione mobile */
-        @media (max-width: 768px) {
-            nav {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                z-index: 1000;
-            }
-
-            nav ul {
-                max-height: 0;
-                flex-direction: column;
-                background: white;
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                border-top: 1px solid #ddd;
-            }
-
-            nav ul li {
-                padding: 12px 20px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            nav ul li a {
-                display: block;
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
-    <header class="hero" style="background-image: url('hero-contatto.jpg');">
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-        <nav>
+    <img src="immagini/contatto.jpg" class="header-image" alt="Contatto">
 
-            <!-- ICONA HAMBURGER -->
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
-            </div>
-
-            <!-- MENU ORIGINALE -->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="perche-esiste.html">Perché esiste</a></li>
-                <li><a href="come-funziona.html">Come funziona</a></li>
-                <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-                <li><a href="scrivi-una-domanda.html">Scrivi una domanda</a></li>
-                <li><a href="contatto.html" class="active">Contatto</a></li>
-                <li><a href="chi-sono.html">Chi sono</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-
-        </nav>
-
-        <div class="hero-text">
-            <h1>Contatto</h1>
-        </div>
-
-    </header>
-
-    <main class="content">
-
-        <h2>Come puoi metterti in contatto</h2>
+    <div class="container">
+        <h1>Contatto</h1>
 
         <p>
-            Se hai bisogno di chiarimenti, vuoi condividere un pensiero o semplicemente desideri
-            scrivere qualcosa che non rientra nelle domande, puoi farlo da qui.
+            Se vuoi scrivermi direttamente, puoi farlo tramite il modulo nella pagina “Scrivi una domanda”.
+            Non raccolgo dati personali e non uso sistemi di tracciamento.
         </p>
 
         <p>
-            Non serve registrarsi e non devi lasciare dati personali se non vuoi.
+            Se preferisci, puoi anche contattarmi via email:
+            <br><strong>domandedeigiovani@gmail.com</strong>
         </p>
 
-        <form action="https://formspree.io/f/xjkvzjpn" method="POST" class="form-box">
-            <input type="hidden" name="_redirect" value="https://domandedeigiovani.it/grazie.html">
-            <textarea name="messaggio" rows="7" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
-            <input type="email" name="email" placeholder="La tua email (opzionale)">
-            <button type="submit" class="btn">Invia</button>
-        </form>
+        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
+    </div>
 
-    </main>
-
-    <footer>
-        <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
-    </footer>
-
-    <!-- SCRIPT MENU HAMBURGER -->
     <script>
         function toggleMenu() {
-            document.querySelector("nav ul").classList.toggle("open");
+            document.getElementById("navMenu").classList.toggle("open");
         }
     </script>
 
