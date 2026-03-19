@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style-v2.css?v=3">
 
     <style>
-        /* Icona hamburger (visibile solo su mobile) */
         .hamburger {
             display: none;
             font-size: 28px;
@@ -16,18 +15,15 @@
             padding: 10px;
         }
 
-        /* Menu mobile nascosto */
         nav ul {
             transition: max-height 0.3s ease;
             overflow: hidden;
         }
 
-        /* Attiva il menu mobile */
         nav ul.open {
             max-height: 500px;
         }
 
-        /* Versione mobile */
         @media (max-width: 768px) {
             nav {
                 position: relative;
@@ -66,16 +62,12 @@
 
 <body>
 
-    <header class="hero" style="background-image: url('hero-home.jpg');">
+    <!-- IMMAGINE CORRETTA DELLA HOME -->
+    <header class="hero" style="background-image: url('hero-benvenuto.jpg');">
 
         <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-            <!-- ICONA HAMBURGER -->
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
-            </div>
-
-            <!-- MENU ORIGINALE -->
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="perche-esiste.html">Perché esiste</a></li>
@@ -86,7 +78,6 @@
                 <li><a href="chi-sono.html">Chi sono</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
-
         </nav>
 
         <div class="hero-text">
@@ -96,6 +87,7 @@
     </header>
 
     <main class="content">
+
         <h2>Uno spazio tranquillo per le tue domande</h2>
 
         <p>
@@ -111,13 +103,13 @@
         <p>
             <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
         </p>
+
     </main>
 
     <footer>
         <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
     </footer>
 
-    <!-- SCRIPT MENU HAMBURGER -->
     <script>
         function toggleMenu() {
             document.querySelector("nav ul").classList.toggle("open");
