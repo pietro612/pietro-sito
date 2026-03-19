@@ -20,6 +20,7 @@ nav ul {
     justify-content: center;
     gap: 25px;
     padding: 15px 0;
+    flex-wrap: wrap; /* permette al menu di andare a capo */
 }
 
 nav ul li a {
@@ -67,6 +68,7 @@ nav ul li a.active {
 .hero-text h1 {
     word-wrap: break-word;
     overflow-wrap: break-word;
+    font-size: 42px;
 }
 
 /* CONTENUTO SOTTO */
@@ -123,54 +125,30 @@ footer {
     color: #555;
     font-size: 15px;
 }
-@media (max-width: 600px) {
-    .hero-text h1 {
-        font-size: 28px;
-        line-height: 1.2;
-        padding: 0 20px;
-        text-align: center;
-    }
-}
+
+/* VERSIONE MOBILE */
 @media (max-width: 600px) {
 
-    /* Riduce l'altezza dell'immagine in alto */
-    .hero {
-        height: 220px;
-        padding-bottom: 25px;
-    }
-
-    /* Sistema il titolo */
-    .hero-text h1 {
-        font-size: 24px;
-        line-height: 1.25;
-        padding: 0 15px;
-        text-align: center;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    /* Sistema il menu se serve */
+    /* Menu più compatto */
     nav ul {
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 10px 0;
+        gap: 10px;
+        padding: 10px 5px;
     }
 
     nav ul li a {
-        font-size: 15px;
+        font-size: 14px;
+        padding: 5px;
     }
-}
-@media (max-width: 600px) {
 
-    /* Riduce l'altezza dell'immagine in alto */
+    /* Hero più bassa */
     .hero {
         height: 200px;
         padding-bottom: 20px;
     }
 
-    /* Titolo che rientra sempre */
+    /* Titolo che non esce mai dai bordi */
     .hero-text h1 {
-        font-size: 22px;
+        font-size: 24px;
         line-height: 1.25;
         padding: 0 20px;
         text-align: center;
@@ -182,18 +160,5 @@ footer {
     .content {
         padding: 0 15px;
         font-size: 17px;
-    }
-}
-@media (max-width: 600px) {
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px 5px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-        padding: 5px;
     }
 }
