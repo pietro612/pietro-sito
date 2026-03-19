@@ -6,12 +6,76 @@
     <title>Contatto – Domande dei Giovani</title>
 
     <link rel="stylesheet" href="style-v2.css?v=3">
+
+    <style>
+        /* Icona hamburger (visibile solo su mobile) */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Menu mobile nascosto */
+        nav ul {
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Attiva il menu mobile */
+        nav ul.open {
+            max-height: 500px;
+        }
+
+        /* Versione mobile */
+        @media (max-width: 768px) {
+            nav {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            nav ul {
+                max-height: 0;
+                flex-direction: column;
+                background: white;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                border-top: 1px solid #ddd;
+            }
+
+            nav ul li {
+                padding: 12px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header class="hero" style="background-image: url('hero-contatto.jpg');">  
+    <header class="hero" style="background-image: url('hero-contatto.jpg');">
+
         <nav>
+
+            <!-- ICONA HAMBURGER -->
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- MENU ORIGINALE -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="perche-esiste.html">Perché esiste</a></li>
@@ -22,6 +86,7 @@
                 <li><a href="chi-sono.html">Chi sono</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
+
         </nav>
 
         <div class="hero-text">
@@ -31,25 +96,37 @@
     </header>
 
     <main class="content">
-        <h2>Come puoi contattarmi</h2>
+
+        <h2>Come puoi metterti in contatto</h2>
 
         <p>
-            Se desideri scrivermi direttamente, puoi farlo tramite questo indirizzo email:
+            Se hai bisogno di chiarimenti, vuoi condividere un pensiero o semplicemente desideri
+            scrivere qualcosa che non rientra nelle domande, puoi farlo da qui.
         </p>
-
-<p style="font-size: 1.2rem; font-weight: bold; margin-top: 10px;">
-    <a href="mailto:pietroceroni@gmail.com">pietroceroni@gmail.com</a>
-</p>
 
         <p>
-            Rispondo sempre con calma e rispetto, senza giudizio.  
-            Se preferisci, puoi anche usare la pagina “Scrivi una domanda”.
+            Non serve registrarsi e non devi lasciare dati personali se non vuoi.
         </p>
+
+        <form action="https://formspree.io/f/xjkvzjpn" method="POST" class="form-box">
+            <input type="hidden" name="_redirect" value="https://domandedeigiovani.it/grazie.html">
+            <textarea name="messaggio" rows="7" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+            <input type="email" name="email" placeholder="La tua email (opzionale)">
+            <button type="submit" class="btn">Invia</button>
+        </form>
+
     </main>
 
     <footer>
         <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
     </footer>
+
+    <!-- SCRIPT MENU HAMBURGER -->
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
