@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrivi una domanda</title>
-    <link rel="stylesheet" href="style-v2.css">
+    <title>Scrivi una domanda – Domande dei Giovani</title>
+
+    <link rel="stylesheet" href="style-v2.css?v=3">
 </head>
+
 <body>
 
-    <header class="hero" style="background-image: url('hero-scrivi.jpg');">
+    <header class="hero" style="background-image: url('hero-funziona.jpg');">
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,18 +27,20 @@
 
         <div class="hero-text">
             <h1>Scrivi una domanda</h1>
-            <p>Uno spazio semplice dove puoi esprimere ciò che ti sta a cuore.</p>
         </div>
+
     </header>
 
     <main class="content">
         <h2>La tua domanda</h2>
-        <p>Scrivi liberamente ciò che desideri chiedere. Non ci sono domande giuste o sbagliate.</p>
 
-        <form action="grazie.html" method="get" class="form-box">
-            <label for="domanda">La tua domanda:</label>
-            <textarea id="domanda" name="domanda" rows="6" required></textarea>
+        <p>
+            Qui puoi scrivere liberamente la tua domanda. Non serve registrarsi e non devi lasciare dati personali.
+            Il tuo messaggio verrà letto con attenzione e rispetto.
+        </p>
 
+        <form action="grazie.html" method="GET" class="form-box">
+            <textarea name="messaggio" rows="7" placeholder="Scrivi qui la tua domanda..."></textarea>
             <button type="submit" class="btn">Invia</button>
         </form>
     </main>
