@@ -4,143 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perché esiste – Domande dei Giovani</title>
-
-   <link rel="stylesheet" href="style-v2.css?v=4">
-
-    <style>
-        /* Icona hamburger (visibile solo su mobile) */
-        .hamburger {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        /* Menu mobile nascosto */
-        nav ul {
-            transition: max-height 0.3s ease;
-            overflow: hidden;
-        }
-
-        /* Attiva il menu mobile */
-        nav ul.open {
-            max-height: 500px;
-        }
-
-        /* Versione mobile */
-        @media (max-width: 768px) {
-            nav {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                z-index: 1000;
-            }
-
-            nav ul {
-                max-height: 0;
-                flex-direction: column;
-                background: white;
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                border-top: 1px solid #ddd;
-            }
-
-            nav ul li {
-                padding: 12px 20px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            nav ul li a {
-                display: block;
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
- <header class="hero" style="background-image: url('hero-benvenuto.jpg');">
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-        <nav>
+    <img src="immagini/perche.jpg" class="header-image" alt="Perché esiste">
 
-            <!-- ICONA HAMBURGER -->
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
-            </div>
-
-            <!-- MENU ORIGINALE -->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="perche-esiste.html" class="active">Perché esiste</a></li>
-                <li><a href="come-funziona.html">Come funziona</a></li>
-                <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-                <li><a href="scrivi-una-domanda.html">Scrivi una domanda</a></li>
-                <li><a href="contatto.html">Contatto</a></li>
-                <li><a href="chi-sono.html">Chi sono</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-
-        </nav>
-
-        <div class="hero-text">
-            <h1>Perché esiste</h1>
-        </div>
-
-    </header>
-
-    <main class="content">
-
-        <h2>Un luogo semplice, per parlare con calma</h2>
+    <div class="container">
+        <h1>Perché esiste questo spazio</h1>
 
         <p>
-            Questo spazio esiste per dare ai giovani un luogo tranquillo dove poter fare domande,
-            esprimere dubbi, condividere pensieri o cercare un orientamento. Non è un servizio
-            professionale, non è un centro di ascolto, non è un luogo dove si ricevono diagnosi
-            o soluzioni immediate.
+            Questo spazio nasce dal desiderio di offrire un luogo tranquillo, rispettoso e protetto
+            dove poter esprimere ciò che ti sta a cuore. A volte non è facile trovare qualcuno che ascolti
+            senza giudicare, senza interpretare, senza dare etichette.
         </p>
 
         <p>
-            È semplicemente un posto dove puoi scrivere ciò che senti, senza giudizio e senza
-            dover mostrare nulla di te. Un posto dove le parole vengono accolte con rispetto.
+            Qui puoi scrivere liberamente, con calma, sapendo che ogni parola viene accolta con attenzione.
         </p>
 
-        <h2>Perché scrivere aiuta</h2>
+        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
+    </div>
 
-        <p>
-            A volte mettere in parole ciò che si prova è già un primo passo per capirlo meglio.
-            Non sempre abbiamo qualcuno con cui parlare liberamente, senza paura di essere fraintesi
-            o giudicati. Qui puoi farlo.
-        </p>
-
-        <p>
-            Non devi avere le idee chiare. Non devi sapere cosa dire. Puoi iniziare da dove vuoi.
-        </p>
-
-        <p>
-            Se vuoi, puoi farlo ora:
-        </p>
-
-        <p>
-            <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
-        </p>
-
-    </main>
-
-    <footer>
-        <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
-    </footer>
-
-    <!-- SCRIPT MENU HAMBURGER -->
     <script>
         function toggleMenu() {
-            document.querySelector("nav ul").classList.toggle("open");
+            document.getElementById("navMenu").classList.toggle("open");
         }
     </script>
 
