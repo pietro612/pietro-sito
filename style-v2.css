@@ -65,8 +65,8 @@ nav ul li a.active {
 }
 
 .hero-text h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* CONTENUTO SOTTO */
