@@ -47,7 +47,8 @@ body, h1, p, ul, li {
 /* IMMAGINE A TUTTA LARGHEZZA */
 .header-image {
     width: 100%;
-    height: auto;
+    height: 450px;
+    object-fit: cover;
     display: block;
 }
 
