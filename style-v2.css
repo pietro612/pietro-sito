@@ -162,3 +162,45 @@ footer {
         font-size: 17px;
     }
 }
+/* Icona hamburger (visibile solo su mobile) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Menu mobile nascosto */
+nav ul {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+/* Attiva il menu mobile */
+nav ul.open {
+    max-height: 500px;
+}
+
+/* Versione mobile */
+@media (max-width: 768px) {
+    nav ul {
+        max-height: 0;
+        flex-direction: column;
+        background: white;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 12px 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
