@@ -1,70 +1,48 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Perché esiste</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perché esiste – Domande dei Giovani</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #000;
-      color: #fff;
-    }
-
-    .hero {
-      height: 300px;
-      background-image: url('hero-perche.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    nav {
-      background: #000;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 24px;
-      max-width: 700px;
-      margin: auto;
-    }
-  </style>
+    <link rel="stylesheet" href="style-v2.css?v=3">
 </head>
 
 <body>
 
-  <div class="hero"></div>
+    <header class="hero" style="background-image: url('hero-perche.jpg');">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-    <a href="scrivi-una-domanda.html">Scrivi una domanda</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="chi-sono.html">Chi sono</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="perche-esiste.html" class="active">Perché esiste</a></li>
+                <li><a href="come-funziona.html">Come funziona</a></li>
+                <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+                <li><a href="scrivi-una-domanda.html">Scrivi una domanda</a></li>
+                <li><a href="contatto.html">Contatto</a></li>
+                <li><a href="chi-sono.html">Chi sono</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
 
-  <main>
-    <h1>Perché esiste</h1>
-    <p>Qui puoi scrivere il contenuto della pagina.</p>
-  </main>
+        <div class="hero-text">
+            <h1>Perché esiste</h1>
+        </div>
+
+    </header>
+
+    <main class="content">
+        <h2>Perché esiste questo spazio</h2>
+        <p>
+            Questo sito nasce per offrire un luogo tranquillo, semplice e rispettoso dove chiunque
+            possa fare una domanda senza sentirsi giudicato. Un posto dove fermarsi un momento,
+            riflettere e trovare un po’ di chiarezza.
+        </p>
+    </main>
+
+    <footer>
+        <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
+    </footer>
 
 </body>
 </html>
