@@ -1,7 +1,7 @@
 /* NAVBAR */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;        /* centra logo + menu */
     align-items: center;
     padding: 15px 20px;
     background-color: white;
@@ -9,14 +9,35 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-
-    /* Evita che il menu esca dallo schermo */
-    overflow-x: auto;
+    overflow-x: hidden;             /* impedisce al menu di uscire */
 }
 
 .logo {
     font-size: 20px;
     font-weight: bold;
+    margin-right: 20px;             /* avvicina logo e menu */
+}
+
+.hamburger {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;                /* permette di andare a capo */
+    justify-content: center;        /* centra tutte le voci */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
 
 .hamburger {
