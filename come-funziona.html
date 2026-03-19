@@ -4,153 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Come funziona – Domande dei Giovani</title>
-
-    <link rel="stylesheet" href="style-v2.css?v=4">
-
-    <style>
-        /* Icona hamburger (visibile solo su mobile) */
-        .hamburger {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        /* Menu mobile nascosto */
-        nav ul {
-            transition: max-height 0.3s ease;
-            overflow: hidden;
-        }
-
-        /* Attiva il menu mobile */
-        nav ul.open {
-            max-height: 500px;
-        }
-
-        /* Versione mobile */
-        @media (max-width: 768px) {
-            nav {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                z-index: 1000;
-            }
-
-            nav ul {
-                max-height: 0;
-                flex-direction: column;
-                background: white;
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                border-top: 1px solid #ddd;
-            }
-
-            nav ul li {
-                padding: 12px 20px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            nav ul li a {
-                display: block;
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
-    <header class="hero" style="background-image: url('hero-funziona.jpg');">
-
-        <nav>
-
-            <!-- ICONA HAMBURGER -->
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
-            </div>
-
-            <!-- MENU ORIGINALE -->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="perche-esiste.html">Perché esiste</a></li>
-                <li><a href="come-funziona.html" class="active">Come funziona</a></li>
-                <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-                <li><a href="scrivi-una-domanda.html">Scrivi una domanda</a></li>
-                <li><a href="contatto.html">Contatto</a></li>
-                <li><a href="chi-sono.html">Chi sono</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-
-        </nav>
-
-        <div class="hero-text">
-            <h1>Come funziona</h1>
-        </div>
-
-    </header>
-
-    <main class="content">
-
-        <h2>Un funzionamento semplice e trasparente</h2>
-
-        <p>
-            Il funzionamento di questo spazio è molto semplice: tu scrivi una domanda,
-            io la leggo con attenzione e ti rispondo con calma. Non ci sono algoritmi,
-            non ci sono risposte automatiche, non c’è nessuna pressione.
-        </p>
-
-        <p>
-            Ogni messaggio viene letto da una sola persona, in modo riservato e rispettoso.
-            Non serve registrarsi e non devi lasciare dati personali.
-        </p>
-
-        <h2>Cosa succede quando invii una domanda</h2>
-
-        <p>
-            Quando invii il tuo messaggio:
-        </p>
-
-        <ul>
-            <li>arriva in una casella dedicata</li>
-            <li>viene letto con attenzione</li>
-            <li>ricevi una risposta personale</li>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
         </ul>
+    </nav>
+
+    <img src="immagini/funziona.jpg" class="header-image" alt="Come funziona">
+
+    <div class="container">
+        <h1>Come funziona</h1>
 
         <p>
-            Non ci sono tempi prestabiliti: rispondo con cura, non con fretta.
-        </p>
-
-        <h2>Un luogo senza giudizio</h2>
-
-        <p>
-            Puoi scrivere ciò che vuoi, anche se ti sembra confuso, difficile o imbarazzante.
-            Non c’è nessun giudizio, nessuna valutazione, nessuna aspettativa.
-        </p>
-
-        <p>
-            Se vuoi fare una domanda, puoi iniziare da qui:
+            Puoi scrivere una domanda in modo semplice e privato. Non serve registrarsi,
+            non devi lasciare dati personali e non c’è alcuna forma di tracciamento.
         </p>
 
         <p>
-            <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
+            Io leggo il tuo messaggio e rispondo con calma, con rispetto e senza giudizi.
         </p>
 
-    </main>
+        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
+    </div>
 
-    <footer>
-        <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
-    </footer>
-
-    <!-- SCRIPT MENU HAMBURGER -->
     <script>
         function toggleMenu() {
-            document.querySelector("nav ul").classList.toggle("open");
+            document.getElementById("navMenu").classList.toggle("open");
         }
     </script>
 
