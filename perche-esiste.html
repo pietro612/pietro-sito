@@ -3,18 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perché esiste – Domande dei Giovani</title>
+    <title>Domande dei Giovani</title>
 
     <link rel="stylesheet" href="style-v2.css?v=3">
+
+    <style>
+        /* Icona hamburger (visibile solo su mobile) */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Menu mobile nascosto */
+        nav ul {
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Attiva il menu mobile */
+        nav ul.open {
+            max-height: 500px;
+        }
+
+        /* Versione mobile */
+        @media (max-width: 768px) {
+            nav {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            nav ul {
+                max-height: 0;
+                flex-direction: column;
+                background: white;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                border-top: 1px solid #ddd;
+            }
+
+            nav ul li {
+                padding: 12px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header class="hero" style="background-image: url('hero-benvenuto.jpg');">
+    <header class="hero" style="background-image: url('hero-home.jpg');">
+
         <nav>
+
+            <!-- ICONA HAMBURGER -->
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- MENU ORIGINALE -->
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="perche-esiste.html" class="active">Perché esiste</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="perche-esiste.html">Perché esiste</a></li>
                 <li><a href="come-funziona.html">Come funziona</a></li>
                 <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
                 <li><a href="scrivi-una-domanda.html">Scrivi una domanda</a></li>
@@ -22,35 +86,43 @@
                 <li><a href="chi-sono.html">Chi sono</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
+
         </nav>
 
         <div class="hero-text">
-            <h1>Perché esiste</h1>
+            <h1>Domande dei Giovani</h1>
         </div>
+
     </header>
 
     <main class="content">
-        <h2>Uno spazio tranquillo per le domande</h2>
+        <h2>Uno spazio tranquillo per le tue domande</h2>
 
         <p>
-            Questo sito nasce dal desiderio di offrire un luogo semplice, rispettoso e silenzioso
-            dove poter fare domande senza sentirsi giudicati.
+            Questo è un luogo dove puoi scrivere liberamente ciò che ti sta a cuore.
+            Non serve registrarsi, non devi lasciare dati personali e nessuno ti giudica.
+            Le tue parole verranno accolte con attenzione e rispetto.
         </p>
 
         <p>
-            A volte abbiamo bisogno di un punto di appoggio, di uno sguardo esterno, o semplicemente
-            di qualcuno che ascolti ciò che abbiamo dentro. Qui puoi farlo in modo libero e anonimo.
+            Se vuoi, puoi iniziare da qui:
         </p>
 
         <p>
-            Non ci sono registrazioni, non ci sono profili, non ci sono aspettative.
-            Solo uno spazio tranquillo dove puoi esprimerti.
+            <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
         </p>
     </main>
 
     <footer>
         <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
     </footer>
+
+    <!-- SCRIPT MENU HAMBURGER -->
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
