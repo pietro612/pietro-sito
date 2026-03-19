@@ -6,12 +6,76 @@
     <title>Come tratto i messaggi – Domande dei Giovani</title>
 
     <link rel="stylesheet" href="style-v2.css?v=3">
+
+    <style>
+        /* Icona hamburger (visibile solo su mobile) */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Menu mobile nascosto */
+        nav ul {
+            transition: max-height 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Attiva il menu mobile */
+        nav ul.open {
+            max-height: 500px;
+        }
+
+        /* Versione mobile */
+        @media (max-width: 768px) {
+            nav {
+                position: relative;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            nav ul {
+                max-height: 0;
+                flex-direction: column;
+                background: white;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                border-top: 1px solid #ddd;
+            }
+
+            nav ul li {
+                padding: 12px 20px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header class="hero" style="background-image: url('hero-contatto.jpg');">
+    <header class="hero" style="background-image: url('hero-messaggi.jpg');">
+
         <nav>
+
+            <!-- ICONA HAMBURGER -->
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- MENU ORIGINALE -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="perche-esiste.html">Perché esiste</a></li>
@@ -22,33 +86,65 @@
                 <li><a href="chi-sono.html">Chi sono</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
+
         </nav>
 
         <div class="hero-text">
             <h1>Come tratto i messaggi</h1>
         </div>
+
     </header>
 
     <main class="content">
+
         <h2>Rispetto, riservatezza e attenzione</h2>
 
         <p>
-            Ogni messaggio che ricevo viene letto con cura e rispetto.  
-            Non raccolgo dati personali e non conservo informazioni che non siano necessarie a rispondere alla tua domanda.
+            Ogni messaggio che ricevo viene trattato con grande rispetto. Non condivido i contenuti
+            con nessuno, non li uso per altri scopi e non vengono archiviati in modo permanente.
+            Sono parole che leggo, accolgo e a cui rispondo con cura.
         </p>
 
         <p>
-            Il tuo messaggio rimane privato: non viene condiviso con nessuno e non viene utilizzato per altri scopi.
+            Non esiste nessuna forma di giudizio, valutazione o classificazione. Ogni domanda è
+            importante perché nasce da un momento reale della tua vita.
+        </p>
+
+        <h2>Nessuna analisi, nessun profilo</h2>
+
+        <p>
+            Non faccio analisi psicologiche, non creo profili, non raccolgo dati. Non cerco di
+            interpretare chi sei o cosa dovresti fare. Mi limito a leggere ciò che scrivi e a
+            rispondere nel modo più umano e rispettoso possibile.
+        </p>
+
+        <h2>Un dialogo semplice</h2>
+
+        <p>
+            La risposta che ricevi è scritta da una persona, non da un sistema automatico.
+            Non ci sono modelli predefiniti, non ci sono risposte standard.
         </p>
 
         <p>
-            Rispondo sempre con sincerità, delicatezza e attenzione, cercando di offrire uno spazio tranquillo e accogliente.
+            Se vuoi scrivere un messaggio, puoi farlo da qui:
         </p>
+
+        <p>
+            <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
+        </p>
+
     </main>
 
     <footer>
         <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
     </footer>
+
+    <!-- SCRIPT MENU HAMBURGER -->
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
