@@ -1,53 +1,99 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrivi una domanda – Domande dei Giovani</title>
-<link rel="stylesheet" href="style-v2.css?v=7">
-</head>
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-<body>
+    /* Evita che il menu esca dallo schermo */
+    overflow-x: auto;
+}
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav>
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
 
-    <!-- Immagine corretta -->
-    <img src="hero-scrivi.jpg" class="header-image" alt="Scrivi una domanda">
+.hamburger {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-    <div class="container">
-        <h1>Scrivi una domanda</h1>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 
-        <p>
-            Puoi scrivere liberamente ciò che ti sta a cuore. Non serve registrarsi,
-            non devi lasciare dati personali e nessuno ti giudica.
-        </p>
+    /* Permette al menu di andare a capo se serve */
+    flex-wrap: wrap;
+}
 
-        <form action="https://formspree.io/f/mqakjzpq" method="POST">
-            <textarea name="messaggio" placeholder="Scrivi qui il tuo messaggio..." required style="width:100%; height:180px; padding:10px;"></textarea>
-            <button type="submit" class="cta">Invia</button>
-        </form>
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
 
-        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
-    </div>
+/* IMMAGINE GRANDE */
+.header-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    display: block;
+}
 
-    <script>
-        function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
-        }
-    </script>
+/* CONTENITORE */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-</body>
-</html>
+/* CTA */
+.cta {
+    background-color: #0077ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta:hover {
+    background-color: #005fcc;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
