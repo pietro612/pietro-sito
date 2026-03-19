@@ -4,137 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi sono – Domande dei Giovani</title>
-
-<link rel="stylesheet" href="style-v2.css?v=4">
-
-    <style>
-        .hamburger {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        nav ul {
-            transition: max-height 0.3s ease;
-            overflow: hidden;
-        }
-
-        nav ul.open {
-            max-height: 500px;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                z-index: 1000;
-            }
-
-            nav ul {
-                max-height: 0;
-                flex-direction: column;
-                background: white;
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                border-top: 1px solid #ddd;
-            }
-
-            nav ul li {
-                padding: 12px 20px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            nav ul li a {
-                display: block;
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
-    <!-- QUI IL NOME È ORA CORRETTO -->
-    <header class="hero" style="background-image: url('hero-chisono.jpg');">
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-        <nav>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <img src="immagini/chisono.jpg" class="header-image" alt="Chi sono">
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="perche-esiste.html">Perché esiste</a></li>
-                <li><a href="come-funziona.html">Come funziona</a></li>
-                <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-                <li><a href="scrivi-una-domanda.html">Scrivi una domanda</a></li>
-                <li><a href="contatto.html">Contatto</a></li>
-                <li><a href="chi-sono.html" class="active">Chi sono</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-
-        <div class="hero-text">
-            <h1>Chi sono</h1>
-        </div>
-
-    </header>
-
-    <main class="content">
-
-        <h2>Una persona che ascolta</h2>
+    <div class="container">
+        <h1>Chi sono</h1>
 
         <p>
-            Mi chiamo Pietro e ho creato questo spazio per offrire ai giovani un luogo tranquillo
-            dove poter fare domande, condividere pensieri o cercare un orientamento senza sentirsi
-            giudicati. Non rappresento un’istituzione, non faccio diagnosi e non offro percorsi
-            terapeutici. Sono semplicemente una persona che ascolta.
-        </p>
-
-        <h2>Perché ho aperto questo spazio</h2>
-
-        <p>
-            Negli anni ho incontrato molti giovani che avevano bisogno di parlare, ma non sempre
-            trovavano un luogo sicuro dove farlo. A volte basta qualcuno che legga con attenzione,
-            che risponda con calma, che non abbia fretta di interpretare o classificare.
+            Sono una persona che ascolta. Non sono un terapeuta, non sono un esperto,
+            non faccio diagnosi e non do giudizi. Rispondo con semplicità e rispetto.
         </p>
 
         <p>
-            Questo sito nasce da quel desiderio: offrire un punto di contatto semplice, umano,
-            rispettoso.
+            Questo spazio nasce dal desiderio di offrire un luogo tranquillo dove poter parlare
+            senza sentirsi osservati o valutati.
         </p>
 
-        <h2>Come rispondo ai messaggi</h2>
-
-        <p>
-            Leggo ogni messaggio personalmente e rispondo con cura. Non uso modelli automatici,
-            non preparo risposte standard e non raccolgo dati personali. Ogni risposta è un piccolo
-            dialogo, unico e riservato.
-        </p>
-
-        <p>
-            Se vuoi scrivermi, puoi farlo da qui:
-        </p>
-
-        <p>
-            <a href="scrivi-una-domanda.html" class="btn">Scrivi una domanda</a>
-        </p>
-
-    </main>
-
-    <footer>
-        <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
-    </footer>
+        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
+    </div>
 
     <script>
         function toggleMenu() {
-            document.querySelector("nav ul").classList.toggle("open");
+            document.getElementById("navMenu").classList.toggle("open");
         }
     </script>
 
