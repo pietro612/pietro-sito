@@ -154,7 +154,7 @@ footer {
 @media (max-width: 768px) {
     .music-btn {
         position: fixed;
-        top: 30px;      /* altezza perfetta per allineamento */
+        top: 26px;      /* altezza perfetta per allineamento */
         left: 10px;
         margin: 0;
         z-index: 2000;
@@ -163,4 +163,3 @@ footer {
         font-size: 16px;
     }
 }
-
