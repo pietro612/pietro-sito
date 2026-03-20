@@ -62,7 +62,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* TESTO SOTTO IL TITOLO — AGGIORNATO */
+/* TESTO SOTTO IL TITOLO */
 .container p {
     font-size: 22px;
     line-height: 1.75;
@@ -70,7 +70,7 @@ h1 {
     text-align: center;
 }
 
-/* TEXTAREA — AGGIORNATO */
+/* TEXTAREA */
 textarea {
     width: 100%;
     height: 260px;
@@ -81,7 +81,7 @@ textarea {
     resize: vertical;
 }
 
-/* BOTTONE INVIA — AGGIORNATO */
+/* BOTTONE INVIA */
 .cta {
     background-color: #0077ff;
     color: white;
@@ -125,30 +125,41 @@ footer {
         display: flex;
     }
 
-    /* immagine più armoniosa su schermi piccoli */
     .header-image {
         height: 55vh;
     }
 
-    /* testo più leggibile su smartphone */
     .container p {
         font-size: 20px;
     }
 }
 
-/* PULSANTE AUDIO — NUOVA POSIZIONE + ICONA PIÙ VISIBILE */
+/* PULSANTE AUDIO — DESKTOP: CENTRATO IN FONDO ALLA PAGINA */
 .music-btn {
-    position: fixed;
-    top: 20px;          /* spostato in alto */
-    left: 20px;         /* spostato a sinistra */
+    position: static;              /* non fisso */
+    display: block;
+    margin: 40px auto 0 auto;      /* centrato */
     background-color: #0077ff;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 60px;        /* leggermente più grande */
+    width: 60px;
     height: 60px;
-    font-size: 30px;    /* icona più grande e più visibile */
+    font-size: 30px;               /* icona più visibile */
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    z-index: 2000;
+}
+
+/* MOBILE — PULSANTE IN ALTO A SINISTRA */
+@media (max-width: 768px) {
+    .music-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        margin: 0;
+        z-index: 2000;
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
 }
