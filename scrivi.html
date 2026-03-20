@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrivi una domanda</title>
-  <link rel="stylesheet" href="style-v2.css?v=12">
+    <link rel="stylesheet" href="style-v2.css?v=20">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">Domande dei Giovani</div>
-        <ul class="nav-links">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
-            <li><a href="perche.html">Perché esiste</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
             <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
             <li><a href="scrivi.html">Scrivi una domanda</a></li>
@@ -24,25 +24,29 @@
         </ul>
     </nav>
 
-    <!-- IMMAGINE GRANDE -->
-   <img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
+    <img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
 
-    <!-- CONTENUTO -->
     <div class="container">
-        <h1>Scrivi una domanda</h1>
-        <p>Puoi scrivere liberamente ciò che ti sta a cuore.  
-        Non serve registrarsi, non devi lasciare dati personali e nessuno ti giudica.</p>
+        <h1>SCRIVI UNA DOMANDA</h1>
+        <p>
+            Puoi scrivere liberamente ciò che ti sta a cuore. 
+            Non serve registrarsi, non devi lasciare dati personali e nessuno ti giudica.
+        </p>
 
-        <form action="https://formspree.io/f/mjkbqkrl" method="POST">
-            <textarea name="message" placeholder="Scrivi qui il tuo messaggio..." required style="width:100%; height:150px;"></textarea>
+        <form action="https://formspree.io/f/mzzbqkqk" method="POST">
+            <textarea name="message" rows="6" placeholder="Scrivi qui la tua domanda..." required></textarea>
             <br><br>
-            <button type="submit" class="cta">Invia</button>
+            <button class="cta" type="submit">Invia</button>
         </form>
     </div>
 
-    <footer>
-        <p>© 2024 Domande dei Giovani</p>
-    </footer>
+    <footer>© 2025 Domande dei Giovani</footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
