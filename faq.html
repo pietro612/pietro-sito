@@ -36,9 +36,24 @@
 
     <footer>© 2025 Domande dei Giovani</footer>
 
+    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <audio id="bg-music" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
     <script>
         function toggleMenu() {
             document.getElementById("navLinks").classList.toggle("open");
+        }
+
+        function toggleMusic() {
+            const audio = document.getElementById("bg-music");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
         }
     </script>
 
