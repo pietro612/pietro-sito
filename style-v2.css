@@ -1,124 +1,58 @@
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrivi una domanda</title>
+    <link rel="stylesheet" href="style-v2.css?v=21">
+</head>
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 20px;
-}
+<body>
 
-.hamburger {
-    display: none;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    <!-- IMMAGINE -->
+    <img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
 
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-}
+    <!-- CONTENUTO -->
+    <div class="container">
+        <h1>SCRIVI UNA DOMANDA</h1>
 
-/* IMMAGINE GRANDE */
-.header-image {
-    width: 100%;
-    height: 45vh;
-    object-fit: cover;
-    display: block;
-}
+        <p>
+            Puoi scrivere liberamente ciò che ti sta a cuore.  
+            Non serve registrarsi, non devi lasciare dati personali e nessuno ti giudica.
+        </p>
 
-/* CONTENITORE */
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+        <form action="https://formspree.io/f/mzzbqkqk" method="POST">
+            <textarea name="message" placeholder="Scrivi qui la tua domanda..." required></textarea>
+            <br><br>
+            <button class="cta" type="submit">Invia</button>
+        </form>
+    </div>
 
-/* TITOLI */
-h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
+    <footer>
+        © 2025 Domande dei Giovani
+    </footer>
 
-/* TESTO SOTTO IL TITOLO */
-.container p {
-    font-size: 20px;
-    line-height: 1.7;
-    color: #333;
-    text-align: center;
-}
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
 
-/* CTA */
-.cta {
-    background-color: #0077ff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.cta:hover {
-    background-color: #005fcc;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    color: #666;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    /* immagine più armoniosa su schermi piccoli */
-    .header-image {
-        height: 55vh;
-    }
-
-    /* testo più leggibile su smartphone */
-    .container p {
-        font-size: 19px;
-    }
-}
+</body>
+</html>
