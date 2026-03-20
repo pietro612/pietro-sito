@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi sono – Domande dei Giovani</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <title>Chi sono</title>
+    <link rel="stylesheet" href="style-v2.css?v=20">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="logo">Domande dei Giovani</div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navMenu">
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
@@ -24,27 +24,22 @@
         </ul>
     </nav>
 
-    <img src="immagini/hero-chisono.jpg" class="header-image" alt="Chi sono">
+    <img src="hero-chisono.jpg" alt="Chi sono" class="header-image">
 
     <div class="container">
-        <h1>Chi sono</h1>
-
+        <h1>CHI SONO</h1>
         <p>
-            Sono una persona che ascolta. Non sono un terapeuta, non sono un esperto,
-            non faccio diagnosi e non do giudizi. Rispondo con semplicità e rispetto.
+            Sono una persona che crede nel valore dell’ascolto e del dialogo. 
+            Questo spazio nasce dal desiderio di offrire ai giovani un luogo sicuro 
+            dove poter esprimere ciò che sentono.
         </p>
-
-        <p>
-            Questo spazio nasce dal desiderio di offrire un luogo tranquillo dove poter parlare
-            senza sentirsi osservati o valutati.
-        </p>
-
-        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
     </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
 
     <script>
         function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
+            document.getElementById("navLinks").classList.toggle("open");
         }
     </script>
 
