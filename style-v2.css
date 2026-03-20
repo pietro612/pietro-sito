@@ -135,3 +135,18 @@ footer {
         font-size: 20px;
     }
 }
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
