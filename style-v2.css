@@ -1,7 +1,7 @@
 /* NAVBAR */
 .navbar {
     display: flex;
-    justify-content: center;        /* centra logo + menu */
+    justify-content: center;
     align-items: center;
     padding: 15px 20px;
     background-color: white;
@@ -9,13 +9,13 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    overflow-x: hidden;             /* impedisce al menu di uscire */
+    overflow-x: hidden;
 }
 
 .logo {
     font-size: 20px;
     font-weight: bold;
-    margin-right: 20px;             /* avvicina logo e menu */
+    margin-right: 20px;
 }
 
 .hamburger {
@@ -30,8 +30,8 @@
     list-style: none;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;                /* permette di andare a capo */
-    justify-content: center;        /* centra tutte le voci */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -53,6 +53,22 @@
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
+}
+
+/* TITOLI */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* TESTO SOTTO IL TITOLO */
+.container p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #333;
+    text-align: center;
 }
 
 /* CTA */
@@ -94,5 +110,15 @@ footer {
 
     .nav-links.open {
         display: flex;
+    }
+
+    /* immagine più armoniosa su schermi piccoli */
+    .header-image {
+        height: 55vh;
+    }
+
+    /* testo più leggibile su smartphone */
+    .container p {
+        font-size: 19px;
     }
 }
