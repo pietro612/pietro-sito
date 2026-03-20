@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Come tratto i messaggi – Domande dei Giovani</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <title>Come tratto i messaggi</title>
+    <link rel="stylesheet" href="style-v2.css?v=20">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="logo">Domande dei Giovani</div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navMenu">
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
@@ -24,27 +24,22 @@
         </ul>
     </nav>
 
-    <img src="immagini/hero-faq.jpg" class="header-image" alt="Come tratto i messaggi">
+    <img src="hero-faq.jpg" alt="Come tratto i messaggi" class="header-image">
 
     <div class="container">
-        <h1>Come tratto i messaggi</h1>
-
+        <h1>COME TRATTO I MESSAGGI</h1>
         <p>
-            Ogni messaggio viene accolto con rispetto, riservatezza e attenzione.
-            Non condivido i contenuti con nessuno e non vengono archiviati in modo permanente.
+            Ogni messaggio viene accolto con rispetto, attenzione e riservatezza. 
+            Non raccolgo dati personali e non traccio chi scrive. 
+            L’obiettivo è offrire ascolto, riflessione e una risposta che possa aiutare davvero.
         </p>
-
-        <p>
-            Non faccio analisi psicologiche, non creo profili, non raccolgo dati.
-            Rispondo semplicemente come una persona che ascolta.
-        </p>
-
-        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
     </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
 
     <script>
         function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
+            document.getElementById("navLinks").classList.toggle("open");
         }
     </script>
 
