@@ -154,12 +154,12 @@ footer {
 @media (max-width: 768px) {
     .music-btn {
         position: fixed;
-        top: 25px;      /* più in alto */
-        left: 10px;     /* più verso l’angolo */
+        top: 30px;      /* leggermente più alto */
+        left: 10px;     /* resta vicino all’angolo */
         margin: 0;
         z-index: 2000;
-        width: 45px;
-        height: 45px;
-        font-size: 24px;
+        width: 40px;    /* più piccolo */
+        height: 40px;   /* più piccolo */
+        font-size: 20px; /* icona più piccola ma chiara */
     }
 }
