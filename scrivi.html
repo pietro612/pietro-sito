@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrivi una domanda</title>
-    <link rel="stylesheet" href="style-v2.css?v=20">
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">Domande dei Giovani</div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -24,27 +25,48 @@
         </ul>
     </nav>
 
+    <!-- IMMAGINE -->
     <img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
 
+    <!-- CONTENUTO -->
     <div class="container">
         <h1>SCRIVI UNA DOMANDA</h1>
+
         <p>
-            Puoi scrivere liberamente ciò che ti sta a cuore. 
+            Puoi scrivere liberamente ciò che ti sta a cuore.  
             Non serve registrarsi, non devi lasciare dati personali e nessuno ti giudica.
         </p>
 
         <form action="https://formspree.io/f/mzzbqkqk" method="POST">
-            <textarea name="message" rows="6" placeholder="Scrivi qui la tua domanda..." required></textarea>
+            <textarea name="message" placeholder="Scrivi qui la tua domanda..." required></textarea>
             <br><br>
             <button class="cta" type="submit">Invia</button>
         </form>
     </div>
 
-    <footer>© 2025 Domande dei Giovani</footer>
+    <footer>
+        © 2025 Domande dei Giovani
+    </footer>
+
+    <!-- PULSANTE MUSICA (sicuro, isolato, non tocca nulla) -->
+    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <audio id="bg-music" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         function toggleMenu() {
             document.getElementById("navLinks").classList.toggle("open");
+        }
+
+        function toggleMusic() {
+            const audio = document.getElementById("bg-music");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
         }
     </script>
 
