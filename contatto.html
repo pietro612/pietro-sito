@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatto – Domande dei Giovani</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <title>Contatto</title>
+    <link rel="stylesheet" href="style-v2.css?v=20">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="logo">Domande dei Giovani</div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navMenu">
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
@@ -24,27 +24,21 @@
         </ul>
     </nav>
 
-    <img src="immagini/hero-contatto.jpg" class="header-image" alt="Contatto">
+    <img src="hero-home.jpg" alt="Contatto" class="header-image">
 
     <div class="container">
-        <h1>Contatto</h1>
-
+        <h1>CONTATTO</h1>
         <p>
-            Se vuoi scrivermi direttamente, puoi farlo tramite il modulo nella pagina “Scrivi una domanda”.
-            Non raccolgo dati personali e non uso sistemi di tracciamento.
+            Se desideri comunicare direttamente, puoi farlo attraverso il modulo della pagina “Scrivi una domanda”. 
+            Ogni messaggio viene letto con attenzione e rispetto.
         </p>
-
-        <p>
-            Se preferisci, puoi anche contattarmi via email:<br>
-            <strong>domandedeigiovani@gmail.com</strong>
-        </p>
-
-        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
     </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
 
     <script>
         function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
+            document.getElementById("navLinks").classList.toggle("open");
         }
     </script>
 
