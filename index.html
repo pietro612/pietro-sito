@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domande dei Giovani</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <title>Domande dei Giovani - Benvenuto</title>
+    <link rel="stylesheet" href="style-v2.css?v=20">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">Domande dei Giovani</div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navMenu">
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
@@ -24,25 +25,26 @@
         </ul>
     </nav>
 
-    <img src="immagini/hero-home.jpg" class="header-image" alt="Benvenuto">
+    <!-- IMMAGINE GRANDE -->
+    <img src="hero-benvenuto.jpg" alt="Benvenuto" class="header-image">
 
+    <!-- CONTENUTO -->
     <div class="container">
-        <h1>Uno spazio tranquillo per le tue domande</h1>
-
+        <h1>BENVENUTO</h1>
         <p>
-            Questo è un luogo dove puoi scrivere liberamente ciò che ti sta a cuore.
-            Non serve registrarsi, non devi lasciare dati personali e nessuno ti giudica.
-            Le tue parole verranno accolte con attenzione e rispetto.
+            Questo spazio è dedicato ai giovani che vogliono fare domande, esprimere dubbi, 
+            condividere pensieri. Qui puoi leggere, riflettere e scrivere liberamente, 
+            senza giudizio e senza dover lasciare dati personali.
         </p>
-
-        <p><a href="scrivi.html" class="cta">Scrivi una domanda</a></p>
-
-        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
     </div>
+
+    <footer>
+        © 2025 Domande dei Giovani
+    </footer>
 
     <script>
         function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
+            document.getElementById("navLinks").classList.toggle("open");
         }
     </script>
 
