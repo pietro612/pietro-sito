@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perché esiste – Domande dei Giovani</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <title>Perché esiste</title>
+    <link rel="stylesheet" href="style-v2.css?v=20">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="logo">Domande dei Giovani</div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navMenu">
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
@@ -24,27 +24,22 @@
         </ul>
     </nav>
 
-    <img src="immagini/hero-perche.jpg" class="header-image" alt="Perché esiste">
+    <img src="hero-perche.jpg" alt="Perché esiste" class="header-image">
 
     <div class="container">
-        <h1>Perché esiste questo spazio</h1>
-
+        <h1>PERCHÉ ESISTE</h1>
         <p>
-            Questo spazio nasce dal desiderio di offrire un luogo tranquillo, rispettoso e protetto
-            dove poter esprimere ciò che ti sta a cuore. A volte non è facile trovare qualcuno che ascolti
-            senza giudicare, senza interpretare, senza dare etichette.
+            Questo progetto nasce dal desiderio di offrire ai giovani uno spazio sicuro, 
+            libero e rispettoso dove poter esprimere domande, dubbi, emozioni e pensieri 
+            senza sentirsi giudicati.
         </p>
-
-        <p>
-            Qui puoi scrivere liberamente, con calma, sapendo che ogni parola viene accolta con attenzione.
-        </p>
-
-        <footer>© 2025 – Uno spazio tranquillo per le tue domande</footer>
     </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
 
     <script>
         function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
+            document.getElementById("navLinks").classList.toggle("open");
         }
     </script>
 
