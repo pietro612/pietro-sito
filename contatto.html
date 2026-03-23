@@ -1,61 +1,35 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatto</title>
-    <link rel="stylesheet" href="style-v2.css?v=22">
-</head>
+<h1>Contatto</h1>
 
-<body>
+<div class="container">
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav>
+    <h2>Come posso contattarti?</h2>
+    <p>
+        Se vuoi scrivere in modo privato, puoi farlo attraverso il modulo nella pagina 
+        <a href="scrivi.html">Scrivi una domanda</a>.  
+        È il modo più semplice e diretto per inviarmi un messaggio.
+    </p>
 
-    <img src="hero-home.jpg" alt="Contatto" class="header-image">
+    <h2>Posso scrivere anche senza fare una domanda?</h2>
+    <p>
+        Certo. Puoi usare il modulo per condividere un pensiero, un dubbio o una riflessione.  
+        Non è necessario formulare una domanda precisa.
+    </p>
 
-    <div class="container">
-        <h1>CONTATTO</h1>
-        <p>
-            Se desideri comunicare direttamente, puoi farlo attraverso il modulo della pagina “Scrivi una domanda”.
-            Ogni messaggio viene letto con attenzione e rispetto.
-        </p>
-    </div>
+    <h2>Riceverò una risposta?</h2>
+    <p>
+        Se lasci un contatto, posso risponderti tramite:
+        <br>• Email  
+        <br>• Numero di cellulare  
+        <br>• SMS  
+        <br><br>
+        Se preferisci rimanere anonimo, puoi comunque leggere le risposte pubblicate alle domande simili alla tua.
+    </p>
 
-    <footer>© 2025 Domande dei Giovani</footer>
+    <h2>Serve lasciare i miei dati?</h2>
+    <p>
+        No, non è obbligatorio.  
+        Puoi scrivere anche in modo completamente anonimo.  
+        I tuoi dati, se li lasci, vengono usati solo per risponderti.
+    </p>
 
-    <button class="music-btn" onclick="toggleMusic()">🎵</button>
-
-    <audio id="bg-music" loop>
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-
-        function toggleMusic() {
-            const audio = document.getElementById("bg-music");
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        }
-    </script>
-
-</body>
-</html>
+</div>
