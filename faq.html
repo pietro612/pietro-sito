@@ -1,46 +1,79 @@
-<h1>FAQ</h1>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style-v2.css?v=2">
+    <script src="audio.js"></script>
+</head>
 
-<div class="container">
+<body>
 
-    <h2>Come vengono trattati i messaggi?</h2>
-    <p>
-        Ogni messaggio viene letto con attenzione e rispetto.  
-        Non è richiesto alcun dato personale: puoi scrivere in modo completamente anonimo.  
-        Il tuo messaggio non viene condiviso con nessuno e non viene utilizzato per scopi diversi da quelli del sito.
-    </p>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-    <h2>Riceverò una risposta?</h2>
-    <p>
-        Sì, se scegli di lasciare un contatto.  
-        Puoi ricevere una risposta tramite:
-        <br>• Email  
-        <br>• Numero di cellulare  
-        <br>• SMS  
-        <br><br>
-        Se invece preferisci rimanere anonimo, puoi comunque leggere le risposte pubblicate alle domande simili alla tua.
-    </p>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="scrivi.html">Scrivi</a></li>
+        </ul>
+    </nav>
 
-    <h2>Devo registrarmi?</h2>
-    <p>
-        No, non è necessaria alcuna registrazione.  
-        Puoi leggere e scrivere liberamente.
-    </p>
+    <!-- PULSANTE AUDIO -->
+    <button class="music-btn" onclick="toggleAudio()">🎵</button>
 
-    <h2>Chi può scrivere?</h2>
-    <p>
-        Questo spazio è dedicato ai giovani che vogliono fare domande, esprimere dubbi o condividere pensieri.  
-        Non ci sono limiti di età rigidi: conta solo il desiderio di cercare chiarezza.
-    </p>
+    <!-- IMMAGINE DI INTESTAZIONE -->
+    <img src="hero-faq.jpg" alt="FAQ" class="header-image">
 
-    <h2>Le mie domande saranno pubblicate?</h2>
-    <p>
-        Solo se lo desideri.  
-        Puoi scegliere se rendere pubblica la tua domanda (in forma anonima) oppure ricevere una risposta privata.
-    </p>
+    <!-- CONTENUTO -->
+    <h1>FAQ</h1>
 
-    <h2>Posso cancellare una domanda?</h2>
-    <p>
-        Sì. Se hai lasciato un contatto, puoi chiedere in qualsiasi momento che la tua domanda venga rimossa.
-    </p>
+    <div class="container">
 
-</div>
+        <h2>Come vengono trattati i messaggi?</h2>
+        <p>
+            Ogni messaggio viene letto con attenzione e rispetto.  
+            Non è richiesto alcun dato personale: puoi scrivere in modo completamente anonimo.  
+            Il tuo messaggio non viene utilizzato per scopi diversi da quelli del sito.
+        </p>
+
+        <h2>Riceverò una risposta?</h2>
+        <p>
+            Sì, se scegli di lasciare un contatto. Puoi ricevere una risposta tramite:
+            <br>• Email
+            <br>• Numero di cellulare
+            <br>• SMS
+            <br><br>
+            Se invece preferisci rimanere anonimo, puoi comunque leggere le risposte pubblicate alle domande simili alla tua.
+        </p>
+
+        <h2>Devo registrarmi?</h2>
+        <p>
+            No, non è necessaria alcuna registrazione.  
+            Puoi leggere e scrivere liberamente.
+        </p>
+
+        <h2>Chi può scrivere?</h2>
+        <p>
+            Questo spazio è dedicato ai giovani che vogliono fare domande, esprimere dubbi o condividere pensieri.  
+            Non ci sono limiti di età rigidi: conta solo il desiderio di comunicare.
+        </p>
+
+        <h2>Le mie domande saranno pubblicate?</h2>
+        <p>
+            Solo se lo desideri.  
+            Puoi scegliere se rendere pubblica la tua domanda (in forma anonima) oppure ricevere una risposta privata.
+        </p>
+
+        <h2>Posso cancellare una domanda?</h2>
+        <p>
+            Sì. Se hai lasciato un contatto, puoi chiedere in qualsiasi momento che la tua domanda venga rimossa.
+        </p>
+
+    </div>
+
+</body>
+</html>
