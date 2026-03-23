@@ -42,10 +42,10 @@
 /* IMMAGINE GRANDE */
 .header-image {
     width: 100%;
-    height: 28vh;      /* molto più equilibrata */
+    height: 28vh;
     object-fit: cover;
     display: block;
-    margin-bottom: 20px;  /* aggiunge respiro al menu */
+    margin-bottom: 20px;
 }
 
 /* CONTENITORE */
@@ -127,7 +127,7 @@ footer {
     }
 
     .header-image {
-        height: 55vh;
+        height: 35vh;
     }
 
     .container p {
@@ -139,7 +139,7 @@ footer {
 .music-btn {
     position: static;
     display: block;
-    margin: 50px auto 0 auto;   /* più respiro sotto il testo */
+    margin: 50px auto 0 auto;
     background-color: #0077ff;
     color: white;
     border: none;
@@ -155,7 +155,7 @@ footer {
 @media (max-width: 768px) {
     .music-btn {
         position: fixed;
-        top: 21px;      /* allineamento perfetto */
+        top: 21px;
         left: 10px;
         margin: 0;
         z-index: 2000;
@@ -163,30 +163,4 @@ footer {
         height: 34px;
         font-size: 16px;
     }
-}
-#audioButton {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 9999;
-}
-#audioButton {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 9999; /* fondamentale */
-}
-.header-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px; /* aggiunge respiro */
 }
