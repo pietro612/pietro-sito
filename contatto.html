@@ -1,35 +1,69 @@
-<h1>Contatto</h1>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatto</title>
+    <link rel="stylesheet" href="style-v2.css?v=2">
+    <script src="audio.js"></script>
+</head>
 
-<div class="container">
+<body>
 
-    <h2>Come posso contattarti?</h2>
-    <p>
-        Se vuoi scrivere in modo privato, puoi farlo attraverso il modulo nella pagina 
-        <a href="scrivi.html">Scrivi una domanda</a>.  
-        È il modo più semplice e diretto per inviarmi un messaggio.
-    </p>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-    <h2>Posso scrivere anche senza fare una domanda?</h2>
-    <p>
-        Certo. Puoi usare il modulo per condividere un pensiero, un dubbio o una riflessione.  
-        Non è necessario formulare una domanda precisa.
-    </p>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contatto.html" class="active">Contatto</a></li>
+            <li><a href="scrivi.html">Scrivi</a></li>
+        </ul>
+    </nav>
 
-    <h2>Riceverò una risposta?</h2>
-    <p>
-        Se lasci un contatto, posso risponderti tramite:
-        <br>• Email  
-        <br>• Numero di cellulare  
-        <br>• SMS  
-        <br><br>
-        Se preferisci rimanere anonimo, puoi comunque leggere le risposte pubblicate alle domande simili alla tua.
-    </p>
+    <!-- PULSANTE AUDIO -->
+    <button class="music-btn" onclick="toggleAudio()">🎵</button>
 
-    <h2>Serve lasciare i miei dati?</h2>
-    <p>
-        No, non è obbligatorio.  
-        Puoi scrivere anche in modo completamente anonimo.  
-        I tuoi dati, se li lasci, vengono usati solo per risponderti.
-    </p>
+    <!-- IMMAGINE DI INTESTAZIONE -->
+    <img src="hero-contatto.jpg" alt="Contatto" class="header-image">
 
-</div>
+    <!-- CONTENUTO -->
+    <h1>Contatto</h1>
+
+    <div class="container">
+
+        <h2>Come posso contattarti?</h2>
+        <p>
+            Se vuoi scrivere in modo privato, puoi farlo attraverso il modulo nella pagina
+            <a href="scrivi.html">Scrivi una domanda</a>.
+            È il modo più semplice e diretto per inviarmi un messaggio.
+        </p>
+
+        <h2>Posso scrivere anche senza fare una domanda?</h2>
+        <p>
+            Certo. Puoi usare il modulo per condividere un pensiero, un dubbio o una riflessione.
+            Non è necessario formulare una domanda precisa.
+        </p>
+
+        <h2>Riceverò una risposta?</h2>
+        <p>
+            Se lasci un contatto, posso risponderti tramite:
+            <br>• Email
+            <br>• Numero di cellulare
+            <br>• SMS
+            <br><br>
+            Se preferisci rimanere anonimo, puoi comunque leggere le risposte pubblicate alle domande simili alla tua.
+        </p>
+
+        <h2>Serve lasciare i miei dati?</h2>
+        <p>
+            No, non è obbligatorio.
+            Puoi scrivere anche in modo completamente anonimo.
+            I tuoi dati, se li lasci, vengono usati solo per risponderti.
+        </p>
+
+    </div>
+
+</body>
+</html>
