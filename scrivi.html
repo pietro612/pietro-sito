@@ -1,74 +1,34 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrivi una domanda</title>
-    <link rel="stylesheet" href="style-v2.css?v=22">
-</head>
+<h1>Scrivi una domanda</h1>
 
-<body>
+<div class="container">
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav>
+    <h2>Vuoi fare una domanda o condividere un pensiero?</h2>
+    <p>
+        Puoi usare questo spazio per esprimere un dubbio, una domanda, una riflessione o un pensiero personale.  
+        Non è necessario scrivere in modo formale: ciò che conta è la sincerità.
+    </p>
 
-    <!-- IMMAGINE -->
-    <img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
+    <h2>Come riceverò una risposta?</h2>
+    <p>
+        Se desideri una risposta privata, puoi lasciare un contatto.  
+        Posso risponderti tramite:
+        <br>• Email  
+        <br>• Numero di cellulare  
+        <br>• SMS  
+        <br><br>
+        Se preferisci rimanere anonimo, puoi comunque inviare la tua domanda:  
+        in questo caso non riceverai una risposta diretta, ma potrai leggere le risposte pubblicate alle domande simili alla tua.
+    </p>
 
-    <!-- CONTENUTO -->
-    <div class="container">
-        <h1>SCRIVI UNA DOMANDA</h1>
+    <h2>I miei dati sono al sicuro?</h2>
+    <p>
+        Sì. I tuoi dati non vengono condivisi con nessuno e vengono usati solo per risponderti.  
+        Puoi anche scegliere di non lasciare alcun contatto.
+    </p>
 
-        <p>
-            Puoi scrivere liberamente ciò che ti sta a cuore.  
-            Non serve registrarsi, non devi lasciare dati personali e nessuno ti giudica.
-        </p>
+    <h2>Modulo</h2>
+    <p>
+        Compila il modulo qui sotto per inviare la tua domanda.
+    </p>
 
-        <form action="https://formspree.io/f/mzzbqkqk" method="POST">
-            <textarea name="message" placeholder="Scrivi qui la tua domanda..." required></textarea>
-            <br><br>
-            <button class="cta" type="submit">Invia</button>
-        </form>
-    </div>
-
-    <footer>
-        © 2025 Domande dei Giovani
-    </footer>
-
-    <!-- PULSANTE MUSICA (sicuro, isolato, non tocca nulla) -->
-    <button class="music-btn" onclick="toggleMusic()">🎵</button>
-
-    <audio id="bg-music" loop>
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-
-        function toggleMusic() {
-            const audio = document.getElementById("bg-music");
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        }
-    </script>
-
-</body>
-</html>
+</div>
