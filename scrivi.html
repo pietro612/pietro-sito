@@ -10,23 +10,28 @@
 
 <body>
 
+    <!-- NAVBAR MODERNA -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="scrivi.html" class="active">Scrivi</a></li>
+        </ul>
+    </nav>
+
+    <!-- PULSANTE AUDIO (STESSO DELLA HOME) -->
+    <button class="music-btn" onclick="toggleAudio()">🎵</button>
+
     <!-- IMMAGINE DI INTESTAZIONE -->
     <img src="immagini/hero-scrivi.jpg" alt="Scrivi" class="header-image">
 
-    <!-- MENU -->
-    <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="scrivi.html" class="active">Scrivi</a>
-    </nav>
-
-    <!-- PULSANTE AUDIO -->
-    <button id="audioButton" onclick="toggleAudio()">🔊</button>
-
-    <!-- CONTENUTO DELLA PAGINA -->
+    <!-- TITOLO -->
     <h1>Scrivi una domanda</h1>
 
+    <!-- CONTENUTO -->
     <div class="container">
 
         <h2>Vuoi fare una domanda o condividere un pensiero?</h2>
@@ -71,7 +76,7 @@
             <label for="sms">Numero per SMS (opzionale)</label>
             <input type="tel" id="sms" name="sms">
 
-            <button type="submit" class="submit-button">Invia la tua domanda</button>
+            <button type="submit" class="cta">Invia la tua domanda</button>
 
         </form>
 
