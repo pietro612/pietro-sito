@@ -1,69 +1,71 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatto</title>
-    <link rel="stylesheet" href="style-v2.css?v=2">
-    <script src="audio.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domande dei Giovani - Contatto</title>
+
+  <meta name="description" content="Scrivi un messaggio in modo semplice e anonimo. Puoi lasciare un contatto per ricevere una risposta oppure restare anonimo.">
+
+  <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">Domande dei Giovani</a>
+    </div>
+    <div class="nav-right">
+      <a href="benvenuto.html">Benvenuto</a>
+      <a href="faq.html">FAQ</a>
+      <a href="perche-esiste.html">Perché esiste</a>
+      <a href="funziona.html">Come funziona</a>
+      <a href="scrivi.html">Scrivi</a>
+      <a href="contatto.html">Contatto</a>
+      <a href="chi-sono.html">Chi sono</a>
+    </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contatto.html" class="active">Contatto</a></li>
-            <li><a href="scrivi.html">Scrivi</a></li>
-        </ul>
-    </nav>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="audio-btn">♫</button>
+    <audio id="audio-player" src="musica.mp3"></audio>
+  </nav>
 
-    <!-- PULSANTE AUDIO -->
-    <button class="music-btn" onclick="toggleAudio()">🎵</button>
+  <!-- Hero -->
+  <div class="hero">
+    <img src="hero-contatto.jpg" alt="Contatto" class="hero-image">
+  </div>
 
-    <!-- IMMAGINE DI INTESTAZIONE -->
-    <img src="hero-contatto.jpg" alt="Contatto" class="header-image">
-
-    <!-- CONTENUTO -->
+  <!-- Contenuto -->
+  <div class="container">
     <h1>Contatto</h1>
 
-    <div class="container">
+    <p>
+      Se vuoi scrivere un messaggio, fare una domanda o condividere un pensiero, puoi farlo da qui.
+      Puoi scegliere se lasciare un contatto oppure restare anonimo.
+    </p>
 
-        <h2>Come posso contattarti?</h2>
-        <p>
-            Se vuoi scrivere in modo privato, puoi farlo attraverso il modulo nella pagina
-            <a href="scrivi.html">Scrivi una domanda</a>.
-            È il modo più semplice e diretto per inviarmi un messaggio.
-        </p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
 
-        <h2>Posso scrivere anche senza fare una domanda?</h2>
-        <p>
-            Certo. Puoi usare il modulo per condividere un pensiero, un dubbio o una riflessione.
-            Non è necessario formulare una domanda precisa.
-        </p>
+      <label for="message">Il tuo messaggio</label>
+      <textarea id="message" name="message" required></textarea>
 
-        <h2>Riceverò una risposta?</h2>
-        <p>
-            Se lasci un contatto, posso risponderti tramite:
-            <br>• Email
-            <br>• Numero di cellulare
-            <br>• SMS
-            <br><br>
-            Se preferisci rimanere anonimo, puoi comunque leggere le risposte pubblicate alle domande simili alla tua.
-        </p>
+      <label for="email">Email (opzionale)</label>
+      <input type="email" id="email" name="email">
 
-        <h2>Serve lasciare i miei dati?</h2>
-        <p>
-            No, non è obbligatorio.
-            Puoi scrivere anche in modo completamente anonimo.
-            I tuoi dati, se li lasci, vengono usati solo per risponderti.
-        </p>
+      <label for="phone">Cellulare (opzionale)</label>
+      <input type="text" id="phone" name="phone">
 
-    </div>
+      <button type="submit" class="btn">Invia</button>
+    </form>
+
+    <p>
+      La tua richiesta sarà accolta con rispetto e riservatezza.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
