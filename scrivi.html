@@ -3,81 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrivi una domanda – Domande dei Giovani</title>
+    <title>Scrivi una domanda</title>
 
     <!-- SEO -->
-    <meta name="description" content="Scrivi una domanda in modo anonimo e ricevi una risposta rispettosa e pensata per te.">
+    <meta name="description" content="Scrivi una domanda in modo anonimo e rispettoso. Riceverai una risposta pensata davvero per te.">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Scrivi una domanda – Domande dei Giovani">
-    <meta property="og:description" content="Scrivi liberamente la tua domanda in modo anonimo e ricevi una risposta personale.">
+    <meta property="og:title" content="Scrivi una domanda">
+    <meta property="og:description" content="Uno spazio semplice e anonimo per porre una domanda e ricevere una risposta pensata per te.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pietro612.github.io/scrivi.html">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-scrivi.jpg">
 
     <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
             <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="scrivi.html" class="active">Scrivi una domanda</a></li>
             <li><a href="contatto.html">Contatto</a></li>
             <li><a href="chi-sono.html">Chi sono</a></li>
             <li><a href="faq.html">FAQ</a></li>
         </ul>
     </nav>
 
-    <img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
+    <main>
+        <h1>Scrivi una domanda</h1>
+        <p>Puoi scrivere la tua domanda in modo anonimo. Se vuoi ricevere una risposta, puoi indicare come preferisci essere contattato.</p>
 
-    <div class="container">
-        <h1>SCRIVI UNA DOMANDA</h1>
-        <p>
-            Puoi scrivere liberamente ciò che vuoi.  
-            Non serve registrarsi, non serve lasciare dati personali.  
-            Se vuoi ricevere una risposta, puoi lasciare un contatto.
-        </p>
-
-        <form action="https://formspree.io/f/mqakjvkd" method="POST" class="contact-form">
-
-            <label for="message">La tua domanda</label>
-            <textarea id="message" name="message" required placeholder="Scrivi qui la tua domanda"></textarea>
+        <form action="https://formspree.io/f/mzbqgqkd" method="POST">
+            <label for="messaggio">La tua domanda</label>
+            <textarea id="messaggio" name="messaggio" required></textarea>
 
             <label for="email">Email (opzionale)</label>
-            <input type="email" id="email" name="email" placeholder="La tua email">
+            <input type="email" id="email" name="email">
 
-            <label for="telefono">Numero di telefono (opzionale)</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Il tuo numero">
+            <label for="telefono">Numero di cellulare (opzionale)</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+39 ...">
 
-            <label for="sms">Numero per SMS (opzionale)</label>
-            <input type="tel" id="sms" name="sms" placeholder="Numero per SMS">
+            <label for="preferenza">Come vuoi ricevere la risposta?</label>
+            <select id="preferenza" name="preferenza" required>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+                <option value="whatsapp">WhatsApp</option>
+            </select>
 
-            <p class="privacy-note">I tuoi dati non vengono salvati né condivisi. Servono solo per risponderti.</p>
-
-            <button type="submit" class="submit-btn">Invia</button>
+            <button type="submit">Invia</button>
         </form>
-    </div>
+    </main>
 
-    <footer>© 2025 Domande dei Giovani</footer>
-
-    <button id="audio-btn" class="music-btn">🎵</button>
-    <audio id="audio-player" src="musica.mp3" loop></audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-    </script>
-
-    <script src="audio.js"></script>
+    <footer>
+        <p>© 2025 Domande dei Giovani</p>
+    </footer>
 
 </body>
 </html>
