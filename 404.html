@@ -4,53 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina non trovata – Domande dei Giovani</title>
-
-    <link rel="stylesheet" href="style-v2.css?v=3">
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-    <header class="hero" style="background-image: url('hero-benvenuto.jpg');">
-  <nav class="navbar">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Domande dei Giovani</a>
-  </div>
-  <div class="nav-right">
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="faq.html">FAQ</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="scrivi.html">Scrivi</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="chi-sono.html">Chi sono</a>
-  </div>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-  <!-- Pulsante musica -->
-  <button id="audio-btn" class="audio-btn">♫</button>
-  <audio id="audio-player" src="musica.mp3"></audio>
-</nav>
+    <div class="container" style="padding-top: 120px; text-align: center;">
+        <h1>404</h1>
+        <p>La pagina che cerchi non esiste.</p>
+        <a href="index.html" class="submit-btn">Torna alla Home</a>
+    </div>
 
-        <div class="hero-text">
-            <h1>Pagina non trovata</h1>
-        </div>
-    </header>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-    <main class="content">
-        <h2>Ops… questa pagina non esiste</h2>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
 
-        <p>
-            Forse il link è stato scritto male, oppure la pagina è stata spostata.
-            Puoi tornare alla Home o continuare a esplorare il sito.
-        </p>
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
 
-        <p style="margin-top: 20px;">
-            <a href="index.html" class="btn">Torna alla Home</a>
-        </p>
-    </main>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
 
-    <footer>
-        <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
-    </footer>
+    <!-- Script musica -->
+    <script src="audio.js"></script>
 
 </body>
 </html>
