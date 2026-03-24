@@ -1,70 +1,65 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domande dei Giovani - Contatto</title>
-
-  <meta name="description" content="Scrivi un messaggio in modo semplice e anonimo. Puoi lasciare un contatto per ricevere una risposta oppure restare anonimo.">
-
-  <link rel="stylesheet" href="style-v2.css?v=22">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatto – Domande dei Giovani</title>
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Domande dei Giovani</a>
-  </div>
-  <div class="nav-right">
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="faq.html">FAQ</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="scrivi.html">Scrivi</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="chi-sono.html">Chi sono</a>
-  </div>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-  <!-- Pulsante musica -->
-  <button id="audio-btn" class="audio-btn">♫</button>
-  <audio id="audio-player" src="musica.mp3"></audio>
-</nav>
+    <img src="hero-contatto.jpg" alt="Contatto" class="header-image">
 
-  <!-- Hero -->
-  <div class="hero">
-    <img src="hero-contatto.jpg" alt="Contatto" class="hero-image">
-  </div>
+    <div class="container">
+        <h1>CONTATTO</h1>
+        <p>
+            Se vuoi scrivermi per qualsiasi motivo diverso dalle domande anonime,
+            puoi farlo tramite questo modulo. Rispondo sempre con rispetto e attenzione.
+        </p>
 
-  <!-- Contenuto -->
-  <div class="container">
-    <h1>Contatto</h1>
+        <form action="https://formspree.io/f/mqakjvkd" method="POST" class="contact-form">
+            <label for="email">La tua email (opzionale)</label>
+            <input type="email" id="email" name="email">
 
-    <p>
-      Se vuoi scrivere un messaggio, fare una domanda o condividere un pensiero, puoi farlo da qui.
-      Puoi scegliere se lasciare un contatto oppure restare anonimo.
-    </p>
+            <label for="message">Il tuo messaggio</label>
+            <textarea id="message" name="message" required></textarea>
 
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+            <button type="submit" class="submit-btn">Invia</button>
+        </form>
+    </div>
 
-      <label for="message">Il tuo messaggio</label>
-      <textarea id="message" name="message" required></textarea>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-      <label for="email">Email (opzionale)</label>
-      <input type="email" id="email" name="email">
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
 
-      <label for="phone">Cellulare (opzionale)</label>
-      <input type="text" id="phone" name="phone">
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
 
-      <button type="submit" class="btn">Invia</button>
-    </form>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
 
-    <p>
-      La tua richiesta sarà accolta con rispetto e riservatezza.
-    </p>
-  </div>
-
-  <script src="script.js"></script>
+    <!-- Script musica -->
+    <script src="audio.js"></script>
 
 </body>
 </html>
