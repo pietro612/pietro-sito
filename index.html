@@ -14,18 +14,16 @@
     <meta property="og:description" content="Uno spazio anonimo, rispettoso e accogliente dove puoi fare una domanda e ricevere una risposta pensata per te.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pietro612.github.io/">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-home.jpg">
+    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-benvenuto.jpg">
 
     <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="perche-esiste.html">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
             <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
@@ -36,31 +34,18 @@
         </ul>
     </nav>
 
-    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
-
-    <div class="container">
+    <!-- HERO con immagine sostituita -->
+    <div class="hero" style="background-image: url('immagini/hero-benvenuto.jpg');">
         <h1>DOMANDE DEI GIOVANI</h1>
-        <p>
-            Uno spazio semplice, rispettoso e anonimo dove puoi fare una domanda
-            e ricevere una risposta pensata davvero per te.
-        </p>
+        <p>Uno spazio semplice, rispettoso e anonimo dove puoi fare una domanda e ricevere una risposta pensata davvero per te.</p>
     </div>
 
-    <footer>© 2025 Domande dei Giovani</footer>
+    <footer>
+        <p>© 2025 Domande dei Giovani</p>
+    </footer>
 
-    <!-- Pulsante musica -->
-    <button id="audio-btn" class="music-btn">🎵</button>
-
-    <!-- Audio -->
-    <audio id="audio-player" src="musica.mp3" loop></audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-    </script>
-
-    <!-- Script musica -->
+    <div class="music-button" onclick="toggleAudio()">♪</div>
+    <audio id="background-audio" src="audio.mp3" loop></audio>
     <script src="audio.js"></script>
 
 </body>
