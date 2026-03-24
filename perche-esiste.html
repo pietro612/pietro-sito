@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perché esiste</title>
-    <link rel="stylesheet" href="style-v2.css?v=22">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domande dei Giovani - Perché esiste</title>
+
+  <meta name="description" content="Perché esiste questo spazio di ascolto: un luogo semplice, rispettoso e presente dove i giovani possono fare domande e trovare un punto di riferimento.">
+
+  <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav>
-
-    <img src="hero-perche.jpg" alt="Perché esiste" class="header-image">
-
-    <div class="container">
-        <h1>PERCHÉ ESISTE</h1>
-        <p>
-            Questo progetto nasce dal desiderio di offrire ai giovani uno spazio sicuro, 
-            libero e rispettoso dove poter esprimere domande, dubbi, emozioni e pensieri 
-            senza sentirsi giudicati.
-        </p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">Domande dei Giovani</a>
+    </div>
+    <div class="nav-right">
+      <a href="benvenuto.html">Benvenuto</a>
+      <a href="faq.html">FAQ</a>
+      <a href="perche-esiste.html">Perché esiste</a>
+      <a href="funziona.html">Come funziona</a>
+      <a href="scrivi.html">Scrivi</a>
+      <a href="contatto.html">Contatto</a>
+      <a href="chi-sono.html">Chi sono</a>
     </div>
 
-    <footer>© 2025 Domande dei Giovani</footer>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="audio-btn">♫</button>
+    <audio id="audio-player" src="musica.mp3"></audio>
+  </nav>
 
-    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+  <!-- Hero -->
+  <div class="hero">
+    <img src="hero-perche.jpg" alt="Perché esiste questo spazio" class="hero-image">
+  </div>
 
-    <audio id="bg-music" loop>
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
+  <!-- Contenuto -->
+  <div class="container">
+    <h1>Perché esiste questo spazio</h1>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
+    <p>
+      Questo spazio nasce per offrire un punto di riferimento semplice e rispettoso a chi sente il bisogno di fare una domanda, condividere un dubbio o cercare un momento di ascolto.
+    </p>
 
-        function toggleMusic() {
-            const audio = document.getElementById("bg-music");
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        }
-    </script>
+    <p>
+      A volte basta poco: una parola, una presenza, un luogo dove poter dire ciò che si vive senza sentirsi giudicati.
+    </p>
+
+    <p>
+      Qui puoi farlo con calma, nel modo che senti più tuo.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
