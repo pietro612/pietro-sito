@@ -177,3 +177,11 @@ footer {
     margin-top: -5px;
     margin-bottom: 15px;
 }
+.hero-text {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-text h1 {
+    margin-bottom: 10px;
+}
