@@ -1,120 +1,57 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grazie – Domande dei Giovani</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domande dei Giovani - Grazie</title>
 
-    <link rel="stylesheet" href="style-v2.css?v=4">
+  <meta name="description" content="Grazie per il tuo messaggio. Sarà accolto con calma e rispetto.">
 
-    <style>
-        .hamburger {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        nav ul {
-            transition: max-height 0.3s ease;
-            overflow: hidden;
-        }
-
-        nav ul.open {
-            max-height: 500px;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                position: relative;
-            }
-
-            .hamburger {
-                display: block;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                z-index: 1000;
-            }
-
-            nav ul {
-                max-height: 0;
-                flex-direction: column;
-                background: white;
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                border-top: 1px solid #ddd;
-            }
-
-            nav ul li {
-                padding: 12px 20px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            nav ul li a {
-                display: block;
-                width: 100%;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-    <!-- IMMAGINE CORRETTA: PORTA APERTA -->
-    <header class="hero" style="background-image: url('hero-benvenuto.jpg');">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">Domande dei Giovani</a>
+    </div>
+    <div class="nav-right">
+      <a href="benvenuto.html">Benvenuto</a>
+      <a href="faq.html">FAQ</a>
+      <a href="perche-esiste.html">Perché esiste</a>
+      <a href="funziona.html">Come funziona</a>
+      <a href="scrivi.html">Scrivi</a>
+      <a href="contatto.html">Contatto</a>
+      <a href="chi-sono.html">Chi sono</a>
+    </div>
 
-        <nav>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="audio-btn">♫</button>
+    <audio id="audio-player" src="musica.mp3"></audio>
+  </nav>
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="perche-esiste.html">Perché esiste</a></li>
-                <li><a href="come-funziona.html">Come funziona</a></li>
-                <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-                <li><a href="scrivi-una-domanda.html">Scrivi una domanda</a></li>
-                <li><a href="contatto.html">Contatto</a></li>
-                <li><a href="chi-sono.html">Chi sono</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
+  <!-- Hero -->
+  <div class="hero">
+    <img src="hero-home.jpg" alt="Grazie" class="hero-image">
+  </div>
 
-        <div class="hero-text">
-            <h1>Grazie</h1>
-        </div>
+  <!-- Contenuto -->
+  <div class="container">
+    <h1>Grazie</h1>
 
-    </header>
+    <p>
+      Il tuo messaggio è stato inviato.  
+      Sarà accolto con calma, rispetto e presenza.
+    </p>
 
-    <main class="content">
+    <p>
+      Puoi tornare alla <a href="index.html">Home</a> oppure continuare la tua visita.
+    </p>
+  </div>
 
-        <h2>Il tuo messaggio è stato inviato</h2>
-
-        <p>
-            Grazie per aver scritto. Il tuo messaggio è arrivato correttamente e verrà letto con
-            attenzione e rispetto. Se hai lasciato un indirizzo email, riceverai una risposta non
-            appena possibile.
-        </p>
-
-        <p>
-            Puoi tornare alla pagina principale da qui:
-        </p>
-
-        <p>
-            <a href="index.html" class="btn">Torna alla Home</a>
-        </p>
-
-    </main>
-
-    <footer>
-        <p>© 2025 – Uno spazio tranquillo per le tue domande</p>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector("nav ul").classList.toggle("open");
-        }
-    </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
