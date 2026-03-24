@@ -164,3 +164,16 @@ footer {
         font-size: 16px;
     }
 }
+/* Migliora i form su mobile senza cambiare lo stile */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.privacy-note {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
