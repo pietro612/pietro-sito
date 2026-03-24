@@ -26,7 +26,7 @@
         <button class="hamburger" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="perche-esiste.html" class="active">Perché esiste</a></li>
             <li><a href="come-funziona.html">Come funziona</a></li>
             <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
             <li><a href="scrivi.html">Scrivi una domanda</a></li>
@@ -36,7 +36,14 @@
         </ul>
     </nav>
 
-    <img src="hero-perche.jpg" alt="Perché esiste" class="header-image">
+    <!-- Immagine più piccola e visibile -->
+    <div class="hero" style="
+        background-image: url('immagini/hero-perche.jpg');
+        height: 260px;
+        background-size: cover;
+        background-position: center;
+    ">
+    </div>
 
     <div class="container">
         <h1>PERCHÉ ESISTE</h1>
@@ -61,7 +68,6 @@
         }
     </script>
 
-    <!-- Script musica -->
     <script src="audio.js"></script>
 
 </body>
