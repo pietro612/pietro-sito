@@ -1,64 +1,57 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domande dei Giovani - Chi sono</title>
-
-  <meta name="description" content="Chi sono e perché ho creato questo spazio di ascolto dedicato ai giovani. Un luogo semplice, rispettoso e presente.">
-
-  <link rel="stylesheet" href="style-v2.css?v=22">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi sono – Domande dei Giovani</title>
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Domande dei Giovani</a>
-  </div>
-  <div class="nav-right">
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="faq.html">FAQ</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="scrivi.html">Scrivi</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="chi-sono.html">Chi sono</a>
-  </div>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-  <!-- Pulsante musica -->
-  <button id="audio-btn" class="audio-btn">♫</button>
-  <audio id="audio-player" src="musica.mp3"></audio>
-</nav>
+    <img src="hero-chisono.jpg" alt="Chi sono" class="header-image">
 
-  <!-- Hero -->
-  <div class="hero">
-    <img src="hero-chisono.jpg" alt="Chi sono" class="hero-image">
-  </div>
+    <div class="container">
+        <h1>CHI SONO</h1>
+        <p>
+            Mi chiamo Pietro e ho creato questo spazio per offrire ascolto, rispetto
+            e una risposta sincera a chi sente il bisogno di fare una domanda.
+            Credo profondamente nel valore dell’ascolto e nella forza delle parole
+            quando sono usate con cura.
+        </p>
+    </div>
 
-  <!-- Contenuto -->
-  <div class="container">
-    <h1>Chi sono</h1>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-    <p>
-      Mi chiamo Pietro e ho creato questo spazio per offrire un punto di riferimento semplice e rispettoso ai giovani che sentono il bisogno di fare una domanda, condividere un dubbio o cercare un momento di ascolto.
-    </p>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
 
-    <p>
-      Credo nel valore della presenza, della calma e dell’ascolto autentico. A volte basta poco: una parola, un gesto, un luogo dove potersi esprimere senza sentirsi giudicati.
-    </p>
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
 
-    <p>
-      Questo spazio nasce da anni di cammino accanto ai giovani, dalle loro domande, dalle loro fatiche e dalla loro bellezza.
-    </p>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
 
-    <p>
-      Se vuoi, puoi scrivermi in qualsiasi momento.  
-      Sarò qui.
-    </p>
-  </div>
-
-  <script src="script.js"></script>
+    <!-- Script musica -->
+    <script src="audio.js"></script>
 
 </body>
 </html>
