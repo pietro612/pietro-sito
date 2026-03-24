@@ -1,72 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domande dei Giovani - Come funziona</title>
-
-  <meta name="description" content="Come funziona questo spazio di ascolto: come inviare una domanda, come ricevere una risposta e come mantenere l'anonimato.">
-
-  <link rel="stylesheet" href="style-v2.css?v=22">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come funziona – Domande dei Giovani</title>
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Domande dei Giovani</a>
-  </div>
-  <div class="nav-right">
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="faq.html">FAQ</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="scrivi.html">Scrivi</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="chi-sono.html">Chi sono</a>
-  </div>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-  <!-- Pulsante musica -->
-  <button id="audio-btn" class="audio-btn">♫</button>
-  <audio id="audio-player" src="musica.mp3"></audio>
-</nav>
+    <img src="hero-funziona.jpg" alt="Come funziona" class="header-image">
 
-  <!-- Hero -->
-  <div class="hero">
-    <img src="hero-funziona.jpg" alt="Come funziona" class="hero-image">
-  </div>
+    <div class="container">
+        <h1>COME FUNZIONA</h1>
+        <p>
+            Puoi scrivere una domanda in modo completamente anonimo.  
+            La leggo con attenzione e ti rispondo personalmente, senza giudizio.  
+            La risposta arriva direttamente a te, in modo privato.
+        </p>
+    </div>
 
-  <!-- Contenuto -->
-  <div class="container">
-    <h1>Come funziona</h1>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-    <p>
-      Questo spazio è pensato per permetterti di fare una domanda in modo semplice, rispettoso e anonimo.
-    </p>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
 
-    <h2>1. Scrivi la tua domanda</h2>
-    <p>
-      Vai alla pagina <a href="scrivi.html">Scrivi</a> e inserisci ciò che vuoi condividere. Puoi farlo con calma, senza fretta.
-    </p>
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
 
-    <h2>2. Scegli se lasciare un contatto</h2>
-    <p>
-      Puoi decidere se ricevere una risposta via email o cellulare. Se preferisci restare anonimo, va benissimo.
-    </p>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
 
-    <h2>3. Ricevi la risposta</h2>
-    <p>
-      Se hai lasciato un contatto, ti risponderò nel modo che hai scelto. Se non hai lasciato nulla, potrai leggere la risposta nella sezione dedicata.
-    </p>
-
-    <h2>4. Torna quando vuoi</h2>
-    <p>
-      Puoi fare una sola domanda o tornare più volte. Questo spazio è qui per te.
-    </p>
-
-  </div>
-
-  <script src="script.js"></script>
+    <!-- Script musica -->
+    <script src="audio.js"></script>
 
 </body>
 </html>
