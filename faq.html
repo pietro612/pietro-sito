@@ -1,73 +1,63 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domande dei Giovani - FAQ</title>
-
-  <meta name="description" content="Domande frequenti sul funzionamento dello spazio di ascolto: anonimato, risposte, privacy, pubblicazione delle domande e contatti.">
-
-  <link rel="stylesheet" href="style-v2.css?v=22">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ – Domande dei Giovani</title>
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Domande dei Giovani</a>
-  </div>
-  <div class="nav-right">
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="faq.html">FAQ</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="scrivi.html">Scrivi</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="chi-sono.html">Chi sono</a>
-  </div>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-  <!-- Pulsante musica -->
-  <button id="audio-btn" class="audio-btn">♫</button>
-  <audio id="audio-player" src="musica.mp3"></audio>
-</nav>
+    <img src="hero-faq.jpg" alt="FAQ" class="header-image">
 
-  <!-- Hero -->
-  <div class="hero">
-    <img src="hero-faq.jpg" alt="Immagine FAQ" class="hero-image">
-  </div>
+    <div class="container">
+        <h1>DOMANDE FREQUENTI</h1>
 
-  <!-- Contenuto -->
-  <div class="container">
-    <h1>Domande frequenti</h1>
+        <h3>Il servizio è davvero anonimo?</h3>
+        <p>Sì. Non raccolgo dati personali e non traccio chi scrive.</p>
 
-    <h2>Le domande sono anonime?</h2>
-    <p>
-      Sì. Puoi scrivere senza inserire i tuoi dati. Se vuoi ricevere una risposta, puoi lasciare un contatto, ma non è obbligatorio.
-    </p>
+        <h3>Quanto devo aspettare per una risposta?</h3>
+        <p>Di solito rispondo entro pochi giorni, con attenzione e cura.</p>
 
-    <h2>Come riceverò la risposta?</h2>
-    <p>
-      Se lasci un contatto, ti risponderò nel modo che hai scelto: email o cellulare. Se non lasci nulla, leggerai la risposta nella sezione dedicata.
-    </p>
+        <h3>Posso fare qualsiasi tipo di domanda?</h3>
+        <p>Sì, purché sia posta con rispetto. Non ci sono argomenti proibiti.</p>
 
-    <h2>Le domande vengono pubblicate?</h2>
-    <p>
-      Solo se tu lo desideri. Puoi scegliere liberamente.
-    </p>
+        <h3>Le mie domande vengono pubblicate?</h3>
+        <p>No. Le domande restano private e la risposta arriva solo a te.</p>
+    </div>
 
-    <h2>Chi leggerà la mia domanda?</h2>
-    <p>
-      Solo io. La tua domanda viene accolta con rispetto e riservatezza.
-    </p>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-    <h2>Posso scrivere più volte?</h2>
-    <p>
-      Certo. Puoi tornare quando vuoi.
-    </p>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
 
-  </div>
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
 
-  <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <!-- Script musica -->
+    <script src="audio.js"></script>
 
 </body>
 </html>
