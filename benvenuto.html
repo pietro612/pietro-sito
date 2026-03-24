@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domande dei Giovani - Benvenuto</title>
-
-  <meta name="description" content="Benvenuto in uno spazio di ascolto pensato per accompagnarti con calma. Puoi iniziare da una domanda o semplicemente leggere ciò che ti risuona.">
-
-  <link rel="stylesheet" href="style-v2.css?v=22">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuto – Domande dei Giovani</title>
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <a href="index.html" class="logo">Domande dei Giovani</a>
-  </div>
-  <div class="nav-right">
-    <a href="benvenuto.html">Benvenuto</a>
-    <a href="faq.html">FAQ</a>
-    <a href="perche-esiste.html">Perché esiste</a>
-    <a href="come-funziona.html">Come funziona</a>
-    <a href="scrivi.html">Scrivi</a>
-    <a href="contatto.html">Contatto</a>
-    <a href="chi-sono.html">Chi sono</a>
-  </div>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-  <!-- Pulsante musica -->
-  <button id="audio-btn" class="audio-btn">♫</button>
-  <audio id="audio-player" src="musica.mp3"></audio>
-</nav>
+    <img src="hero-benvenuto.jpg" alt="Benvenuto" class="header-image">
 
-  <!-- Hero -->
-  <div class="hero">
-    <img src="hero-benvenuto.jpg" alt="Immagine di benvenuto" class="hero-image">
-  </div>
+    <div class="container">
+        <h1>BENVENUTO</h1>
+        <p>
+            Questo spazio è pensato per accoglierti con semplicità e rispetto.
+            Puoi esplorare liberamente, fare una domanda o leggere le risposte già presenti.
+        </p>
+    </div>
 
-  <!-- Contenuto -->
-  <div class="container">
-    <h1>Benvenuto</h1>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-    <p>
-      Sono qui per accompagnarti con calma, passo dopo passo, nel modo che senti più tuo.
-      Se vuoi, puoi iniziare da una domanda.
-    </p>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
 
-    <p>
-      Uno spazio di ascolto, con calma e presenza.
-    </p>
-  </div>
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
 
-  <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <!-- Script musica -->
+    <script src="audio.js"></script>
 
 </body>
 </html>
