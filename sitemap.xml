@@ -1,70 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
- <url>
-  <loc>https://domandedeigiovani.it/scrivi.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
-
   <url>
-    <loc>https://domandedeigiovani.it/index.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://domandedeigiovani.it/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://domandedeigiovani.it/benvenuto.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://domandedeigiovani.it/chi-sono.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://domandedeigiovani.it/come-funziona.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://domandedeigiovani.it/perche-esiste.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://domandedeigiovani.it/scrivi.html</loc>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://domandedeigiovani.it/faq.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://domandedeigiovani.it/contatto.html</loc>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://domandedeigiovani.it/come-tratto-i-messaggi.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://domandedeigiovani.it/contatto.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://domandedeigiovani.it/scrivi.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://domandedeigiovani.it/chi-sono.html</loc>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://domandedeigiovani.it/grazie.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
