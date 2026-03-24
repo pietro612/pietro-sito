@@ -1,12 +1,12 @@
-let audio = new Audio("musica.mp3");
-let playing = false;
+const audioBtn = document.getElementById("audio-btn");
+const audioPlayer = document.getElementById("audio-player");
 
-function toggleAudio() {
-    if (!playing) {
-        audio.play();
-        playing = true;
-    } else {
-        audio.pause();
-        playing = false;
-    }
-}
+audioBtn.addEventListener("click", () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    audioBtn.textContent = "❚❚"; // icona pausa
+  } else {
+    audioPlayer.pause();
+    audioBtn.textContent = "♫"; // icona musica
+  }
+});
