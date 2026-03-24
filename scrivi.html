@@ -1,86 +1,71 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrivi una domanda</title>
-   <link rel="stylesheet" href="style-v2.css?v=2">
-    <script src="audio.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domande dei Giovani - Scrivi</title>
+
+  <meta name="description" content="Invia una domanda o un pensiero in modo privato. Puoi scegliere come essere ricontattato oppure restare anonimo.">
+
+  <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-    <!-- NAVBAR MODERNA -->
-    <nav class="navbar">
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="scrivi.html" class="active">Scrivi</a></li>
-        </ul>
-    </nav>
-
-    <!-- PULSANTE AUDIO (STESSO DELLA HOME) -->
-    <button class="music-btn" onclick="toggleAudio()">🎵</button>
-
-    <!-- IMMAGINE DI INTESTAZIONE -->
-    <img src="immagini/hero-scrivi.jpg" alt="Scrivi" class="header-image">
-
-    <!-- TITOLO -->
-    <h1>Scrivi una domanda</h1>
-
-    <!-- CONTENUTO -->
-    <div class="container">
-
-        <h2>Vuoi fare una domanda o condividere un pensiero?</h2>
-        <p>
-            Puoi usare questo spazio per esprimere un dubbio, una domanda, una riflessione o un pensiero personale.  
-            Non è necessario scrivere in modo formale: ciò che conta è la sincerità.
-        </p>
-
-        <h2>Come riceverò una risposta?</h2>
-        <p>
-            Se desideri una risposta privata, puoi lasciare un contatto.  
-            Posso risponderti tramite:
-            <br>• Email  
-            <br>• Numero di cellulare  
-            <br>• SMS  
-            <br><br>
-            Se preferisci rimanere anonimo, puoi comunque inviare la tua domanda:  
-            in questo caso non riceverai una risposta diretta, ma potrai leggere le risposte pubblicate alle domande simili alla tua.
-        </p>
-
-        <h2>I miei dati sono al sicuro?</h2>
-        <p>
-            Sì. I tuoi dati non vengono condivisi con nessuno e vengono usati solo per risponderti.  
-            Puoi anche scegliere di non lasciare alcun contatto.
-        </p>
-
-        <h2>Modulo</h2>
-        <p>Compila il modulo qui sotto per inviare la tua domanda.</p>
-
-        <!-- MODULO -->
-        <form action="https://formspree.io/f/mqakjzpq" method="POST" class="form">
-
-            <label for="messaggio">La tua domanda o il tuo pensiero</label>
-            <textarea id="messaggio" name="messaggio" required></textarea>
-
-            <label for="email">Email (opzionale)</label>
-            <input type="email" id="email" name="email">
-
-            <label for="telefono">Numero di cellulare (opzionale)</label>
-            <input type="tel" id="telefono" name="telefono">
-
-            <label for="sms">Numero per SMS (opzionale)</label>
-            <input type="tel" id="sms" name="sms">
-
-            <button type="submit" class="cta">Invia la tua domanda</button>
-
-        </form>
-
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">Domande dei Giovani</a>
     </div>
+    <div class="nav-right">
+      <a href="benvenuto.html">Benvenuto</a>
+      <a href="faq.html">FAQ</a>
+      <a href="perche-esiste.html">Perché esiste</a>
+      <a href="funziona.html">Come funziona</a>
+      <a href="scrivi.html">Scrivi</a>
+      <a href="contatto.html">Contatto</a>
+      <a href="chi-sono.html">Chi sono</a>
+    </div>
+
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="audio-btn">♫</button>
+    <audio id="audio-player" src="musica.mp3"></audio>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <img src="hero-scrivi.jpg" alt="Scrivi la tua domanda" class="hero-image">
+  </div>
+
+  <!-- Contenuto -->
+  <div class="container">
+    <h1>Scrivi la tua domanda</h1>
+
+    <p>
+      Qui puoi condividere un pensiero, un dubbio o una domanda. Puoi farlo con calma, nel modo che senti più tuo.
+    </p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+
+      <label for="message">La tua domanda o il tuo messaggio</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <label for="email">Email (opzionale)</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Cellulare (opzionale)</label>
+      <input type="text" id="phone" name="phone">
+
+      <button type="submit" class="btn">Invia</button>
+    </form>
+
+    <p>
+      Puoi scegliere se lasciare un contatto oppure restare anonimo.  
+      In ogni caso, la tua domanda sarà accolta con rispetto.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
