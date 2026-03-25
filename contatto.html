@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contatto</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatto</title>
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">Domande dei Giovani</div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="perche.html">Perché esiste</a></li>
-      <li><a href="come-funziona.html">Come funziona</a></li>
-      <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-      <li><a href="scrivi.html">Scrivi una domanda</a></li>
-      <li><a href="contatto.html" class="active">Contatto</a></li>
-      <li><a href="chi-sono.html">Chi sono</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-    </ul>
-  </header>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+</header>
 
-  <!-- IMMAGINE GRANDE -->
-  <img src="immagini/hero-home.jpg" alt="Contatto" class="header-image">
+<!-- IMMAGINE HERO -->
+<img src="hero-contatto.jpg" alt="Contatto" class="header-image">
 
-  <!-- CONTENUTO -->
-  <div class="container">
-    <h1>CONTATTO</h1>
+<!-- PULSANTE AUDIO (sotto l’immagine) -->
+<button id="audio-btn" class="audio-button">♫</button>
+<audio id="audio-player" src="musica.mp3"></audio>
 
-    <p>
-      Se vuoi scrivermi direttamente, puoi farlo con calma e senza fretta.
-      Rispondo sempre con rispetto, sincerità e attenzione.
-    </p>
+<!-- CONTENUTO DELLA PAGINA -->
+<main>
+    <h1>Contatto</h1>
+    <p>Se desideri scrivermi direttamente, puoi farlo tramite il modulo qui sotto.</p>
 
-    <p>
-      Puoi contattarmi via email:
-      <br><strong>tuoindirizzo@email.com</strong>
-    </p>
+    <form action="grazie.html" method="POST" class="form-container">
+        <label for="nome">Il tuo nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <p>
-      Oppure puoi usare la pagina “Scrivi una domanda” se preferisci rimanere anonimo.
-    </p>
-  </div>
+        <label for="email">La tua email:</label>
+        <input type="email" id="email" name="email" required>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Pietro</p>
-  </footer>
+        <label for="messaggio">Il tuo messaggio:</label>
+        <textarea id="messaggio" name="messaggio" required></textarea>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("open");
-    }
-  </script>
+        <button type="submit" class="submit-btn">Invia</button>
+    </form>
+</main>
+
+<!-- SCRIPT AUDIO -->
+<script>
+const audioBtn = document.getElementById("audio-btn");
+const audioPlayer = document.getElementById("audio-player");
+
+audioBtn.addEventListener("click", () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    audioBtn.textContent = "❚❚";
+  } else {
+    audioPlayer.pause();
+    audioBtn.textContent = "♫";
+  }
+});
+</script>
 
 </body>
 </html>
