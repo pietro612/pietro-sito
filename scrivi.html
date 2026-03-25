@@ -1,74 +1,62 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scrivi una domanda</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrivi una domanda</title>
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">Domande dei Giovani</div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="perche.html">Perché esiste</a></li>
-      <li><a href="come-funziona.html">Come funziona</a></li>
-      <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-      <li><a href="scrivi.html" class="active">Scrivi una domanda</a></li>
-      <li><a href="contatto.html">Contatto</a></li>
-      <li><a href="chi-sono.html">Chi sono</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-    </ul>
-  </header>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+</header>
 
-  <!-- IMMAGINE GRANDE -->
-  <img src="immagini/hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
+<!-- IMMAGINE HERO -->
+<img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
 
-  <!-- CONTENUTO -->
-  <div class="container">
-    <h1>SCRIVI UNA DOMANDA</h1>
+<!-- PULSANTE AUDIO (sotto l’immagine) -->
+<button id="audio-btn" class="audio-button">♫</button>
+<audio id="audio-player" src="musica.mp3"></audio>
 
-    <p>
-      Puoi scrivere la tua domanda in modo anonimo.  
-      Se vuoi ricevere una risposta, puoi indicare come preferisci.
-    </p>
+<!-- CONTENUTO DELLA PAGINA -->
+<main>
+    <h1>Scrivi una domanda</h1>
+    <p>Puoi inviarmi qualsiasi domanda o riflessione. Ti risponderò con cura.</p>
 
-    <form action="https://formspree.io/f/xvzwobdy?redirect=https://pietro612.github.io/grazie.html" method="POST">
+    <form action="grazie.html" method="POST" class="form-container">
+        <label for="messaggio">Il tuo messaggio:</label>
+        <textarea id="messaggio" name="messaggio" required></textarea>
 
-      <label for="domanda">La tua domanda</label>
-      <textarea id="domanda" name="domanda" required></textarea>
-
-      <label for="email">Email (opzionale)</label>
-      <input type="email" id="email" name="email">
-
-      <label for="telefono">Numero di cellulare (opzionale)</label>
-      <input type="tel" id="telefono" name="telefono">
-
-      <label for="risposta">Come vuoi ricevere la risposta?</label>
-      <select id="risposta" name="risposta">
-        <option value="email">Email</option>
-        <option value="telefono">Telefono</option>
-        <option value="nessuna">Non voglio risposta</option>
-      </select>
-
-      <button type="submit" class="cta">Invia</button>
+        <button type="submit" class="submit-btn">Invia</button>
     </form>
-  </div>
+</main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Pietro</p>
-  </footer>
+<!-- SCRIPT AUDIO -->
+<script>
+const audioBtn = document.getElementById("audio-btn");
+const audioPlayer = document.getElementById("audio-player");
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("open");
-    }
-  </script>
+audioBtn.addEventListener("click", () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    audioBtn.textContent = "❚❚";
+  } else {
+    audioPlayer.pause();
+    audioBtn.textContent = "♫";
+  }
+});
+</script>
 
 </body>
 </html>
