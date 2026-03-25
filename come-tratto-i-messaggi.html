@@ -1,59 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Come tratto i messaggi</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come tratto i messaggi</title>
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">Domande dei Giovani</div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="perche.html">Perché esiste</a></li>
-      <li><a href="come-funziona.html">Come funziona</a></li>
-      <li><a href="come-tratto-i-messaggi.html" class="active">Come tratto i messaggi</a></li>
-      <li><a href="scrivi.html">Scrivi una domanda</a></li>
-      <li><a href="contatto.html">Contatto</a></li>
-      <li><a href="chi-sono.html">Chi sono</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-    </ul>
-  </header>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+</header>
 
-  <!-- IMMAGINE GRANDE -->
-  <img src="immagini/hero-home.jpg" alt="Come tratto i messaggi" class="header-image">
+<!-- IMMAGINE HERO -->
+<img src="hero-benvenuto.jpg" alt="Come tratto i messaggi" class="header-image">
 
-  <!-- CONTENUTO -->
-  <div class="container">
-    <h1>COME TRATTO I MESSAGGI</h1>
+<!-- PULSANTE AUDIO (sotto l’immagine) -->
+<button id="audio-btn" class="audio-button">♫</button>
+<audio id="audio-player" src="musica.mp3"></audio>
 
-    <p>
-      Ogni messaggio che ricevo viene letto con attenzione e rispetto.
-      Non raccolgo dati personali e non conservo nulla oltre al tempo necessario per rispondere.
-      La tua domanda rimane anonima e privata.
-    </p>
+<!-- CONTENUTO DELLA PAGINA -->
+<main>
+    <h1>Come tratto i messaggi</h1>
+    <p>Ogni messaggio viene accolto con rispetto, attenzione e riservatezza.  
+       Rispondo con cura, senza giudizio, e con l’intenzione di offrire uno spazio sicuro.</p>
+</main>
 
-    <p>
-      Rispondo con sincerità, delicatezza e senza giudizio.
-      Il mio unico intento è offrirti un ascolto autentico e una riflessione che possa esserti utile.
-    </p>
-  </div>
+<!-- SCRIPT AUDIO -->
+<script>
+const audioBtn = document.getElementById("audio-btn");
+const audioPlayer = document.getElementById("audio-player");
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Pietro</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("open");
-    }
-  </script>
+audioBtn.addEventListener("click", () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    audioBtn.textContent = "❚❚";
+  } else {
+    audioPlayer.pause();
+    audioBtn.textContent = "♫";
+  }
+});
+</script>
 
 </body>
 </html>
