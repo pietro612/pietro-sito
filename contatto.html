@@ -8,40 +8,55 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="scrivi.html">Scrivi</a>
-      <a href="contatto.html" class="active">Contatto</a>
-      <a href="faq.html">FAQ</a>
-    </nav>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Domande dei Giovani</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="perche.html">Perché esiste</a></li>
+      <li><a href="come-funziona.html">Come funziona</a></li>
+      <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+      <li><a href="scrivi.html">Scrivi una domanda</a></li>
+      <li><a href="contatto.html" class="active">Contatto</a></li>
+      <li><a href="chi-sono.html">Chi sono</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
   </header>
 
-  <main>
-    <h1>Contattami</h1>
-    <p>Se vuoi inviarmi un messaggio diretto, puoi usare questo modulo.</p>
+  <!-- IMMAGINE GRANDE -->
+  <img src="immagini/hero-home.jpg" alt="Contatto" class="header-image">
 
-    <form action="https://formspree.io/f/mzbqgqkd" method="POST">
+  <!-- CONTENUTO -->
+  <div class="container">
+    <h1>CONTATTO</h1>
 
-      <label for="nome">Il tuo nome (opzionale)</label>
-      <input type="text" id="nome" name="nome">
+    <p>
+      Se vuoi scrivermi direttamente, puoi farlo con calma e senza fretta.
+      Rispondo sempre con rispetto, sincerità e attenzione.
+    </p>
 
-      <label for="email">Email (opzionale)</label>
-      <input type="email" id="email" name="email">
+    <p>
+      Puoi contattarmi via email:
+      <br><strong>tuoindirizzo@email.com</strong>
+    </p>
 
-      <label for="telefono">Numero di cellulare (opzionale)</label>
-      <input type="tel" id="telefono" name="telefono" placeholder="+39 ...">
+    <p>
+      Oppure puoi usare la pagina “Scrivi una domanda” se preferisci rimanere anonimo.
+    </p>
+  </div>
 
-      <label for="messaggio">Il tuo messaggio</label>
-      <textarea id="messaggio" name="messaggio" required></textarea>
-
-      <button type="submit">Invia</button>
-
-    </form>
-  </main>
-
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Pietro</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("open");
+    }
+  </script>
+
 </body>
 </html>
