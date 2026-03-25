@@ -3,58 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domande dei Giovani</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Domande dei Giovani – uno spazio semplice, rispettoso e anonimo dove puoi fare una domanda e ricevere una risposta pensata davvero per te.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Domande dei Giovani">
-    <meta property="og:description" content="Uno spazio anonimo, rispettoso e accogliente dove puoi fare una domanda e ricevere una risposta pensata per te.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pietro612.github.io/">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-benvenuto.jpg">
-
-    <link rel="stylesheet" href="style-v2.css?v=22">
+    <title>Home</title>
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 
 <body>
 
+<header class="navbar">
     <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
     </nav>
+</header>
 
-    <!-- HERO con immagine più piccola e testo NON sovrapposto -->
-    <div class="hero" style="
-        background-image: url('immagini/hero-benvenuto.jpg');
-        height: 280px;
-        background-size: cover;
-        background-position: center;
-    ">
-    </div>
+<!-- IMMAGINE HERO -->
+<img src="hero-home.jpg" alt="Immagine Home" class="header-image">
 
-    <div class="hero-text">
-        <h1>DOMANDE DEI GIOVANI</h1>
-        <p>Uno spazio semplice, rispettoso e anonimo dove puoi fare una domanda e ricevere una risposta pensata davvero per te.</p>
-    </div>
+<!-- PULSANTE AUDIO (sotto l’immagine) -->
+<button id="audio-btn" class="audio-button">♫</button>
+<audio id="audio-player" src="musica.mp3"></audio>
 
-    <footer>
-        <p>© 2025 Domande dei Giovani</p>
-    </footer>
+<!-- CONTENUTO DELLA PAGINA -->
+<main>
+    <h1>Benvenuto</h1>
+    <p>Questo è il tuo spazio di ascolto e condivisione.</p>
+</main>
 
-    <div class="music-button" onclick="toggleAudio()">♪</div>
-    <audio id="background-audio" src="audio.mp3" loop></audio>
-    <script src="audio.js"></script>
+<!-- SCRIPT AUDIO -->
+<script>
+const audioBtn = document.getElementById("audio-btn");
+const audioPlayer = document.getElementById("audio-player");
+
+audioBtn.addEventListener("click", () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    audioBtn.textContent = "❚❚";
+  } else {
+    audioPlayer.pause();
+    audioBtn.textContent = "♫";
+  }
+});
+</script>
 
 </body>
 </html>
