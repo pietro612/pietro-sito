@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatto</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Contatta Domande dei Giovani in modo semplice e rispettoso. Puoi scegliere come ricevere la risposta.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contatto">
-    <meta property="og:description" content="Scrivi un messaggio e scegli come ricevere la risposta: email, SMS o WhatsApp.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pietro612.github.io/contatto.html">
-
-    <link rel="stylesheet" href="style-v2.css?v=22">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatto</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+  <header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html" class="active">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
+      <a href="index.html">Home</a>
+      <a href="scrivi.html">Scrivi</a>
+      <a href="contatto.html" class="active">Contatto</a>
+      <a href="faq.html">FAQ</a>
     </nav>
+  </header>
 
-    <main>
-        <h1>Contatto</h1>
-        <p>Se desideri scrivermi direttamente, puoi farlo da qui. Puoi anche scegliere come preferisci ricevere la risposta.</p>
+  <main>
+    <h1>Contattami</h1>
+    <p>Se vuoi inviarmi un messaggio diretto, puoi usare questo modulo.</p>
 
-        <form action="https://formspree.io/f/mzbqgqkd" method="POST">
+    <form action="https://formspree.io/f/mzbqgqkd" method="POST">
 
-            <label for="messaggio">Il tuo messaggio</label>
-            <textarea id="messaggio" name="messaggio" required></textarea>
+      <label for="nome">Il tuo nome (opzionale)</label>
+      <input type="text" id="nome" name="nome">
 
-            <label for="email">Email (opzionale)</label>
-            <input type="email" id="email" name="email">
+      <label for="email">Email (opzionale)</label>
+      <input type="email" id="email" name="email">
 
-            <label for="telefono">Numero di cellulare (opzionale)</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+39 ...">
+      <label for="telefono">Numero di cellulare (opzionale)</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="+39 ...">
 
-            <label for="preferenza">Come vuoi ricevere la risposta?</label>
-            <select id="preferenza" name="preferenza" required>
-                <option value="email">Email</option>
-                <option value="sms">SMS</option>
-                <option value="whatsapp">WhatsApp</option>
-            </select>
+      <label for="messaggio">Il tuo messaggio</label>
+      <textarea id="messaggio" name="messaggio" required></textarea>
 
-            <button type="submit">Invia</button>
-        </form>
-    </main>
+      <button type="submit">Invia</button>
 
-    <footer>
-        <p>© 2025 Domande dei Giovani</p>
-    </footer>
+    </form>
+  </main>
 
+  <footer>
+    <p>© 2025 Pietro</p>
+  </footer>
 </body>
 </html>
