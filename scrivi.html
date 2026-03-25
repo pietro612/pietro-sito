@@ -15,48 +15,38 @@
         <a href="perche-esiste.html">Perché esiste</a>
         <a href="come-funziona.html">Come funziona</a>
         <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="scrivi.html" class="active">Scrivi una domanda</a>
         <a href="contatto.html">Contatto</a>
         <a href="chi-sono.html">Chi sono</a>
         <a href="faq.html">FAQ</a>
     </nav>
 </header>
 
-<!-- IMMAGINE HERO -->
-<img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
-
-<!-- PULSANTE AUDIO (sotto l’immagine) -->
-<button id="audio-btn" class="audio-button">♫</button>
-<audio id="audio-player" src="musica.mp3"></audio>
-
-<!-- CONTENUTO DELLA PAGINA -->
-<main>
+<main class="form-container">
     <h1>Scrivi una domanda</h1>
     <p>Puoi inviarmi qualsiasi domanda o riflessione. Ti risponderò con cura.</p>
 
-    <form action="grazie.html" method="POST" class="form-container">
+    <form action="https://formspree.io/f/mjkvzjpj" method="POST">
+
         <label for="messaggio">Il tuo messaggio:</label>
         <textarea id="messaggio" name="messaggio" required></textarea>
+
+        <label for="email">La tua email (opzionale):</label>
+        <input type="email" id="email" name="email" placeholder="nome@example.com">
+
+        <label for="telefono">Il tuo numero (opzionale):</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="123 456 7890">
+
+        <label>Come preferisci essere ricontattato:</label>
+        <div class="contatto-opzioni">
+            <label><input type="radio" name="preferenza" value="email"> Email</label>
+            <label><input type="radio" name="preferenza" value="sms"> SMS</label>
+            <label><input type="radio" name="preferenza" value="nessuno" checked> Nessun contatto</label>
+        </div>
 
         <button type="submit" class="submit-btn">Invia</button>
     </form>
 </main>
-
-<!-- SCRIPT AUDIO -->
-<script>
-const audioBtn = document.getElementById("audio-btn");
-const audioPlayer = document.getElementById("audio-player");
-
-audioBtn.addEventListener("click", () => {
-  if (audioPlayer.paused) {
-    audioPlayer.play();
-    audioBtn.textContent = "❚❚";
-  } else {
-    audioPlayer.pause();
-    audioBtn.textContent = "♫";
-  }
-});
-</script>
 
 </body>
 </html>
