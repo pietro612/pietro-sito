@@ -251,3 +251,10 @@ input[type="tel"] {
     display: block;
     margin-bottom: 5px;
 }
+.music-image {
+    display: block;
+    width: 120px;
+    margin: 20px auto;
+    opacity: 0.9;
+}
+
