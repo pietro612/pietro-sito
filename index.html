@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home – Test</title>
+    <title>Uno spazio per scrivere</title>
     <link rel="stylesheet" href="style-v2.css">
+    <meta name="description" content="Uno spazio tranquillo dove puoi scrivere una domanda, un dubbio o un pensiero. Rispondo con cura e rispetto.">
 </head>
 
 <body>
 
 <header class="navbar">
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="perche-esiste.html">Perché esiste</a>
         <a href="come-funziona.html">Come funziona</a>
         <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
@@ -21,33 +22,27 @@
         <a href="faq.html">FAQ</a>
     </nav>
 </header>
-s
-<!-- IMMAGINE HERO CORRETTA + CACHE BUSTER -->
-<img src="hero-benvenuto.jpg?v=1" alt="Immagine Home" class="header-image">
 
-<!-- PULSANTE AUDIO -->
-<button id="audio-btn" class="audio-button">♫</button>
-<audio id="audio-player" src="musica.mp3"></audio>
+<!-- IMMAGINE HERO -->
+<img src="hero-benvenuto.jpg" alt="Immagine di benvenuto" class="header-image">
 
-<main>
-    <h1>Benvenuto</h1>
-    <p>Questo è il tuo spazio di ascolto e condivisione.</p>
+<main class="content">
+    <h1>Uno spazio per scrivere</h1>
+    <p>
+        Questo è un luogo semplice e tranquillo.  
+        Puoi scrivere una domanda, un dubbio, un pensiero che ti sta a cuore.  
+        Io ti risponderò con attenzione, rispetto e calma.
+    </p>
+
+    <p>
+        Non serve registrarsi, non serve lasciare dati personali.  
+        Puoi scrivere liberamente, in modo anonimo se preferisci.
+    </p>
+
+    <div class="cta-container">
+        <a href="scrivi.html" class="cta-button">Scrivi una domanda</a>
+    </div>
 </main>
-
-<script>
-const audioBtn = document.getElementById("audio-btn");
-const audioPlayer = document.getElementById("audio-player");
-
-audioBtn.addEventListener("click", () => {
-  if (audioPlayer.paused) {
-    audioPlayer.play();
-    audioBtn.textContent = "❚❚";
-  } else {
-    audioPlayer.pause();
-    audioBtn.textContent = "♫";
-  }
-});
-</script>
 
 </body>
 </html>

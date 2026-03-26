@@ -236,3 +236,18 @@ form button:hover {
 .button:hover {
   background-color: #357ab8;
 }
+/* Campi email e telefono */
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Opzioni di contatto */
+.contatto-opzioni label {
+    display: block;
+    margin-bottom: 5px;
+}
