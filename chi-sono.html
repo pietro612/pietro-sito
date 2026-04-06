@@ -3,84 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi sono – Domande dei Giovani</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Chi sono: la persona che risponde alle domande con ascolto, rispetto e riservatezza.">
-    <meta name="robots" content="index, follow">
+    <title>Chi sono – La persona dietro Domande dei Giovani</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://domandedeigiovani.it/chi-sono.html">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Mi presento: sono la persona che legge e risponde ai tuoi messaggi. Qui trovi la mia storia e il motivo per cui faccio questo.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Chi sono – Domande dei Giovani">
-    <meta property="og:description" content="Scopri chi risponde alle domande con ascolto, rispetto e riservatezza.">
+    <meta property="og:title" content="Chi sono – La persona dietro Domande dei Giovani">
+    <meta property="og:description" content="Mi presento: sono la persona che legge e risponde ai tuoi messaggi. Qui trovi la mia storia e il motivo per cui faccio questo.">
+    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
+    <meta property="og:url" content="https://domandedeigiovani.it/chi-sono.html">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pietro612.github.io/chi-sono.html">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-chisono.jpg">
 
-    <link rel="stylesheet" href="style-v2.css?v=22">
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html" class="active">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html" class="active">Chi sono</a>
+        <a href="faq.html">FAQ</a>
     </nav>
+</header>
 
-    <!-- Immagine più piccola e visibile -->
-    <div class="hero" style="
-        background-image: url('immagini/hero-chisono.jpg');
-        height: 260px;
-        background-size: cover;
-        background-position: center;
-    ">
-    </div>
+<img src="hero-chisono.jpg" alt="Chi sono" class="header-image">
 
-    <div class="container">
-        <h1>CHI SONO</h1>
-        <p>
-            Sono una persona che crede profondamente nel valore dell’ascolto.
-            Ogni giorno incontro giovani che portano domande, dubbi, paure e desideri.
-            Questo spazio nasce proprio da lì: dal bisogno di offrire un luogo sicuro,
-            rispettoso e libero da giudizi.
-        </p>
+<main class="content">
+    <h1>Chi sono</h1>
 
-        <p>
-            Rispondo personalmente a ogni messaggio, con sincerità e delicatezza.
-            Non raccolgo dati, non traccio nulla, non conservo nulla oltre al tempo necessario
-            per rispondere. La tua domanda rimane privata e protetta.
-        </p>
+    <p>Sono la persona che legge e risponde ai messaggi che arrivano su questo sito.  
+    Ho creato questo spazio perché credo che ogni giovane meriti un luogo dove poter parlare liberamente.</p>
 
-        <p>
-            Il mio intento è semplice: offrirti un punto di riferimento,
-            un luogo dove poter dire ciò che senti e ricevere una risposta pensata davvero per te.
-        </p>
-    </div>
+    <h2>Perché lo faccio</h2>
+    <p>Perché ascoltare è importante.  
+    Perché a volte basta qualcuno che ti prenda sul serio.  
+    Perché nessuno dovrebbe sentirsi solo con i propri pensieri.</p>
 
-    <footer>© 2025 Domande dei Giovani</footer>
-
-    <!-- Pulsante musica -->
-    <button id="audio-btn" class="music-btn">🎵</button>
-
-    <!-- Audio -->
-    <audio id="audio-player" src="musica.mp3" loop></audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-    </script>
-
-    <script src="audio.js"></script>
+    <h2>Il mio impegno</h2>
+    <p>Rispondere con sincerità, rispetto e attenzione.  
+    Sempre.</p>
+</main>
 
 </body>
 </html>
