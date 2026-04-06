@@ -3,61 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pagina non trovata – Domande dei Giovani</title>
 
-    <!-- SEO -->
-    <meta name="description" content="La pagina che cerchi non esiste. Torna alla home di Domande dei Giovani.">
-    <meta name="robots" content="index, follow">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://domandedeigiovani.it/">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Spiacente, la pagina che cerchi non esiste. Torna alla home o contattami se hai bisogno di aiuto.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Pagina non trovata – Domande dei Giovani">
-    <meta property="og:description" content="La pagina che cerchi non esiste. Puoi tornare alla home.">
+    <meta property="og:description" content="Spiacente, la pagina che cerchi non esiste. Torna alla home o contattami se hai bisogno di aiuto.">
+    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
+    <meta property="og:url" content="https://domandedeigiovani.it/404.html">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pietro612.github.io/404.html">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-home.jpg">
 
-    <link rel="stylesheet" href="style-v2.css?v=22">
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
     </nav>
+</header>
 
-    <div class="container" style="padding-top: 120px; text-align: center;">
-        <h1>404</h1>
-        <p>La pagina che cerchi non esiste.</p>
-        <a href="index.html" class="submit-btn">Torna alla Home</a>
-    </div>
+<img src="hero-home.jpg" alt="Pagina non trovata" class="header-image">
 
-    <footer>© 2025 Domande dei Giovani</footer>
+<main class="content">
+    <h1>Pagina non trovata</h1>
 
-    <!-- Pulsante musica -->
-    <button id="audio-btn" class="music-btn">🎵</button>
+    <p>Spiacente, non riesco a trovare la pagina che stavi cercando.</p>
 
-    <!-- Audio -->
-    <audio id="audio-player" src="musica.mp3" loop></audio>
+    <p>Puoi tornare alla home del sito oppure contattarmi se hai bisogno di aiuto.</p>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-    </script>
-
-    <!-- Script musica -->
-    <script src="audio.js"></script>
+    <a href="index.html" class="button">Vai alla home</a>
+</main>
 
 </body>
 </html>
