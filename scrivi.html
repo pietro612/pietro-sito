@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrivi una domanda</title>
+
+    <title>Scrivi una domanda – Ti ascolto con attenzione</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://domandedeigiovani.it/scrivi.html">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Hai un dubbio o un pensiero da condividere? Scrivi liberamente. Ogni messaggio viene letto con cura e riceve una risposta sincera.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Scrivi una domanda – Ti ascolto con attenzione">
+    <meta property="og:description" content="Hai un dubbio o un pensiero da condividere? Scrivi liberamente. Ogni messaggio viene letto con cura e riceve una risposta sincera.">
+    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
+    <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="style-v2.css">
 </head>
 
@@ -24,39 +39,20 @@
 
 <img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
 
-<main class="form-container">
+<main class="content">
     <h1>Scrivi una domanda</h1>
-    <p>Puoi inviarmi qualsiasi domanda o riflessione. Ti risponderò con cura.</p>
 
-    <form action="https://formspree.io/f/mbdpdwbq" method="POST">
+    <p>Se hai un dubbio, un pensiero o qualcosa che ti pesa, puoi scriverlo qui.  
+    Ogni messaggio viene letto con attenzione e rispetto.</p>
 
-        <!-- Campo nascosto per compatibilità Formspree -->
-        <input type="hidden" name="form-name" value="messaggi-sito">
+    <form action="https://formspree.io/f/mqakjvjn" method="POST" class="contact-form">
+        <label for="message">Il tuo messaggio</label>
+        <textarea id="message" name="message" required></textarea>
 
-        <label for="messaggio">Il tuo messaggio:</label>
-        <textarea id="messaggio" name="message" required></textarea>
+        <label for="email">Email (facoltativa)</label>
+        <input type="email" id="email" name="email" placeholder="Se vuoi una risposta diretta">
 
-        <label for="email">La tua email (opzionale):</label>
-        <input type="email" id="email" name="_replyto" placeholder="nome@example.com">
-
-        <label for="telefono">Il tuo numero (opzionale):</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="123 456 7890">
-
-        <label>Come preferisci essere ricontattato:</label>
-        <div class="contatto-opzioni">
-            <label><input type="radio" name="preferenza" value="email"> Email</label>
-            <label><input type="radio" name="preferenza" value="sms"> SMS</label>
-            <label><input type="radio" name="preferenza" value="nessuno" checked> Nessun contatto</label>
-        </div>
-
-        <button type="submit" class="submit-btn">Invia</button>
-
-        <p class="fallback-message" style="margin-top:15px; font-size:0.9em; text-align:center;">
-            Se per qualche motivo il form non dovesse inviare il messaggio,<br>
-            puoi contattarmi direttamente a:<br>
-            <strong>pietroceroni@gmail.com</strong>
-        </p>
-
+        <button type="submit" class="button">Invia</button>
     </form>
 </main>
 
