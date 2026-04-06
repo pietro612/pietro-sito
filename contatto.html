@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatto</title>
+
+    <title>Contatto – Scrivimi in modo diretto e riservato</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://domandedeigiovani.it/contatto.html">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Vuoi contattarmi direttamente? Qui puoi inviarmi un messaggio in modo semplice e riservato. Rispondo sempre con attenzione.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contatto – Scrivimi in modo diretto e riservato">
+    <meta property="og:description" content="Vuoi contattarmi direttamente? Qui puoi inviarmi un messaggio in modo semplice e riservato. Rispondo sempre con attenzione.">
+    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
+    <meta property="og:url" content="https://domandedeigiovani.it/contatto.html">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="style-v2.css">
 </head>
 
@@ -22,48 +37,22 @@
     </nav>
 </header>
 
-<img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
+<img src="hero-contatto.jpg" alt="Contatto" class="header-image">
 
-<img src="musica.jpg" alt="Musica" class="music-image">
+<main class="content">
+    <h1>Contatto diretto</h1>
 
-<audio controls style="display:block; margin: 0 auto 20px auto;">
-    <source src="musica.mp3" type="audio/mpeg">
-    Il tuo browser non supporta l'audio.
-</audio>
+    <p>Se preferisci scrivermi in modo diretto, puoi farlo da qui.  
+    Ogni messaggio viene letto con attenzione e riservatezza.</p>
 
-<main class="form-container">
-    <h1>Contatto</h1>
-    <p>Se desideri scrivermi direttamente, puoi farlo da qui. Risponderò con attenzione e rispetto.</p>
+    <form action="https://formspree.io/f/mqakjvjn" method="POST" class="contact-form">
+        <label for="message">Il tuo messaggio</label>
+        <textarea id="message" name="message" required></textarea>
 
-    <form action="https://formspree.io/f/mbdpdwbq" method="POST">
+        <label for="email">Email (facoltativa)</label>
+        <input type="email" id="email" name="email" placeholder="Se vuoi una risposta diretta">
 
-        <!-- Campo nascosto per compatibilità Formspree -->
-        <input type="hidden" name="form-name" value="messaggi-sito">
-
-        <label for="messaggio">Il tuo messaggio:</label>
-        <textarea id="messaggio" name="message" required></textarea>
-
-        <label for="email">La tua email (opzionale):</label>
-        <input type="email" id="email" name="_replyto" placeholder="nome@example.com">
-
-        <label for="telefono">Il tuo numero (opzionale):</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="123 456 7890">
-
-        <label>Come preferisci essere ricontattato:</label>
-        <div class="contatto-opzioni">
-            <label><input type="radio" name="preferenza" value="email"> Email</label>
-            <label><input type="radio" name="preferenza" value="sms"> SMS</label>
-            <label><input type="radio" name="preferenza" value="nessuno" checked> Nessun contatto</label>
-        </div>
-
-        <button type="submit" class="submit-btn">Invia</button>
-
-        <p class="fallback-message" style="margin-top:15px; font-size:0.9em; text-align:center;">
-            Se per qualche motivo il form non dovesse inviare il messaggio,<br>
-            puoi contattarmi direttamente a:<br>
-            <strong>pietroceroni@gmail.com</strong>
-        </p>
-
+        <button type="submit" class="button">Invia</button>
     </form>
 </main>
 
