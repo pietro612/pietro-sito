@@ -3,85 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ – Domande dei Giovani</title>
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style-v2.css">
 
-    <!-- SEO -->
-    <meta name="description" content="Domande frequenti su Domande dei Giovani: anonimato, riservatezza, tempi di risposta e funzionamento.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="FAQ – Domande dei Giovani">
-    <meta property="og:description" content="Risposte alle domande più frequenti su anonimato, riservatezza e funzionamento del servizio.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pietro612.github.io/faq.html">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-faq.jpg">
-
-    <link rel="stylesheet" href="style-v2.css?v=22">
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://domandedeigiovani.it/faq.html">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html" class="active">FAQ</a></li>
-        </ul>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html" class="active">FAQ</a>
     </nav>
+</header>
 
-    <!-- Immagine più piccola e visibile -->
-    <div class="hero" style="
-        background-image: url('immagini/hero-faq.jpg');
-        height: 260px;
-        background-size: cover;
-        background-position: center;
-    ">
-    </div>
+<img src="hero-faq.jpg" alt="FAQ" class="header-image">
 
-    <div class="container">
-        <h1>DOMANDE FREQUENTI</h1>
+<main class="content">
+    <h1>Domande frequenti</h1>
 
-        <h3>Devo lasciare i miei dati?</h3>
-        <p>No. Puoi scrivere in modo completamente anonimo. Se vuoi ricevere una risposta, puoi lasciare un’email o un numero di cellulare, ma non è obbligatorio.</p>
+    <section>
+        <h2>Chi può scrivere?</h2>
+        <p>Chiunque abbia una domanda sincera o un dubbio che desidera condividere.</p>
+    </section>
 
-        <h3>Come ricevo la risposta?</h3>
-        <p>Puoi scegliere tu: email, SMS o WhatsApp. Rispondo personalmente con il canale che preferisci.</p>
+    <section>
+        <h2>Come vengono trattati i messaggi?</h2>
+        <p>Con rispetto, riservatezza e attenzione. Nessun messaggio viene ignorato.</p>
+    </section>
 
-        <h3>Le mie domande vengono salvate?</h3>
-        <p>No. Non conservo nulla oltre al tempo necessario per rispondere. Non esiste un archivio delle domande.</p>
+    <section>
+        <h2>Riceverò una risposta?</h2>
+        <p>Sì, sempre. Ogni messaggio merita ascolto.</p>
+    </section>
 
-        <h3>Chi risponde ai messaggi?</h3>
-        <p>Rispondo io personalmente, con ascolto, rispetto e senza giudizio.</p>
-
-        <h3>Quanto tempo serve per ricevere una risposta?</h3>
-        <p>Dipende dal momento, ma cerco sempre di rispondere il prima possibile.</p>
-
-        <h3>Posso fare più di una domanda?</h3>
-        <p>Sì, tutte quelle che vuoi. Questo spazio è qui per te.</p>
-    </div>
-
-    <footer>© 2025 Domande dei Giovani</footer>
-
-    <!-- Pulsante musica -->
-    <button id="audio-btn" class="music-btn">🎵</button>
-
-    <!-- Audio -->
-    <audio id="audio-player" src="musica.mp3" loop></audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-    </script>
-
-    <script src="audio.js"></script>
+    <section>
+        <h2>Serve lasciare l’email?</h2>
+        <p>No, è facoltativa. Puoi scrivere anche in forma anonima.</p>
+    </section>
+</main>
 
 </body>
 </html>
