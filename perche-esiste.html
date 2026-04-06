@@ -3,72 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perché esiste – Domande dei Giovani</title>
+    <title>Perché esiste</title>
+    <link rel="stylesheet" href="style-v2.css">
 
-    <!-- SEO -->
-    <meta name="description" content="Perché esiste Domande dei Giovani: uno spazio semplice, rispettoso e anonimo per chi vuole fare una domanda.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Perché esiste – Domande dei Giovani">
-    <meta property="og:description" content="Uno spazio anonimo e rispettoso dove puoi fare una domanda e ricevere una risposta pensata per te.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pietro612.github.io/perche-esiste.html">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-perche.jpg">
-
-    <link rel="stylesheet" href="style-v2.css?v=22">
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://domandedeigiovani.it/perche-esiste.html">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html" class="active">Perché esiste</a></li>
-            <li><a href="come-funziona.html">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html" class="active">Perché esiste</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
     </nav>
+</header>
 
-    <!-- Immagine più piccola e visibile -->
-    <div class="hero" style="
-        background-image: url('immagini/hero-perche.jpg');
-        height: 260px;
-        background-size: cover;
-        background-position: center;
-    ">
-    </div>
+<img src="hero-perche.jpg" alt="Perché esiste" class="header-image">
 
-    <div class="container">
-        <h1>PERCHÉ ESISTE</h1>
-        <p>
-            Questo spazio nasce per offrire ascolto, riflessione e una risposta sincera
-            a chi sente il bisogno di fare una domanda senza essere giudicato.
-            È un luogo semplice, rispettoso e completamente anonimo.
-        </p>
-    </div>
+<main class="content">
+    <h1>Perché esiste questo sito</h1>
 
-    <footer>© 2025 Domande dei Giovani</footer>
+    <p>Per dare uno spazio sicuro ai giovani che hanno domande, dubbi, pensieri che non sanno dove mettere.</p>
 
-    <!-- Pulsante musica -->
-    <button id="audio-btn" class="music-btn">🎵</button>
+    <h2>Un luogo di ascolto</h2>
+    <p>Qui puoi scrivere liberamente, senza giudizio.</p>
 
-    <!-- Audio -->
-    <audio id="audio-player" src="musica.mp3" loop></audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-    </script>
-
-    <script src="audio.js"></script>
+    <h2>Un luogo di risposta</h2>
+    <p>Ogni domanda merita attenzione, e qui la riceve.</p>
+</main>
 
 </body>
 </html>
