@@ -1,22 +1,53 @@
-.music-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    z-index: 999;
-    transition: transform 0.2s ease;
+/* Reset di base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
 }
 
-.music-button img {
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 10px;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+.navbar .active {
+    border-bottom: 2px solid #000;
+}
+
+/* Immagine header */
+.header-image {
     width: 100%;
-    height: 100%;
+    height: 260px;
     object-fit: cover;
+    display: block;
 }
 
-.music-button:hover {
-    transform: scale(1.08);
-}
+/* Contenuto principale */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding
