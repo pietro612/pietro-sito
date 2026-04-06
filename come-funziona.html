@@ -3,72 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Come funziona – Domande dei Giovani</title>
+    <title>Come funziona</title>
+    <link rel="stylesheet" href="style-v2.css">
 
-    <!-- SEO -->
-    <meta name="description" content="Come funziona Domande dei Giovani: uno spazio semplice e rispettoso dove puoi fare una domanda.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Come funziona – Domande dei Giovani">
-    <meta property="og:description" content="Scopri come funziona questo spazio anonimo e rispettoso dedicato alle tue domande.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pietro612.github.io/come-funziona.html">
-    <meta property="og:image" content="https://pietro612.github.io/immagini/hero-funziona.jpg">
-
-    <link rel="stylesheet" href="style-v2.css?v=22">
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://domandedeigiovani.it/come-funziona.html">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Domande dei Giovani</div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="perche-esiste.html">Perché esiste</a></li>
-            <li><a href="come-funziona.html" class="active">Come funziona</a></li>
-            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
-            <li><a href="scrivi.html">Scrivi una domanda</a></li>
-            <li><a href="contatto.html">Contatto</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
+<header class="navbar">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="perche-esiste.html">Perché esiste</a>
+        <a href="come-funziona.html" class="active">Come funziona</a>
+        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="scrivi.html">Scrivi una domanda</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="chi-sono.html">Chi sono</a>
+        <a href="faq.html">FAQ</a>
     </nav>
+</header>
 
-    <!-- Immagine più piccola e visibile -->
-    <div class="hero" style="
-        background-image: url('immagini/hero-funziona.jpg');
-        height: 260px;
-        background-size: cover;
-        background-position: center;
-    ">
-    </div>
+<img src="hero-funziona.jpg" alt="Come funziona" class="header-image">
 
-    <div class="container">
-        <h1>COME FUNZIONA</h1>
-        <p>
-            Puoi scrivere una domanda in modo completamente anonimo.
-            La leggo con attenzione e ti rispondo personalmente, senza giudizio.
-            La risposta arriva direttamente a te, in modo privato.
-        </p>
-    </div>
+<main class="content">
+    <h1>Come funziona</h1>
 
-    <footer>© 2025 Domande dei Giovani</footer>
+    <h2>1. Scrivi</h2>
+    <p>Puoi inviarmi qualsiasi domanda o pensiero.</p>
 
-    <!-- Pulsante musica -->
-    <button id="audio-btn" class="music-btn">🎵</button>
+    <h2>2. Leggo</h2>
+    <p>Ogni messaggio viene letto con attenzione.</p>
 
-    <!-- Audio -->
-    <audio id="audio-player" src="musica.mp3" loop></audio>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("open");
-        }
-    </script>
-
-    <script src="audio.js"></script>
+    <h2>3. Rispondo</h2>
+    <p>Riceverai una risposta sincera e rispettosa.</p>
+</main>
 
 </body>
 </html>
