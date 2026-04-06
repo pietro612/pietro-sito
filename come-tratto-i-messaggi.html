@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Come tratto i messaggi</title>
     <link rel="stylesheet" href="style-v2.css">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://domandedeigiovani.it/come-tratto-i-messaggi.html">
 </head>
 
 <body>
@@ -14,7 +17,7 @@
         <a href="index.html">Home</a>
         <a href="perche-esiste.html">Perché esiste</a>
         <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
+        <a href="come-tratto-i-messaggi.html" class="active">Come tratto i messaggi</a>
         <a href="scrivi.html">Scrivi una domanda</a>
         <a href="contatto.html">Contatto</a>
         <a href="chi-sono.html">Chi sono</a>
@@ -22,33 +25,23 @@
     </nav>
 </header>
 
-<!-- IMMAGINE HERO CORRETTA + CACHE BUSTER -->
-<img src="hero-benvenuto.jpg?v=1" alt="Come tratto i messaggi" class="header-image">
+<img src="hero-messaggi.jpg" alt="Come tratto i messaggi" class="header-image">
 
-<!-- PULSANTE AUDIO -->
-<button id="audio-btn" class="audio-button">♫</button>
-<audio id="audio-player" src="musica.mp3"></audio>
-
-<main>
+<main class="content">
     <h1>Come tratto i messaggi</h1>
-    <p>Ogni messaggio viene accolto con rispetto, attenzione e riservatezza.  
-       Rispondo con cura, senza giudizio, e con l’intenzione di offrire uno spazio sicuro.</p>
+
+    <p>Ogni messaggio che ricevo viene letto con attenzione e rispetto.  
+    Non giudico, non classifico, non ignoro.</p>
+
+    <h2>Riservatezza</h2>
+    <p>I messaggi non vengono condivisi con nessuno.</p>
+
+    <h2>Risposta</h2>
+    <p>Rispondo sempre, con cura e sincerità.</p>
+
+    <h2>Tempi</h2>
+    <p>Di solito rispondo entro pochi giorni.</p>
 </main>
-
-<script>
-const audioBtn = document.getElementById("audio-btn");
-const audioPlayer = document.getElementById("audio-player");
-
-audioBtn.addEventListener("click", () => {
-  if (audioPlayer.paused) {
-    audioPlayer.play();
-    audioBtn.textContent = "❚❚";
-  } else {
-    audioPlayer.pause();
-    audioBtn.textContent = "♫";
-  }
-});
-</script>
 
 </body>
 </html>
