@@ -4,58 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Musica – Un piccolo spazio per respirare</title>
+    <!-- Meta tag SEO -->
+    <title>Musica rilassante</title>
+    <meta name="description" content="Ascolta musica rilassante mentre navighi nel sito. Un piccolo spazio di calma per accompagnare i tuoi pensieri.">
 
-    <link rel="canonical" href="https://domandedeigiovani.it/musica.html">
-    <meta name="description" content="Un piccolo spazio di musica e calma. Una pausa, un respiro, un momento per te.">
-
-    <meta property="og:title" content="Musica – Un piccolo spazio per respirare">
-    <meta property="og:description" content="Un piccolo spazio di musica e calma. Una pausa, un respiro, un momento per te.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/musica.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-benvenuto.jpg" alt="Musica" class="header-image">
+    <div class="container">
+        <h1>Musica rilassante</h1>
+        <p>
+            Qui puoi ascoltare una musica tranquilla mentre navighi nel sito.
+            Un piccolo spazio di calma per accompagnare i tuoi pensieri.
+        </p>
 
-<main class="content">
-    <h1>Musica</h1>
+        <audio controls loop>
+            <source src="musica.mp3" type="audio/mpeg">
+            Il tuo browser non supporta l'audio.
+        </audio>
+    </div>
 
-    <p>A volte serve solo un momento per respirare.  
-    Qui puoi trovare un po’ di calma, un po’ di spazio, un po’ di musica.</p>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-    <p>Se vuoi, posso aggiungere una playlist, un brano, o un suono che per te ha un significato.</p>
-
-    <!-- Lettore audio -->
-    <audio controls autoplay>
-        <source src="musica.mp3" type="audio/mpeg">
-        Il tuo browser non supporta l'audio.
-    </audio>
-
-    <a href="index.html" class="button">Torna alla home</a>
-</main>
-
-<!-- Pulsante musicale fluttuante -->
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
 
 </body>
 </html>
