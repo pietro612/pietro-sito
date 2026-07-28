@@ -1,44 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://pietro612.github.io/</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/</loc>
+        <priority>1.00</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/benvenuto.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/index.html</loc>
+        <priority>1.00</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/perche-esiste.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/benvenuto.html</loc>
+        <priority>0.90</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/come-funziona.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/perche-esiste.html</loc>
+        <priority>0.90</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/come-tratto-i-messaggi.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/come-funziona.html</loc>
+        <priority>0.90</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/chi-sono.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/come-tratto-i-messaggi.html</loc>
+        <priority>0.85</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/contatto.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/chi-sono.html</loc>
+        <priority>0.85</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/faq.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/contatto.html</loc>
+        <priority>0.85</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/scrivi.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/faq.html</loc>
+        <priority>0.80</priority>
+    </url>
 
-  <url>
-    <loc>https://pietro612.github.io/musica.html</loc>
-  </url>
+    <url>
+        <loc>https://pietro612.github.io/scrivi.html</loc>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://pietro612.github.io/musica.html</loc>
+        <priority>0.70</priority>
+    </url>
 
 </urlset>
