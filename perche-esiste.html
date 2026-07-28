@@ -1,61 +1,82 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <head>
-  <title>Perché esiste questo spazio</title>
-  <meta name="description" content="La motivazione e la visione dietro questo spazio di ascolto: un luogo dedicato a chi cerca confronto, chiarezza e rispetto.">
-</head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Perché esiste questo sito – Domande dei Giovani</title>
+    <!-- Meta tag SEO -->
+    <title>Perché esiste questo spazio</title>
+    <meta name="description" content="La motivazione e la visione dietro questo spazio di ascolto: un luogo dedicato a chi cerca confronto, chiarezza e rispetto.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://domandedeigiovani.it/perche-esiste.html">
-
-    <!-- Meta Description -->
-    <meta name="description" content="Questo sito nasce per offrire ai giovani uno spazio sicuro dove esprimere pensieri e domande senza paura. Un luogo di ascolto autentico.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Perché esiste questo sito – Domande dei Giovani">
-    <meta property="og:description" content="Questo sito nasce per offrire ai giovani uno spazio sicuro dove esprimere pensieri e domande senza paura. Un luogo di ascolto autentico.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/perche-esiste.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="perche-esiste.html" class="active">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-perche.jpg" alt="Perché esiste questo sito" class="header-image">
+    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
 
-<main class="content">
-    <h1>Perché esiste questo sito</h1>
+    <div class="container">
+        <h1>Perché esiste questo spazio</h1>
 
-    <p>Questo spazio nasce per offrire ai giovani un luogo sicuro dove esprimere pensieri, dubbi e domande senza paura di essere giudicati.</p>
+        <p>
+            Questo sito nasce da un’idea semplice: creare un luogo dove chiunque possa parlare
+            liberamente, senza paura di essere frainteso o giudicato. Un luogo dove le parole
+            hanno valore e vengono accolte con rispetto.
+        </p>
 
-    <h2>Un luogo di ascolto</h2>
-    <p>Qui puoi scrivere liberamente, sapendo che ogni parola viene accolta con rispetto.</p>
+        <p>
+            Viviamo in un mondo veloce, dove spesso non c’è tempo per ascoltare davvero.
+            Molte persone hanno pensieri che non sanno a chi raccontare. Altre hanno domande
+            che non trovano spazio. Questo sito esiste per offrire quel tempo e quello spazio.
+        </p>
 
-    <h2>Un luogo di risposta</h2>
-    <p>Ogni domanda merita attenzione, e qui la riceve.</p>
-</main>
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+        <p>
+            Credo che ogni persona meriti di essere ascoltata. Credo che un dialogo sincero
+            possa aiutare a vedere le cose da un’altra prospettiva. Credo che anche un piccolo
+            messaggio possa fare la differenza.
+        </p>
+
+        <p>
+            Questo spazio esiste per te, per le tue parole e per ciò che senti.
+        </p>
+    </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
+
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
+
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <!-- Script musica -->
+    <script src="audio.js"></script>
+
+    <a href="musica.html" class="music-button">
+        <img src="musica.jpg" alt="Musica">
+    </a>
+
 </body>
 </html>
