@@ -1,62 +1,86 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <head>
-  <title>Come funziona questo spazio</title>
-  <meta name="description" content="Scopri come inviare un messaggio, come viene letto e come ricevi una risposta rispettosa e attenta.">
-</head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Come funziona – Scrivi, ti ascolto, rispondo</title>
+    <!-- Meta tag SEO -->
+    <title>Come funziona questo spazio</title>
+    <meta name="description" content="Scopri come inviare un messaggio, come viene letto e come ricevi una risposta rispettosa e attenta.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://domandedeigiovani.it/come-funziona.html">
-
-    <!-- Meta Description -->
-    <meta name="description" content="Scopri come funziona Domande dei Giovani: scrivi liberamente, ogni messaggio viene letto con cura e riceverai una risposta sincera e rispettosa.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Come funziona – Scrivi, ti ascolto, rispondo">
-    <meta property="og:description" content="Scopri come funziona Domande dei Giovani: scrivi liberamente, ogni messaggio viene letto con cura e riceverai una risposta sincera e rispettosa.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/come-funziona.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html" class="active">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-funziona.jpg" alt="Come funziona" class="header-image">
+    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
 
-<main class="content">
-    <h1>Come funziona</h1>
+    <div class="container">
+        <h1>Come funziona</h1>
 
-    <h2>1. Scrivi</h2>
-    <p>Puoi inviarmi qualsiasi domanda o pensiero, liberamente e senza giudizio.</p>
+        <p>
+            Qui puoi inviare un messaggio in modo semplice e immediato. Il funzionamento è pensato
+            per essere chiaro, trasparente e rispettoso dei tuoi tempi.
+        </p>
 
-    <h2>2. Leggo</h2>
-    <p>Ogni messaggio viene letto con attenzione e rispetto.</p>
+        <h2>Come inviare un messaggio</h2>
+        <p>
+            1. Vai alla sezione “Scrivi una domanda”.<br>
+            2. Inserisci il tuo testo.<br>
+            3. Invia il messaggio.<br>
+            4. Io lo leggo con attenzione.<br>
+            5. Ricevi una risposta pensata per te.
+        </p>
 
-    <h2>3. Rispondo</h2>
-    <p>Riceverai una risposta sincera, calma e rispettosa.</p>
-</main>
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+        <h2>Cosa succede dopo l’invio</h2>
+        <p>
+            Il tuo messaggio non viene ignorato. Non viene trattato come un numero. Viene letto con
+            cura, cercando di capire davvero ciò che vuoi esprimere.
+        </p>
+
+        <h2>Tempi di risposta</h2>
+        <p>
+            Rispondo nel più breve tempo possibile, rispettando la qualità del dialogo.
+        </p>
+
+        <h2>Privacy</h2>
+        <p>
+            I tuoi messaggi rimangono privati. Non vengono condivisi. Non vengono giudicati.
+        </p>
+    </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
+
+    <button id="audio-btn" class="music-btn">🎵</button>
+    <audio id="audio-player" src="musica.mp3" loop></audio>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <script src="audio.js"></script>
+
+    <a href="musica.html" class="music-button">
+        <img src="musica.jpg" alt="Musica">
+    </a>
+
 </body>
 </html>
