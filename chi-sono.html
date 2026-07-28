@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <head>
-  <title>Chi sono</title>
-  <meta name="description" content="Mi chiamo Pietro e ho creato questo spazio per offrire ascolto sincero, rispetto e un punto di riferimento discreto.">
-</head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chi sono – La persona dietro Domande dei Giovani</title>
+    <!-- Meta tag SEO -->
+    <title>Chi sono</title>
+    <meta name="description" content="Mi chiamo Pietro e ho creato questo spazio per offrire ascolto sincero, rispetto e un punto di riferimento discreto.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://domandedeigiovani.it/chi-sono.html">
-
-    <!-- Meta Description -->
-    <meta name="description" content="Mi presento: sono la persona che legge e risponde ai tuoi messaggi. Qui trovi la mia storia e il motivo per cui faccio questo.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Chi sono – La persona dietro Domande dei Giovani">
-    <meta property="og:description" content="Mi presento: sono la persona che legge e risponde ai tuoi messaggi. Qui trovi la mia storia e il motivo per cui faccio questo.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/chi-sono.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html" class="active">Chi sono</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-chisono.jpg" alt="Chi sono" class="header-image">
+    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
 
-<main class="content">
-    <h1>Chi sono</h1>
+    <div class="container">
+        <h1>Chi sono</h1>
 
-    <p>Sono la persona che legge e risponde ai messaggi che arrivano su questo sito.  
-    Ho creato questo spazio perché credo che ogni giovane meriti un luogo dove poter parlare liberamente.</p>
+        <p>
+            Mi chiamo Pietro e ho creato questo spazio per offrire un punto di ascolto sincero e
+            rispettoso. Credo profondamente nel valore delle parole e nella forza del dialogo.
+        </p>
 
-    <h2>Perché lo faccio</h2>
-    <p>Perché ascoltare è importante.  
-    Perché a volte basta qualcuno che ti prenda sul serio.  
-    Perché nessuno dovrebbe sentirsi solo con i propri pensieri.</p>
+        <h2>La mia storia</h2>
+        <p>
+            Da sempre mi interessa capire le persone, i loro pensieri e le loro emozioni. Ho imparato
+            che spesso basta un confronto gentile per vedere le cose da un’altra prospettiva.
+        </p>
 
-    <h2>Il mio impegno</h2>
-    <p>Rispondere con sincerità, rispetto e attenzione.  
-    Sempre.</p>
-</main>
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+        <h2>Perché faccio questo</h2>
+        <p>
+            Perché credo che ognuno meriti di essere ascoltato. Perché so che a volte è difficile
+            trovare qualcuno che lo faccia davvero. Perché penso che un messaggio possa essere
+            l’inizio di un cambiamento.
+        </p>
+
+        <h2>I miei valori</h2>
+        <p>
+            • Rispetto<br>
+            • Ascolto<br>
+            • Empatia<br>
+            • Chiarezza<br>
+            • Discrezione
+        </p>
+    </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
+
+    <button id="audio-btn" class="music-btn">🎵</button>
+    <audio id="audio-player" src="musica.mp3" loop></audio>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <script src="audio.js"></script>
+
+    <a href="musica.html" class="music-button">
+        <img src="musica.jpg" alt="Musica">
+    </a>
+
 </body>
 </html>
