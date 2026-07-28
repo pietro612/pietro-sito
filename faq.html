@@ -4,65 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FAQ – Domande frequenti dei giovani</title>
+    <!-- Meta tag SEO -->
+    <title>FAQ – Domande frequenti</title>
+    <meta name="description" content="Risposte alle domande più frequenti sul funzionamento di questo spazio di ascolto.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://domandedeigiovani.it/faq.html">
-
-    <!-- Meta Description -->
-    <meta name="description" content="Le risposte alle domande più comuni: chi può scrivere, come vengono trattati i messaggi, se serve lasciare l'email e molto altro.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="FAQ – Domande frequenti dei giovani">
-    <meta property="og:description" content="Le risposte alle domande più comuni: chi può scrivere, come vengono trattati i messaggi, se serve lasciare l'email e molto altro.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/faq.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html" class="active">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-faq.jpg" alt="Domande frequenti" class="header-image">
+    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
 
-<main class="content">
-    <h1>Domande frequenti</h1>
+    <div class="container">
+        <h1>Domande frequenti</h1>
 
-    <h2>Chi può scrivere?</h2>
-    <p>Chiunque abbia un dubbio, un pensiero o una domanda.  
-    Non ci sono limiti di età.</p>
+        <h2>Devo registrarmi per inviare una domanda?</h2>
+        <p>No, non serve alcuna registrazione. Puoi scrivere liberamente e in modo anonimo.</p>
 
-    <h2>Devo lasciare la mia email?</h2>
-    <p>No, è facoltativa.  
-    Se la lasci, posso risponderti direttamente.  
-    Se non la lasci, risponderò comunque nella pagina delle risposte.</p>
+        <h2>Quanto tempo serve per ricevere una risposta?</h2>
+        <p>Rispondo nel più breve tempo possibile, rispettando la qualità del dialogo.</p>
 
-    <h2>Quanto ci vuole per ricevere una risposta?</h2>
-    <p>Di solito pochi giorni.  
-    Ogni messaggio viene letto con attenzione.</p>
+        <h2>Le mie domande rimangono private?</h2>
+        <p>Sì. I messaggi non vengono condivisi e rimangono riservati.</p>
 
-    <h2>I miei messaggi sono anonimi?</h2>
-    <p>Sì. Non raccolgo dati personali e non condivido nulla con nessuno.</p>
+        <h2>Posso fare qualsiasi tipo di domanda?</h2>
+        <p>Sì, purché sia rispettosa. Non esiste una domanda “sbagliata”.</p>
 
-    <h2>Posso scrivere più volte?</h2>
-    <p>Sì, ogni volta che ne senti il bisogno.</p>
-</main>
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+        <h2>Riceverò una risposta automatica?</h2>
+        <p>No. Ogni risposta è scritta con attenzione, senza automatismi.</p>
+    </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
+
+    <button id="audio-btn" class="music-btn">🎵</button>
+    <audio id="audio-player" src="musica.mp3" loop></audio>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <script src="audio.js"></script>
+
+    <a href="musica.html" class="music-button">
+        <img src="musica.jpg" alt="Musica">
+    </a>
+
 </body>
 </html>
