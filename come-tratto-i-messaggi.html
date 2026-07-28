@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <head>
-  <title>Come tratto i tuoi messaggi</title>
-  <meta name="description" content="Il mio approccio ai messaggi: ascolto autentico, rispetto, sensibilità e non giudizio.">
-</head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Come tratto i messaggi – Rispetto, ascolto, riservatezza</title>
+    <!-- Meta tag SEO -->
+    <title>Come tratto i tuoi messaggi</title>
+    <meta name="description" content="Il mio approccio ai messaggi: ascolto autentico, rispetto, sensibilità e non giudizio.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://domandedeigiovani.it/come-tratto-i-messaggi.html">
-
-    <!-- Meta Description -->
-    <meta name="description" content="Ogni messaggio viene accolto con attenzione, riservatezza e rispetto. Nessun giudizio, nessuna pressione. Solo ascolto autentico.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Come tratto i messaggi – Rispetto, ascolto, riservatezza">
-    <meta property="og:description" content="Ogni messaggio viene accolto con attenzione, riservatezza e rispetto. Nessun giudizio, nessuna pressione. Solo ascolto autentico.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/come-tratto-i-messaggi.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html" class="active">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-benvenuto.jpg" alt="Come tratto i messaggi" class="header-image">
+    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
 
-<main class="content">
-    <h1>Come tratto i messaggi</h1>
+    <div class="container">
+        <h1>Come tratto i tuoi messaggi</h1>
 
-    <p>Ogni messaggio che ricevo viene letto con attenzione e rispetto.  
-    Non giudico, non classifico, non ignoro.</p>
+        <p>
+            Ogni messaggio che ricevo è importante. Non importa quanto breve, complesso o personale
+            sia: merita attenzione e rispetto.
+        </p>
 
-    <h2>Riservatezza</h2>
-    <p>I messaggi non vengono condivisi con nessuno.</p>
+        <h2>I principi che seguo</h2>
+        <p>
+            • <strong>Ascolto autentico:</strong> leggo ciò che scrivi senza pregiudizi.<br>
+            • <strong>Rispetto:</strong> tratto ogni parola con cura.<br>
+            • <strong>Chiarezza:</strong> rispondo in modo semplice e comprensibile.<br>
+            • <strong>Sensibilità:</strong> considero ciò che senti, non solo ciò che scrivi.<br>
+            • <strong>Non giudizio:</strong> non esiste una domanda “sbagliata”.
+        </p>
 
-    <h2>Risposta</h2>
-    <p>Rispondo sempre, con cura e sincerità.</p>
+        <h2>Cosa non faccio</h2>
+        <p>
+            • Non etichetto le persone.<br>
+            • Non minimizzo ciò che provano.<br>
+            • Non ignoro le emozioni.<br>
+            • Non uso risposte automatiche.
+        </p>
 
-    <h2>Tempi</h2>
-    <p>Di solito rispondo entro pochi giorni.</p>
-</main>
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+        <h2>Il mio approccio</h2>
+        <p>
+            Cerco di capire il contesto, il tono e l’intenzione del tuo messaggio. Rispondo con
+            l’obiettivo di aiutarti a vedere le cose con più chiarezza.
+        </p>
+    </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
+
+    <button id="audio-btn" class="music-btn">🎵</button>
+    <audio id="audio-player" src="musica.mp3" loop></audio>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <script src="audio.js"></script>
+
+    <a href="musica.html" class="music-button">
+        <img src="musica.jpg" alt="Musica">
+    </a>
+
 </body>
 </html>
