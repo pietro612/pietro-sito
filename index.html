@@ -4,52 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Domande dei Giovani – Uno spazio sicuro per parlare</title>
+    <!-- Meta tag SEO -->
+    <title>Spazio sicuro di ascolto e dialogo</title>
+    <meta name="description" content="Un luogo dove puoi esprimere pensieri, dubbi ed emozioni senza giudizio. Ogni messaggio viene accolto con rispetto e attenzione.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://domandedeigiovani.it/">
+    <link rel="canonical" href="https://pietro612.github.io/">
 
-    <!-- Meta Description -->
-    <meta name="description" content="Un luogo semplice e rispettoso dove i giovani possono fare domande, esprimere dubbi e trovare ascolto sincero. Scrivi liberamente, senza giudizio.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Domande dei Giovani – Uno spazio sicuro per parlare">
-    <meta property="og:description" content="Un luogo semplice e rispettoso dove i giovani possono fare domande, esprimere dubbi e trovare ascolto sincero. Scrivi liberamente, senza giudizio.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="benvenuto.html">Benvenuto</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-home.jpg" alt="Benvenuto" class="header-image">
+    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
 
-<main class="content">
-    <h1>Benvenuto</h1>
-    <p>Questo è uno spazio sicuro dove puoi fare domande, esprimere dubbi e condividere pensieri senza giudizio.</p>
+    <div class="container">
+        <h1>BENVENUTO</h1>
+        <p>
+            Questo è uno spazio semplice, rispettoso e anonimo dove puoi fare una domanda
+            e ricevere una risposta pensata davvero per te.
+        </p>
+    </div>
 
-    <h2>Scrivi liberamente</h2>
-    <p>Ogni messaggio viene letto con attenzione e rispetto.</p>
+    <footer>© 2025 Domande dei Giovani</footer>
 
-    <a href="scrivi.html" class="button">Scrivi una domanda</a>
-</main>
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+    <!-- Pulsante musica -->
+    <button id="audio-btn" class="music-btn">🎵</button>
+
+    <!-- Audio -->
+    <audio id="audio-player" src="musica.mp3" loop></audio>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <!-- Script musica -->
+    <script src="audio.js"></script>
+
+    <a href="musica.html" class="music-button">
+        <img src="musica.jpg" alt="Musica">
+    </a>
+
 </body>
 </html>
