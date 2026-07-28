@@ -4,59 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Scrivi una domanda – Ti ascolto con attenzione</title>
+    <!-- Meta tag SEO -->
+    <title>Scrivi una domanda</title>
+    <meta name="description" content="Invia una domanda, un dubbio o un pensiero. Questo spazio ti permette di esprimerti liberamente e senza giudizio.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://domandedeigiovani.it/scrivi.html">
-
-    <!-- Meta Description -->
-    <meta name="description" content="Hai un dubbio o un pensiero da condividere? Scrivi liberamente. Ogni messaggio viene letto con cura e riceve una risposta sincera.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Scrivi una domanda – Ti ascolto con attenzione">
-    <meta property="og:description" content="Hai un dubbio o un pensiero da condividere? Scrivi liberamente. Ogni messaggio viene letto con cura e riceve una risposta sincera.">
-    <meta property="og:image" content="https://domandedeigiovani.it/og-image.jpg">
-    <meta property="og:url" content="https://domandedeigiovani.it/scrivi.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="style-v2.css">
+    <!-- Stile -->
+    <link rel="stylesheet" href="style-v2.css?v=22">
 </head>
 
 <body>
 
-<header class="navbar">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="perche-esiste.html">Perché esiste</a>
-        <a href="come-funziona.html">Come funziona</a>
-        <a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a>
-        <a href="scrivi.html" class="active">Scrivi una domanda</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="chi-sono.html">Chi sono</a>
-        <a href="faq.html">FAQ</a>
+    <nav class="navbar">
+        <div class="logo">Domande dei Giovani</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perche-esiste.html">Perché esiste</a></li>
+            <li><a href="come-funziona.html">Come funziona</a></li>
+            <li><a href="come-tratto-i-messaggi.html">Come tratto i messaggi</a></li>
+            <li><a href="scrivi.html">Scrivi una domanda</a></li>
+            <li><a href="contatto.html">Contatto</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
     </nav>
-</header>
 
-<img src="hero-scrivi.jpg" alt="Scrivi una domanda" class="header-image">
+    <img src="hero-home.jpg" alt="Domande dei Giovani" class="header-image">
 
-<main class="content">
-    <h1>Scrivi una domanda</h1>
+    <div class="container">
+        <h1>Scrivi una domanda</h1>
 
-    <p>Se hai un dubbio, un pensiero o qualcosa che ti pesa, puoi scriverlo qui.  
-    Ogni messaggio viene letto con attenzione e rispetto.</p>
+        <p>
+            Qui puoi scrivere ciò che senti: un dubbio, un pensiero, un’emozione o una domanda.
+            Non devi preoccuparti della forma. L’importante è che sia autentico.
+        </p>
 
-    <form action="https://formspree.io/f/mqakjvjn" method="POST" class="contact-form">
-        <label for="message">Il tuo messaggio</label>
-        <textarea id="message" name="message" required></textarea>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="form-box">
+            <label for="message">Il tuo messaggio:</label>
+            <textarea id="message" name="message" required placeholder="Scrivi qui ciò che vuoi condividere..."></textarea>
 
-        <label for="email">Email (facoltativa)</label>
-        <input type="email" id="email" name="email" placeholder="Se vuoi una risposta diretta">
+            <button type="submit" class="submit-btn">Invia</button>
+        </form>
 
-        <button type="submit" class="button">Invia</button>
-    </form>
-</main>
-<a href="musica.html" class="music-button">
-    <img src="musica.jpg" alt="Musica">
-</a>
+        <p>
+            Dopo l’invio, il tuo messaggio verrà letto con attenzione e riceverai una risposta
+            pensata davvero per te.
+        </p>
+    </div>
+
+    <footer>© 2025 Domande dei Giovani</footer>
+
+    <button id="audio-btn" class="music-btn">🎵</button>
+    <audio id="audio-player" src="musica.mp3" loop></audio>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("open");
+        }
+    </script>
+
+    <script src="audio.js"></script>
+
+    <a href="musica.html" class="music-button">
+        <img src="musica.jpg" alt="Musica">
+    </a>
+
 </body>
 </html>
